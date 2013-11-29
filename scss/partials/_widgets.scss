@@ -1,0 +1,12 @@
+.widget-area .widget {
+	background-color: #1AFF23;
+	ul {
+		list-style: none;
+		margin-left: 0em;
+		padding-left: 0.3em;
+		li:nth-child(2n+1) {
+			background-color: red;
+
+		}
+	}
+}
