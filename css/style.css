@@ -697,17 +697,18 @@ object {
 .infinity-end.neverending .site-footer {
   display: block; }
 
-/* line 1, ../scss/partials/_widgets.scss */
-.widget-area .widget {
-  background-color: #1AFF23; }
-  /* line 3, ../scss/partials/_widgets.scss */
-  .widget-area .widget ul {
-    list-style: none;
-    margin-left: 0em;
-    padding-left: 0.3em; }
-    /* line 7, ../scss/partials/_widgets.scss */
-    .widget-area .widget ul li:nth-child(2n+1) {
-      background-color: red; }
+/* line 2, ../scss/partials/_widgets.scss */
+.widget-area .widget ul {
+  list-style: none;
+  margin-left: 0em;
+  padding-left: 0.3em; }
+  /* line 6, ../scss/partials/_widgets.scss */
+  .widget-area .widget ul li:nth-child(2n+1) {
+    background-color: rgba(225, 77, 66, 0.74);
+    color: rgba(238, 230, 234, 0.74); }
+    /* line 9, ../scss/partials/_widgets.scss */
+    .widget-area .widget ul li:nth-child(2n+1) a {
+      color: #eee6ea; }
 
 /* --- */
 /* line 31, ../scss/style.scss */

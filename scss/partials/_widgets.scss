@@ -1,11 +1,14 @@
 .widget-area .widget {
-	background-color: #1AFF23;
 	ul {
 		list-style: none;
 		margin-left: 0em;
 		padding-left: 0.3em;
 		li:nth-child(2n+1) {
-			background-color: red;
+			background-color: rgba(225, 77, 66, 0.74);
+			color: rgba(238, 230, 234, 0.74);
+			a {
+			 color: $linkcolor;
+}	
 
 		}
 	}
