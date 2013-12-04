@@ -22,7 +22,7 @@ along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normali
 and Blueprint http://www.blueprintcss.org/
 */
 
-@import "gridset", "partials/variables", "base", "partials/widgets" ;
+@import "gridset", "partials/variables", "base", "partials/widgets", "partials/content" ;
 
 
 /* --- */
@@ -30,6 +30,8 @@ and Blueprint http://www.blueprintcss.org/
 
 #page {
 	  @include gs-span(cl, 3, 10);
+	  @include gs-pad(cl, padfull, false);
+
 	}
 #primary {
 	border-left: 1px solid #000;
@@ -39,6 +41,8 @@ and Blueprint http://www.blueprintcss.org/
 	}
 }
 #secondary {
+	background-color: #363B3E;
+	color: #E5E5E5;
 	@include gs-span(cl, 10, 12);
 	.sidebar-left & {
 		@include gs-span(cl,1,3);

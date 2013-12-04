@@ -702,13 +702,32 @@ object {
   list-style: none;
   margin-left: 0em;
   padding-left: 0.3em; }
-  /* line 6, ../scss/partials/_widgets.scss */
+  /* line 7, ../scss/partials/_widgets.scss */
   .widget-area .widget ul li:nth-child(2n+1) {
-    background-color: rgba(225, 77, 66, 0.74);
-    color: rgba(238, 230, 234, 0.74); }
-    /* line 9, ../scss/partials/_widgets.scss */
-    .widget-area .widget ul li:nth-child(2n+1) a {
-      color: #eee6ea; }
+    background-color: red; }
+  /* line 10, ../scss/partials/_widgets.scss */
+  .widget-area .widget ul li a {
+    text-decoration: none;
+    padding: 5px; }
+
+/* line 2, ../scss/partials/_content.scss */
+.sidebar-left .alignright {
+  margin-right: -170px;
+  clear: right; }
+/* line 6, ../scss/partials/_content.scss */
+.sidebar-left .alignleft {
+  clear: left;
+  margin-left: 0; }
+
+/* line 11, ../scss/partials/_content.scss */
+.alignright {
+  margin-right: 0px;
+  clear: right; }
+
+/* line 15, ../scss/partials/_content.scss */
+.alignleft {
+  clear: left;
+  margin-left: -170px; }
 
 /* --- */
 /* line 31, ../scss/style.scss */
@@ -717,9 +736,13 @@ object {
   float: left;
   margin-left: 16.9184%;
   margin-right: -100%;
-  width: 66.11111%; }
+  width: 66.11111%;
+  left: -1.5625%;
+  position: relative;
+  padding-left: 1.5625%;
+  padding-right: 1.5625%; }
 
-/* line 34, ../scss/style.scss */
+/* line 36, ../scss/style.scss */
 #primary {
   border-left: 1px solid #000;
   display: block;
@@ -727,7 +750,7 @@ object {
   margin-left: 0%;
   margin-right: -100%;
   width: 74.57031%; }
-  /* line 37, ../scss/style.scss */
+  /* line 39, ../scss/style.scss */
   .sidebar-left #primary {
     display: block;
     float: left;
@@ -735,14 +758,16 @@ object {
     margin-right: -100%;
     width: 74.57031%; }
 
-/* line 41, ../scss/style.scss */
+/* line 43, ../scss/style.scss */
 #secondary {
+  background-color: #363B3E;
+  color: #E5E5E5;
   display: block;
   float: left;
   margin-left: 76.13281%;
   margin-right: -100%;
   width: 23.8151%; }
-  /* line 43, ../scss/style.scss */
+  /* line 47, ../scss/style.scss */
   .sidebar-left #secondary {
     display: block;
     float: left;
@@ -750,20 +775,20 @@ object {
     margin-right: -100%;
     width: 23.8151%; }
 
-/* line 48, ../scss/style.scss */
+/* line 52, ../scss/style.scss */
 header#masthead {
   border-bottom: 1px solid black; }
-  /* line 50, ../scss/style.scss */
+  /* line 54, ../scss/style.scss */
   header#masthead .site-title {
     float: left; }
-  /* line 51, ../scss/style.scss */
+  /* line 55, ../scss/style.scss */
   header#masthead .main-navigation ul {
     float: right; }
-    /* line 53, ../scss/style.scss */
+    /* line 57, ../scss/style.scss */
     header#masthead .main-navigation ul li.menu-item {
       padding: 8px;
       border: 1px solid gray;
       background-color: #F0F0F0; }
-      /* line 57, ../scss/style.scss */
+      /* line 61, ../scss/style.scss */
       header#masthead .main-navigation ul li.menu-item :hover {
         background-color: red; }
