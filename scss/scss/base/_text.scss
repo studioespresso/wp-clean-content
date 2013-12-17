@@ -1,0 +1,42 @@
+/* Text-Related Elements */ 
+
+p {
+	margin-bottom: $space;
+    font-family: 'main', sans-serif;
+}
+
+/* Blockquote */
+
+
+blockquote {
+    margin-top: $space-quad;
+    margin-bottom: $space-quad;
+    font-style: italic;
+    font-size: $font-size-larger;
+    border-left: 7px solid $gray-light-4;
+    color: $black;
+    padding-left: $pad;
+    margin-bottom: $space;
+    .citation {
+        padding-top: $pad; 
+        font-style: none;
+        a {
+            text-decoration: underline;
+            font-size: $font-size-slightly-smaller;
+        }
+    }
+}
+
+/* Horizontal Rule */ 
+hr {
+	border: 0;
+    height: 2px;
+    background: $gray-light-2;
+    margin: $space-double 0;
+    clear: both;
+}
+
+abbr {
+    border-bottom: 1px dotted $gray;
+    cursor: help;
+}

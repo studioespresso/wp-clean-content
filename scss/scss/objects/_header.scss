@@ -1,0 +1,51 @@
+.header[role=banner] {
+	margin-top: $pad;
+	margin-bottom: $pad;
+	padding: 0;
+	border-bottom: 1px solid #dbdbdb;
+	@extend .lc;
+}
+
+#site-title a, .nav a, #site-title a:visited, {
+	color: darken($midnight-3, 24%);
+} 
+
+.logo {
+	float: left;
+	max-width: 8rem;
+	margin: 0.4rem;
+
+	@media all and (min-width: $bp-med) {
+		max-width: 9rem;
+	}
+}
+
+.nav-toggle {
+	float: right;
+	display: block;
+	padding: 0.9rem 1rem 0.7rem;
+	font-size: 1.3rem;
+	line-height: 1;
+	border-left: 1px solid #dbdbdb;
+
+	@media all and (min-width: $bp-med) {
+		display: none;
+	}
+}
+
+.header[role=banner] {
+    font-family: 'header', sans-serif;    
+}
+
+.search-form {
+	overflow: hidden;
+	max-height: 0;
+
+	@media all and (min-width: $bp-med) {
+		float: right;
+		max-height: none;
+		margin: 0.65em 0.5em 0 0;
+	}
+}
+
+

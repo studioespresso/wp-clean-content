@@ -1,0 +1,19 @@
+body {
+	background: #cc0000;
+	font: 100%/1.5 $font;
+	-webkit-text-size-adjust: 100%;
+	color: $gray-dark;
+	margin:0px; 
+	font-family: 'main', sans-serif;
+	width: 100%;
+}
+
+a {
+	color: lighten($midnight-3, 0%);
+	text-decoration: none;
+	outline: 0;
+	
+	&:hover, &:focus {
+		color: $gray;
+	}
+}
