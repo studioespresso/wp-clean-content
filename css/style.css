@@ -570,11 +570,11 @@ td {
 
 /* Image sizes offsets */
 /* line 57, ../scss/scss/objects/_layout.scss */
-.small {
+.size-small {
   max-width: 12em; }
 
 /* line 60, ../scss/scss/objects/_layout.scss */
-.medium {
+.size-medium {
   max-width: 16em; }
 
 /* line 64, ../scss/scss/objects/_layout.scss */
@@ -598,10 +598,10 @@ td {
     .alignleft {
       margin-left: 1rem; }
       /* line 81, ../scss/scss/objects/_layout.scss */
-      .alignleft.small {
+      .alignleft.size-small {
         margin-left: -6em; }
       /* line 84, ../scss/scss/objects/_layout.scss */
-      .alignleft.medium {
+      .alignleft.size-medium {
         margin-left: -8em; }
       /* line 87, ../scss/scss/objects/_layout.scss */
       .right .alignleft {
@@ -613,10 +613,10 @@ td {
   float: right; }
   @media all and (min-width: 73em) {
     /* line 98, ../scss/scss/objects/_layout.scss */
-    .alignright.small {
+    .alignright.size-small {
       margin-right: -6em; }
     /* line 101, ../scss/scss/objects/_layout.scss */
-    .alignright.medium {
+    .alignright.size-medium {
       margin-right: -8em; }
     /* line 104, ../scss/scss/objects/_layout.scss */
     .left .alignright {
@@ -626,7 +626,7 @@ td {
     $PAGE STRUCTURE
 \*------------------------------------*/
 /* line 1, ../scss/scss/objects/_header.scss */
-.header[role=banner] {
+header[role=banner] {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0;
@@ -678,35 +678,35 @@ td {
     $NAVIGATION
 \*------------------------------------*/
 /* line 4, ../scss/scss/objects/_nav.scss */
-.nav {
+.main-navigation {
   clear: both;
   overflow: hidden;
   max-height: 0; }
   /* line 8, ../scss/scss/objects/_nav.scss */
-  .nav a {
+  .main-navigation a {
     display: block;
     padding: 1rem 1rem 1rem 0;
     margin: 0rem 1rem 0rem 1rem;
     font-weight: bold;
     color: #569eb3; }
     /* line 14, ../scss/scss/objects/_nav.scss */
-    .nav a.active {
+    .main-navigation a.active {
       color: #121415; }
     /* line 17, ../scss/scss/objects/_nav.scss */
-    .nav a:hover {
+    .main-navigation a:hover {
       color: #3b7282;
       text-decoration: underline; }
   @media all and (min-width: 46.8em) {
     /* line 4, ../scss/scss/objects/_nav.scss */
-    .nav {
+    .main-navigation {
       max-height: none;
       float: right;
       clear: none; }
       /* line 26, ../scss/scss/objects/_nav.scss */
-      .nav li {
+      .main-navigation li {
         float: left; }
       /* line 29, ../scss/scss/objects/_nav.scss */
-      .nav a {
+      .main-navigation a {
         border: 0; } }
 
 /* line 38, ../scss/scss/objects/_nav.scss */
@@ -744,7 +744,7 @@ td {
   color: #333333;
   line-height: 1.2; }
   /* line 11, ../scss/scss/objects/_footer.scss */
-  .footer .lc, .footer .header[role=banner], .footer [role=main] {
+  .footer .lc, .footer header[role=banner], .footer [role=main] {
     padding: 1rem 1rem 0; }
   /* line 16, ../scss/scss/objects/_footer.scss */
   .footer a {
@@ -2090,12 +2090,12 @@ article {
 
 @media all and (min-width: 29.75em) {
   /* line 23, ../scss/scss/objects/_article.scss */
-  .featured-image + .postcontent {
+  .featured-image + .entry-content {
     margin-left: 1rem; } }
 
 /* line 32, ../scss/scss/objects/_article.scss */
-.article-header h1 {
-  font-size: 2.5em; }
+.entry-header h1 {
+  font-size: 1.4375em; }
 
 /* line 37, ../scss/scss/objects/_article.scss */
 .byline {

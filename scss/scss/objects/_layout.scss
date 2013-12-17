@@ -54,10 +54,10 @@
 
 /* Image sizes offsets */
 
-.small {
+.size-small {
 	max-width: $small;
 }
-.medium {
+.size-medium {
 	max-width: $medium;
 }
 
@@ -78,10 +78,10 @@
 	
 	@media all and  (min-width: $bp-xl) {
 		margin-left: $pad;
-		&.small {
+		&.size-small {
 			margin-left: -$small-offset;
 		}
-		&.medium {
+		&.size-medium {
 			margin-left: -$medium-offset;
 		}
 		.right & {
@@ -95,10 +95,10 @@
 	padding-left: $pad;
 	float: right;
 	@media all and  (min-width: $bp-xl) {
-		&.small  {
+		&.size-small  {
 			margin-right: -$small-offset;
 		}
-		&.medium {
+		&.size-medium {
 			margin-right: -$medium-offset;
 		}
 		.left & {

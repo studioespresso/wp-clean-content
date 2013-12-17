@@ -119,7 +119,7 @@ function cc_register_theme_customizer( $wp_customize ) {
         'title'      => __('Layout','clean-content'),
         'priority'   => 130,
     ) );
-
+/** Sidebar control **/
     $wp_customize->add_setting(
     	'cc_sidebar_control',
     	array (
@@ -139,6 +139,7 @@ function cc_register_theme_customizer( $wp_customize ) {
     		)
     	);
 
+/** Tagline control **/
     $wp_customize->add_setting(
     	'cc_show_tagline',
     	array (
@@ -152,7 +153,7 @@ function cc_register_theme_customizer( $wp_customize ) {
     		'settings'	=> 'cc_show_tagline',
     		)
     	);
-
+/** Sticky Menu **/
     $wp_customize->add_setting(
     	'cc_sticky_menu',
     	array (
@@ -168,22 +169,23 @@ function cc_register_theme_customizer( $wp_customize ) {
     	);
 }
 
-function cleancontent_layout_classes( $classes ) {
-	$options = get_theme_mod('cc_sidebar_control');
-	if ($options && 'sidebar-left' == $options)
-		$classes[] = $options;
+/** Adds bodyt classes **/
 
-	return $classes;
+function cleancontent_layout_classes( $classes ) {
+    $options = get_theme_mod('cc_sidebar_control');
+    if ($options && 'sidebar-left' == $options)
+        $classes[] = $options;
+
+    return $classes;
 }
+
 add_filter( 'body_class', 'cleancontent_layout_classes' );
 
 add_action( 'customize_register', 'cc_register_theme_customizer' );
 
 function cc_customizer_css() {
     ?>
-    <style type="text/css">
-        a { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
-    </style>
+
     <?php
 }
 add_action( 'wp_head', 'cc_customizer_css' );

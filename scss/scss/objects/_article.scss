@@ -19,7 +19,7 @@ article {
 	}
 }
 
-.postcontent {
+.entry-content {
 	.featured-image+& {
 		@media all and  (min-width: $bp-small-2) {
 			margin-left: $pad;	
@@ -28,9 +28,9 @@ article {
 }
 
 
-.article-header {
+.entry-header {
 	h1 {
-		font-size: 2.5em;
+		font-size: $font-size-large;
 	}
 }
 
