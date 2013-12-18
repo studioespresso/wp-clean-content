@@ -678,35 +678,35 @@ header[role=banner] {
     $NAVIGATION
 \*------------------------------------*/
 /* line 4, ../scss/scss/objects/_nav.scss */
-.main-navigation {
+.site-navigation {
   clear: both;
   overflow: hidden;
   max-height: 0; }
   /* line 8, ../scss/scss/objects/_nav.scss */
-  .main-navigation a {
+  .site-navigation a {
     display: block;
     padding: 1rem 1rem 1rem 0;
     margin: 0rem 1rem 0rem 1rem;
     font-weight: bold;
     color: #569eb3; }
     /* line 14, ../scss/scss/objects/_nav.scss */
-    .main-navigation a.active {
+    .site-navigation a.active {
       color: #121415; }
     /* line 17, ../scss/scss/objects/_nav.scss */
-    .main-navigation a:hover {
+    .site-navigation a:hover {
       color: #3b7282;
       text-decoration: underline; }
   @media all and (min-width: 46.8em) {
     /* line 4, ../scss/scss/objects/_nav.scss */
-    .main-navigation {
+    .site-navigation {
       max-height: none;
       float: right;
       clear: none; }
       /* line 26, ../scss/scss/objects/_nav.scss */
-      .main-navigation li {
+      .site-navigation li {
         float: left; }
       /* line 29, ../scss/scss/objects/_nav.scss */
-      .main-navigation a {
+      .site-navigation a {
         border: 0; } }
 
 /* line 38, ../scss/scss/objects/_nav.scss */
@@ -730,8 +730,7 @@ header[role=banner] {
 \*------------------------------------*/
 /* line 4, ../scss/scss/objects/_main.scss */
 [role=main] {
-  padding: 0.5rem 0.5rem 2rem;
-  overflow: hidden; }
+  padding: 0.5rem 0.5rem 2rem; }
 
 /*------------------------------------*\
     $FOOTER

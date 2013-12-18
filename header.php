@@ -26,7 +26,7 @@
 			<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"<?php echo ( get_theme_mod( 'cc_show_tagline' ) ) ? "style='display:none;'" : "" ?>><?php bloginfo( 'description' ); ?></h2>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="site-navigation" class="site-navigation" role="navigation">
 <!-- 			<h1 class="menu-toggle"><?php _e( 'Menu', 'clean-content' ); ?></h1>
  --><!-- 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'clean-content' ); ?></a>
  -->
