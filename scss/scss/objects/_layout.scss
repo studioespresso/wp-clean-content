@@ -64,7 +64,7 @@
 .featured-image {
 	display: table-cell;
 	vertical-align: top;
-	margin-right: $pad;
+	margin: $pad;
 	@media all and  (max-width: $bp-small-2) {
 		width: 100%;
 		display: inline;
@@ -73,9 +73,10 @@
 }
 
 .alignleft {
-	padding-right: $pad;
+	margin: $pad;
 	float: left;
-	
+	clear: both;
+
 	@media all and  (min-width: $bp-xl) {
 		margin-left: $pad;
 		&.size-small {
@@ -92,9 +93,11 @@
 }
 
 .alignright {
-	padding-left: $pad;
+	margin: $pad;
 	float: right;
+	clear: both;
 	@media all and  (min-width: $bp-xl) {
+		margin-right: $pad;
 		&.size-small  {
 			margin-right: -$small-offset;
 		}

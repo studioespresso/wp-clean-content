@@ -581,7 +581,7 @@ td {
 .featured-image {
   display: table-cell;
   vertical-align: top;
-  margin-right: 1rem; }
+  margin: 1rem; }
   @media all and (max-width: 29.75em) {
     /* line 64, ../scss/scss/objects/_layout.scss */
     .featured-image {
@@ -591,36 +591,41 @@ td {
 
 /* line 75, ../scss/scss/objects/_layout.scss */
 .alignleft {
-  padding-right: 1rem;
-  float: left; }
+  margin: 1rem;
+  float: left;
+  clear: both; }
   @media all and (min-width: 73em) {
     /* line 75, ../scss/scss/objects/_layout.scss */
     .alignleft {
       margin-left: 1rem; }
-      /* line 81, ../scss/scss/objects/_layout.scss */
+      /* line 82, ../scss/scss/objects/_layout.scss */
       .alignleft.size-small {
         margin-left: -6em; }
-      /* line 84, ../scss/scss/objects/_layout.scss */
+      /* line 85, ../scss/scss/objects/_layout.scss */
       .alignleft.size-medium {
         margin-left: -8em; }
-      /* line 87, ../scss/scss/objects/_layout.scss */
+      /* line 88, ../scss/scss/objects/_layout.scss */
       .right .alignleft {
         margin-left: 0px; } }
 
-/* line 94, ../scss/scss/objects/_layout.scss */
+/* line 95, ../scss/scss/objects/_layout.scss */
 .alignright {
-  padding-left: 1rem;
-  float: right; }
+  margin: 1rem;
+  float: right;
+  clear: both; }
   @media all and (min-width: 73em) {
-    /* line 98, ../scss/scss/objects/_layout.scss */
-    .alignright.size-small {
-      margin-right: -6em; }
-    /* line 101, ../scss/scss/objects/_layout.scss */
-    .alignright.size-medium {
-      margin-right: -8em; }
-    /* line 104, ../scss/scss/objects/_layout.scss */
-    .left .alignright {
-      margin-right: 0px; } }
+    /* line 95, ../scss/scss/objects/_layout.scss */
+    .alignright {
+      margin-right: 1rem; }
+      /* line 101, ../scss/scss/objects/_layout.scss */
+      .alignright.size-small {
+        margin-right: -6em; }
+      /* line 104, ../scss/scss/objects/_layout.scss */
+      .alignright.size-medium {
+        margin-right: -8em; }
+      /* line 107, ../scss/scss/objects/_layout.scss */
+      .left .alignright {
+        margin-right: 0px; } }
 
 /*------------------------------------*\
     $PAGE STRUCTURE
@@ -2079,31 +2084,34 @@ article {
   border-collapse: collapse;
   margin-bottom: 2rem; }
   /* line 9, ../scss/scss/objects/_article.scss */
+  article p {
+    text-align: justify; }
+  /* line 12, ../scss/scss/objects/_article.scss */
   article img {
     margin-bottom: 1rem;
     display: block; }
-  /* line 13, ../scss/scss/objects/_article.scss */
+  /* line 16, ../scss/scss/objects/_article.scss */
   article.quote {
     margin-bottom: 6rem;
     margin-top: 6rem; }
 
 @media all and (min-width: 29.75em) {
-  /* line 23, ../scss/scss/objects/_article.scss */
+  /* line 26, ../scss/scss/objects/_article.scss */
   .featured-image + .entry-content {
     margin-left: 1rem; } }
 
-/* line 32, ../scss/scss/objects/_article.scss */
+/* line 35, ../scss/scss/objects/_article.scss */
 .entry-header h1 {
   font-size: 1.4375em; }
 
-/* line 37, ../scss/scss/objects/_article.scss */
+/* line 40, ../scss/scss/objects/_article.scss */
 .byline {
   font-size: 0.875em;
   font-style: italic;
   margin-bottom: 0.5rem; }
 
 /* Wordpress Caption */
-/* line 44, ../scss/scss/objects/_article.scss */
+/* line 47, ../scss/scss/objects/_article.scss */
 .wp-caption-text {
   font-style: italic; }
 
@@ -2139,3 +2147,7 @@ article {
   margin-right: 0.25rem;
   color: grey;
   font-size: 0.875em; }
+
+/* line 7, ../scss/scss/objects/_meta.scss */
+header.entry-header {
+  margin-bottom: 0.5rem; }
