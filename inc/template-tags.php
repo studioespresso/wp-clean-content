@@ -24,11 +24,11 @@ function clean_content_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'clean-content' ) ); ?></div>
+				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'clean-content' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'clean-content' ) ); ?></div>
+				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'clean-content' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -83,46 +83,46 @@ function clean_content_comment( $comment, $args, $depth ) {
 
 	<?php else : ?>
 
-	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
-		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-			<footer class="comment-meta">
-				<div class="comment-author vcard">
-					<?php if ( 0 != $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>
-					<?php printf( __( '%s <span class="says">says:</span>', 'clean-content' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
-				</div><!-- .comment-author -->
+		<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
+			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<?php if ( 0 != $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>
+						<?php printf( __( '%s <span class="says">says:</span>', 'clean-content' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					</div><!-- .comment-author -->
 
-				<div class="comment-metadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-						<time datetime="<?php comment_time( 'c' ); ?>">
-							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'clean-content' ), get_comment_date(), get_comment_time() ); ?>
-						</time>
-					</a>
-					<?php edit_comment_link( __( 'Edit', 'clean-content' ), '<span class="edit-link">', '</span>' ); ?>
-				</div><!-- .comment-metadata -->
+					<div class="comment-metadata">
+						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+							<time datetime="<?php comment_time( 'c' ); ?>">
+								<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'clean-content' ), get_comment_date(), get_comment_time() ); ?>
+							</time>
+						</a>
+						<?php edit_comment_link( __( 'Edit', 'clean-content' ), '<span class="edit-link">', '</span>' ); ?>
+					</div><!-- .comment-metadata -->
 
-				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'clean-content' ); ?></p>
-				<?php endif; ?>
-			</footer><!-- .comment-meta -->
+					<?php if ( '0' == $comment->comment_approved ) : ?>
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'clean-content' ); ?></p>
+					<?php endif; ?>
+				</footer><!-- .comment-meta -->
 
-			<div class="comment-content">
-				<?php comment_text(); ?>
-			</div><!-- .comment-content -->
+				<div class="comment-content">
+					<?php comment_text(); ?>
+				</div><!-- .comment-content -->
 
-			<?php
+				<?php
 				comment_reply_link( array_merge( $args, array(
 					'add_below' => 'div-comment',
 					'depth'     => $depth,
 					'max_depth' => $args['max_depth'],
 					'before'    => '<div class="reply">',
 					'after'     => '</div>',
-				) ) );
-			?>
-		</article><!-- .comment-body -->
+					) ) );
+					?>
+				</article><!-- .comment-body -->
 
-	<?php
-	endif;
-}
+				<?php
+				endif;
+			}
 endif; // ends check for clean_content_comment()
 
 if ( ! function_exists( 'clean_content_posted_on' ) ) :
@@ -130,31 +130,38 @@ if ( ! function_exists( 'clean_content_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function clean_content_posted_on() {
-	$time_string = '<time class="entry-date published" datetime="%2$s"></time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
-	}
+	$time_string = '<time class="entry-date published" datetime="%2$s">%2$s</time>';
+
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_attr( get_the_modified_date( 'c' ) ),
 		esc_html( get_the_modified_date() )
-	);
+		);
 
 	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'clean-content' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string
-		),
+			),
 
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_html( get_the_author() )
-		)
-	);
+			)
+		);
 }
 endif;
+
+if (! function_exists( 'clean_content_meta_categories' ) ):
+	function clean_content_meta_categories() {
+		$categories_list = get_the_category_list( __( ', ', 'clean-content' ) );
+		if ( $categories_list && clean_content_categorized_blog() ) :
+			printf( __( '<span> in %1$s</span>', 'clean-content' ), $categories_list );
+		endif;
+	}
+	endif;
 
 /**
  * Returns true if a blog has more than 1 category.
@@ -164,7 +171,7 @@ function clean_content_categorized_blog() {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'hide_empty' => 1,
-		) );
+			) );
 
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
