@@ -130,7 +130,7 @@ if ( ! function_exists( 'clean_content_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function clean_content_posted_on() {
-	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+	$time_string = '<time class="entry-date published" datetime="%2$s"></time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 	}
@@ -147,6 +147,7 @@ function clean_content_posted_on() {
 			esc_url( get_permalink() ),
 			$time_string
 		),
+
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_html( get_the_author() )
