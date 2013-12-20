@@ -1,6 +1,7 @@
 #masthead {
 	max-width:1100px;
 	margin:0px auto;
+	max-height: 100%;
 }
 .container {
 	@include gs-span(cl,2, 11);
@@ -33,6 +34,7 @@
 
 /* Two Column Layout */
 .main {
+	max-width: 100%;
 	@media all and (min-width: $bp-large) {
 		&.page {@include gs-span(cl, 2, 11);}
 		&.left {@include gs-span(cl, 1, 9);}
@@ -40,6 +42,8 @@
 	}
 }
 .sidebar {
+	height: 100%;
+
 	@media all and (max-width: $bp-large) {
 		display: none;
 	}
@@ -82,7 +86,7 @@
 		&.size-small {
 			margin-left: -$small-offset;
 		}
-		&.size-medium {
+		&.size-medium, &.size-full {
 			margin-left: -$medium-offset;
 		}
 		.right & {
@@ -91,7 +95,14 @@
 	}
 	
 }
+.wp-caption {
+	max-width: 100%;
+}
+.alignnone {
+	float: left;
+	width: 100%;
 
+}
 .alignright {
 	margin: $pad;
 	float: right;
@@ -101,8 +112,11 @@
 		&.size-small  {
 			margin-right: -$small-offset;
 		}
-		&.size-medium {
+		&.size-medium, &.size-full {
 			margin-right: -$medium-offset;
+		}
+		&.size-large {
+			margin-right: -$large-offset;
 		}
 		.left & {
 			margin-right: 0px;
