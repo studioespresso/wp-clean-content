@@ -4,7 +4,7 @@
  */
 ?>
 
-<article  class="content article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article  id="post-<?php the_ID(); ?>" <?php post_class('content article'); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
@@ -25,7 +25,13 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
+		<?php if ( has_post_thumbnail()) : ?>
+		  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+		  <?php the_post_thumbnail('full'); ?>
+		  </a>
+		<?php endif; ?>
 	<div class="entry-content">
+
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'clean-content' ) ); ?>
 		<?php
 			wp_link_pages( array(

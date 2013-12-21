@@ -12,7 +12,11 @@
 			<?php clean_content_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
-
+	<?php if ( has_post_thumbnail()) : ?>
+	  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+	  <?php the_post_thumbnail('full'); ?>
+	  </a>
+	<?php endif; ?>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
