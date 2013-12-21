@@ -75,40 +75,46 @@
 		margin-bottom: $pad;
 	}
 }
-
-.alignleft {
-	margin: $pad;
-	float: left;
-	clear: both;
-
+.wp-caption.alignleft {
 	@media all and  (min-width: $bp-xl) {
-		margin-left: $pad;
-		&.size-small {
-			margin-left: -$small-offset;
-		}
-		&.size-medium, &.size-full {
-			margin-left: -$medium-offset;
-		}
-		.right & {
-			margin-left: 0px;
-		}
-	}
-	
+	margin-left: -$medium-offset;
 }
-.wp-caption {
-	max-width: 100%;
+	p.wp-caption-text {
+		text-align: right;
+		margin-right: $pad;
+		margin-bottom: 0px;
+	}
 }
 .alignnone {
 	float: left;
 	width: 100%;
 
 }
+.alignleft {
+	float: left;
+	clear: both;
+	margin-right: $pad;
+	@media all and  (min-width: $bp-xl) {
+		&.size-small {
+			margin-left: -$small-offset;
+		}
+		&.size-medium, &.size-full {
+			margin-left: -$medium-offset;
+		}
+		&.size-large {
+			margin-left: -$large-offset;
+		}
+		.right & {
+			margin-left: 0px;
+		}
+	}
+}
+	
 .alignright {
-	margin: $pad;
 	float: right;
 	clear: both;
+	margin-left: $pad;
 	@media all and  (min-width: $bp-xl) {
-		margin-right: $pad;
 		&.size-small  {
 			margin-right: -$small-offset;
 		}
