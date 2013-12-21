@@ -596,61 +596,58 @@ td {
       display: inline;
       margin-bottom: 1rem; } }
 
-/* line 79, ../scss/scss/objects/_layout.scss */
-.alignleft {
-  margin: 1rem;
-  float: left;
-  clear: both; }
-  @media all and (min-width: 73em) {
-    /* line 79, ../scss/scss/objects/_layout.scss */
-    .alignleft {
-      margin-left: 1rem; }
-      /* line 86, ../scss/scss/objects/_layout.scss */
-      .alignleft.size-small {
-        margin-left: -6em; }
-      /* line 89, ../scss/scss/objects/_layout.scss */
-      .alignleft.size-medium, .alignleft.size-full {
-        margin-left: -8em; }
-      /* line 92, ../scss/scss/objects/_layout.scss */
-      .right .alignleft {
-        margin-left: 0px; } }
-
-/* line 97, ../scss/scss/objects/_layout.scss */
-.alignnone {
-  float: left;
-  width: 100%; }
-
 @media all and (min-width: 73em) {
-  /* line 102, ../scss/scss/objects/_layout.scss */
+  /* line 78, ../scss/scss/objects/_layout.scss */
   .wp-caption.alignleft {
     margin-left: -8em; } }
-/* line 106, ../scss/scss/objects/_layout.scss */
+/* line 82, ../scss/scss/objects/_layout.scss */
 .wp-caption.alignleft p.wp-caption-text {
   text-align: right;
   margin-right: 1rem;
   margin-bottom: 0px; }
 
+/* line 88, ../scss/scss/objects/_layout.scss */
+.alignnone {
+  float: left;
+  width: 100%; }
+
+/* line 93, ../scss/scss/objects/_layout.scss */
+.alignleft {
+  float: left;
+  clear: both;
+  margin-right: 1rem; }
+  @media all and (min-width: 73em) {
+    /* line 98, ../scss/scss/objects/_layout.scss */
+    .alignleft.size-small {
+      margin-left: -6em; }
+    /* line 101, ../scss/scss/objects/_layout.scss */
+    .alignleft.size-medium, .alignleft.size-full {
+      margin-left: -8em; }
+    /* line 104, ../scss/scss/objects/_layout.scss */
+    .alignleft.size-large {
+      margin-left: -11em; }
+    /* line 107, ../scss/scss/objects/_layout.scss */
+    .right .alignleft {
+      margin-left: 0px; } }
+
 /* line 113, ../scss/scss/objects/_layout.scss */
 .alignright {
-  margin: 1rem;
   float: right;
-  clear: both; }
+  clear: both;
+  margin-left: 1rem; }
   @media all and (min-width: 73em) {
-    /* line 113, ../scss/scss/objects/_layout.scss */
-    .alignright {
-      margin-right: 1rem; }
-      /* line 119, ../scss/scss/objects/_layout.scss */
-      .alignright.size-small {
-        margin-right: -6em; }
-      /* line 122, ../scss/scss/objects/_layout.scss */
-      .alignright.size-medium, .alignright.size-full {
-        margin-right: -8em; }
-      /* line 125, ../scss/scss/objects/_layout.scss */
-      .alignright.size-large {
-        margin-right: -11em; }
-      /* line 128, ../scss/scss/objects/_layout.scss */
-      .left .alignright {
-        margin-right: 0px; } }
+    /* line 118, ../scss/scss/objects/_layout.scss */
+    .alignright.size-small {
+      margin-right: -6em; }
+    /* line 121, ../scss/scss/objects/_layout.scss */
+    .alignright.size-medium, .alignright.size-full {
+      margin-right: -8em; }
+    /* line 124, ../scss/scss/objects/_layout.scss */
+    .alignright.size-large {
+      margin-right: -11em; }
+    /* line 127, ../scss/scss/objects/_layout.scss */
+    .left .alignright {
+      margin-right: 0px; } }
 
 /*------------------------------------*\
     $PAGE STRUCTURE
@@ -2123,23 +2120,35 @@ article {
     background-origin: content-box;
     background-position: top right;
     background-repeat: no-repeat; }
+  /* line 27, ../scss/scss/objects/_article.scss */
+  article pre {
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */ }
 
 @media all and (min-width: 29.75em) {
-  /* line 32, ../scss/scss/objects/_article.scss */
+  /* line 39, ../scss/scss/objects/_article.scss */
   .featured-image + .entry-content {
     margin-left: 1rem; } }
 
-/* line 41, ../scss/scss/objects/_article.scss */
+/* line 48, ../scss/scss/objects/_article.scss */
 .entry-header h1 {
   font-size: 1.4375em; }
 
-/* line 46, ../scss/scss/objects/_article.scss */
+/* line 53, ../scss/scss/objects/_article.scss */
 .byline {
   font-size: 0.875em;
   margin-bottom: 0.5rem; }
 
 /* Wordpress Caption */
-/* line 52, ../scss/scss/objects/_article.scss */
+/* line 59, ../scss/scss/objects/_article.scss */
 .wp-caption-text {
   font-style: italic; }
 
