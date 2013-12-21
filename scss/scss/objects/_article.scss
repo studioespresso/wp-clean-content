@@ -7,7 +7,7 @@ article {
 	}
 	img {
 		margin-bottom: $pad;
-		display: block;
+		display: block;	
 	}
 	&.quote {
 		margin-bottom: $pad-six;
@@ -16,7 +16,14 @@ article {
 	&.image {
 
 	}
+	&.sticky {
+			padding: $pad;
+			border: 4px dashed $midnight-3;
+
+	}
 }
+
+
 
 .entry-content {
 	.featured-image+& {
@@ -35,7 +42,6 @@ article {
 
 .byline {
 	font-size: $font-size-slightly-smaller;
-	font-style: italic;
 	margin-bottom: $space-half;
 }
 
