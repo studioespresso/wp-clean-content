@@ -11,3 +11,13 @@ header.entry-header {
 .posted-on, .bypostauthor, .byline {
 	font-style: italic;
 }
+
+[rel="tag"]{	
+	&:before {
+		font-family: "SSStandard";
+		content: "tag";
+		color: $midnight-2;
+		font-size: $font-size-sm;
+		margin-right: 6px;
+	}
+} 
