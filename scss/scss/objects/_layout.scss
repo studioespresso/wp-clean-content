@@ -87,8 +87,14 @@
 }
 .alignnone {
 	float: left;
-	width: 100%;
+	max-width: 100%;
 
+}
+.aligncenter {
+	float: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 .alignleft {
 	float: left;
