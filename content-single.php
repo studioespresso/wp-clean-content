@@ -12,11 +12,12 @@
 			<?php clean_content_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
-	<?php if ( has_post_thumbnail()) : ?>
-	  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-	  <?php the_post_thumbnail('full'); ?>
-	  </a>
-	<?php endif; ?>
+	<?php 
+	if ( has_post_thumbnail()) {
+	  $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
+	  the_post_thumbnail('full');
+	}
+	?>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
