@@ -18,8 +18,11 @@ article {
 	}
 	&.sticky {
 			padding: $pad;
-			border: 4px dashed $midnight-3;
-
+			border-bottom: 4px dashed $midnight-3;
+			background-image: url(../img/tag.png);
+			background-origin: content-box;
+			background-position: top right;
+			background-repeat:no-repeat;
 	}
 }
 
