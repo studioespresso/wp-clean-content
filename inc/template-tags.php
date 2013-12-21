@@ -140,7 +140,7 @@ function clean_content_posted_on() {
 		esc_html( get_the_modified_date() )
 		);
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'clean-content' ),
+	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline bypostauthor"> by %2$s</span>', 'clean-content' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string
@@ -158,7 +158,7 @@ if (! function_exists( 'clean_content_meta_categories' ) ):
 	function clean_content_meta_categories() {
 		$categories_list = get_the_category_list( __( ', ', 'clean-content' ) );
 		if ( $categories_list && clean_content_categorized_blog() ) :
-			printf( __( '<span> in %1$s</span>', 'clean-content' ), $categories_list );
+			printf( __( '<span class="byline categories"> in %1$s</span>', 'clean-content' ), $categories_list );
 		endif;
 	}
 	endif;
