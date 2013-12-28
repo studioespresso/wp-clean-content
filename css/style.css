@@ -2219,3 +2219,7 @@ header.entry-header {
   color: #ff8c49;
   font-size: 0.75em;
   margin-right: 6px; }
+
+/* line 1, ../scss/scss/objects/_plugins.scss */
+.widget_woodojo_instagram ul.alignleft li {
+  margin: 0; }
