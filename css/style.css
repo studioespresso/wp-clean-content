@@ -367,33 +367,34 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 /* line 46, ../scss/scss/base/_forms.scss */
 button, input[type="submit"] {
   padding: 0.5rem;
-  background: #333333;
+  background: #ff8c49;
+  color: white;
   cursor: pointer; }
 
-/* line 52, ../scss/scss/base/_forms.scss */
+/* line 53, ../scss/scss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   width: auto;
   margin-right: 0.3em; }
 
-/* line 58, ../scss/scss/base/_forms.scss */
+/* line 59, ../scss/scss/base/_forms.scss */
 input[type="search"] {
   -webkit-appearance: none;
   border-radius: 0; }
 
-/* line 63, ../scss/scss/base/_forms.scss */
+/* line 64, ../scss/scss/base/_forms.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/* line 69, ../scss/scss/base/_forms.scss */
+/* line 70, ../scss/scss/base/_forms.scss */
 .field-container {
   margin-bottom: 1rem; }
 
-/* line 75, ../scss/scss/base/_forms.scss */
+/* line 76, ../scss/scss/base/_forms.scss */
 .inline-form fieldset, .inline-form .inline-container {
   position: relative; }
-/* line 79, ../scss/scss/base/_forms.scss */
+/* line 80, ../scss/scss/base/_forms.scss */
 .inline-form input[type=submit], .inline-form button, .inline-form .btn {
   font-size: 0.875em;
   padding: 0.65rem 1.3rem;
@@ -402,22 +403,22 @@ input[type="search"]::-webkit-search-decoration {
   right: 0;
   z-index: 1;
   width: auto; }
-  /* line 88, ../scss/scss/base/_forms.scss */
+  /* line 89, ../scss/scss/base/_forms.scss */
   .inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
     background: grey;
     color: white; }
 
-/* line 96, ../scss/scss/base/_forms.scss */
+/* line 97, ../scss/scss/base/_forms.scss */
 .inline-search-results-form {
   width: 100%; }
   @media all and (min-width: 46.8em) {
-    /* line 96, ../scss/scss/base/_forms.scss */
+    /* line 97, ../scss/scss/base/_forms.scss */
     .inline-search-results-form {
       width: 82%; } }
-  /* line 103, ../scss/scss/base/_forms.scss */
+  /* line 104, ../scss/scss/base/_forms.scss */
   .inline-search-results-form fieldset, .inline-search-results-form .inline-container {
     position: relative; }
-  /* line 107, ../scss/scss/base/_forms.scss */
+  /* line 108, ../scss/scss/base/_forms.scss */
   .inline-search-results-form input[type=submit], .inline-search-results-form button {
     position: absolute;
     top: 0;
@@ -426,11 +427,11 @@ input[type="search"]::-webkit-search-decoration {
     width: auto; }
 
 /* Validation */
-/* line 117, ../scss/scss/base/_forms.scss */
+/* line 118, ../scss/scss/base/_forms.scss */
 .has-error {
   border-color: red; }
 
-/* line 120, ../scss/scss/base/_forms.scss */
+/* line 121, ../scss/scss/base/_forms.scss */
 .is-valid {
   border-color: #089e00; }
 
@@ -438,11 +439,11 @@ input[type="search"]::-webkit-search-decoration {
     $SPECIFIC FORMS
 \*------------------------------------*/
 /* Search Form */
-/* line 132, ../scss/scss/base/_forms.scss */
+/* line 133, ../scss/scss/base/_forms.scss */
 .search-field {
   padding-right: 3em; }
 
-/* line 135, ../scss/scss/base/_forms.scss */
+/* line 136, ../scss/scss/base/_forms.scss */
 .inline-form .search-submit {
   background: none;
   border: 0;
