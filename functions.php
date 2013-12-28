@@ -38,7 +38,9 @@ function clean_content_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 672, 372, true );
+    add_image_size( 'clean-content-full-width', 1038, 576, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -57,6 +59,8 @@ function clean_content_setup() {
 endif; // clean_content_setup
 add_action( 'after_setup_theme', 'clean_content_setup' );
 
+// This theme uses its own gallery styles.
+add_filter( 'use_default_gallery_style', '__return_false' );
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
@@ -112,6 +116,19 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+add_action( 'init', 'cd_add_editor_styles' );
+/**
+ * Apply theme's stylesheet to the visual editor.
+ *
+ * @uses add_editor_style() Links a stylesheet to visual editor
+ * @uses get_stylesheet_uri() Returns URI of theme stylesheet
+ */
+function cd_add_editor_styles() {
+ 
+    add_editor_style( get_stylesheet_uri() );
+ 
+}
 
 
 function cc_register_theme_customizer( $wp_customize ) {
