@@ -1,5 +1,4 @@
 body {
-	background: #cc0000;
 	font: 100%/1.5 $font;
 	-webkit-text-size-adjust: 100%;
 	color: $gray-dark;
@@ -9,7 +8,7 @@ body {
 }
 
 a {
-	color: lighten($midnight-3, 0%);
+	color: lighten($link, 0%);
 	text-decoration: none;
 	outline: 0;
 	

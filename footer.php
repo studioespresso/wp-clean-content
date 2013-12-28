@@ -16,8 +16,8 @@
 			<?php do_action( 'clean_content_credits' ); ?>
 			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'clean-content' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'clean-content' ), 'Clean Content', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+<!-- 			<?php printf( __( 'Theme: %1$s by %2$s.', 'clean-content' ), 'Clean Content', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+ -->		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #masthead -->
 

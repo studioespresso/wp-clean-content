@@ -17,9 +17,8 @@ article {
 
 	}
 	&.sticky {
-			padding: $pad;
-			border-bottom: 4px dashed $midnight-3;
-			background-image: url(../img/tag.png);
+			padding-bottom: $pad;
+			border-bottom: 2px dashed $link;
 			background-origin: content-box;
 			background-position: top right;
 			background-repeat:no-repeat;

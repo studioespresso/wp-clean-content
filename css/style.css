@@ -188,7 +188,6 @@ header, footer, nav, section, article, hgroup, figure {
 
 /* line 1, ../scss/scss/base/_main.scss */
 body {
-  background: #cc0000;
   font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   -webkit-text-size-adjust: 100%;
   color: #333333;
@@ -196,41 +195,44 @@ body {
   font-family: 'main', sans-serif;
   width: 100%; }
 
-/* line 11, ../scss/scss/base/_main.scss */
+/* line 10, ../scss/scss/base/_main.scss */
 a {
-  color: #68a8bb;
+  color: #ff8c49;
   text-decoration: none;
   outline: 0; }
-  /* line 16, ../scss/scss/base/_main.scss */
+  /* line 15, ../scss/scss/base/_main.scss */
   a:hover, a:focus {
     color: grey; }
 
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
 /* line 3, ../scss/scss/base/_headings.scss */
-h1, .alpha {
+h1 {
   line-height: 1.2; }
 
 /* line 8, ../scss/scss/base/_headings.scss */
-h2, .beta {
+h2 {
   line-height: 1.2; }
+  /* line 10, ../scss/scss/base/_headings.scss */
+  h2.comments-title {
+    margin-bottom: 1rem; }
 
-/* line 12, ../scss/scss/base/_headings.scss */
-h3, .gamma {
+/* line 15, ../scss/scss/base/_headings.scss */
+h3 {
   line-height: 1.2; }
 
 /* Site headings */
-/* line 30, ../scss/scss/base/_headings.scss */
+/* line 33, ../scss/scss/base/_headings.scss */
 h1#site-title {
   line-height: 1.4;
   display: inline; }
 
-/* line 37, ../scss/scss/base/_headings.scss */
+/* line 40, ../scss/scss/base/_headings.scss */
 h2.headline {
   clear: both; }
 
 /* Subheadings */
-/* line 41, ../scss/scss/base/_headings.scss */
+/* line 44, ../scss/scss/base/_headings.scss */
 .subheading {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: normal; }
@@ -350,70 +352,72 @@ button, input, select, textarea {
 
 /* line 31, ../scss/scss/base/_forms.scss */
 input, textarea {
+  background-color: #ffddc8;
+  border: 0px;
   width: 100%;
-  border: 1px solid grey; }
+  padding: 0.5rem 0.65rem; }
+  /* line 36, ../scss/scss/base/_forms.scss */
+  input:focus, textarea:focus {
+    background-color: white; }
 
-/* line 36, ../scss/scss/base/_forms.scss */
+/* line 42, ../scss/scss/base/_forms.scss */
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
   -webkit-appearance: none; }
 
-/* line 40, ../scss/scss/base/_forms.scss */
+/* line 46, ../scss/scss/base/_forms.scss */
 button, input[type="submit"] {
+  padding: 0.5rem;
+  background: #333333;
   cursor: pointer; }
-  /* line 42, ../scss/scss/base/_forms.scss */
-  button.search-submit, input[type="submit"].search-submit {
-    width: 20%; }
 
-/* line 47, ../scss/scss/base/_forms.scss */
+/* line 52, ../scss/scss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   width: auto;
   margin-right: 0.3em; }
 
-/* line 53, ../scss/scss/base/_forms.scss */
+/* line 58, ../scss/scss/base/_forms.scss */
 input[type="search"] {
   -webkit-appearance: none;
-  border-radius: 0;
-  width: 80%; }
+  border-radius: 0; }
 
-/* line 60, ../scss/scss/base/_forms.scss */
+/* line 63, ../scss/scss/base/_forms.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/* line 66, ../scss/scss/base/_forms.scss */
+/* line 69, ../scss/scss/base/_forms.scss */
 .field-container {
   margin-bottom: 1rem; }
 
-/* line 72, ../scss/scss/base/_forms.scss */
+/* line 75, ../scss/scss/base/_forms.scss */
 .inline-form fieldset, .inline-form .inline-container {
   position: relative; }
-/* line 76, ../scss/scss/base/_forms.scss */
+/* line 79, ../scss/scss/base/_forms.scss */
 .inline-form input[type=submit], .inline-form button, .inline-form .btn {
   font-size: 0.875em;
   padding: 0.65rem 1.3rem;
-  background: #333333;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 1;
   width: auto; }
-  /* line 86, ../scss/scss/base/_forms.scss */
+  /* line 88, ../scss/scss/base/_forms.scss */
   .inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
     background: grey;
     color: white; }
 
-/* line 94, ../scss/scss/base/_forms.scss */
+/* line 96, ../scss/scss/base/_forms.scss */
 .inline-search-results-form {
   width: 100%; }
   @media all and (min-width: 46.8em) {
-    /* line 94, ../scss/scss/base/_forms.scss */
+    /* line 96, ../scss/scss/base/_forms.scss */
     .inline-search-results-form {
       width: 82%; } }
-  /* line 101, ../scss/scss/base/_forms.scss */
+  /* line 103, ../scss/scss/base/_forms.scss */
   .inline-search-results-form fieldset, .inline-search-results-form .inline-container {
     position: relative; }
-  /* line 105, ../scss/scss/base/_forms.scss */
+  /* line 107, ../scss/scss/base/_forms.scss */
   .inline-search-results-form input[type=submit], .inline-search-results-form button {
     position: absolute;
     top: 0;
@@ -422,11 +426,11 @@ input[type="search"]::-webkit-search-decoration {
     width: auto; }
 
 /* Validation */
-/* line 115, ../scss/scss/base/_forms.scss */
+/* line 117, ../scss/scss/base/_forms.scss */
 .has-error {
   border-color: red; }
 
-/* line 118, ../scss/scss/base/_forms.scss */
+/* line 120, ../scss/scss/base/_forms.scss */
 .is-valid {
   border-color: #089e00; }
 
@@ -434,16 +438,14 @@ input[type="search"]::-webkit-search-decoration {
     $SPECIFIC FORMS
 \*------------------------------------*/
 /* Search Form */
-/* line 130, ../scss/scss/base/_forms.scss */
+/* line 132, ../scss/scss/base/_forms.scss */
 .search-field {
   padding-right: 3em; }
 
-/* line 133, ../scss/scss/base/_forms.scss */
+/* line 135, ../scss/scss/base/_forms.scss */
 .inline-form .search-submit {
   background: none;
-  padding: 0.78em 1em;
   border: 0;
-  border-left: 1px solid grey;
   color: grey; }
 
 /*------------------------------------*\
@@ -504,10 +506,10 @@ td {
   width: 83.02951%; }
   /* line 8, ../scss/scss/objects/_layout.scss */
   .container.midnight {
-    background: #24282b; }
+    background: #ff8c49; }
   /* line 11, ../scss/scss/objects/_layout.scss */
   .container.light {
-    background: #e5e5e5; }
+    background: #ff8c49; }
 
 /*------------------------------------*\
     $LAYOUT
@@ -609,43 +611,50 @@ td {
 /* line 88, ../scss/scss/objects/_layout.scss */
 .alignnone {
   float: left;
-  width: 100%; }
+  max-width: 100%; }
 
 /* line 93, ../scss/scss/objects/_layout.scss */
+.aligncenter {
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 99, ../scss/scss/objects/_layout.scss */
 .alignleft {
   float: left;
   clear: both;
   margin-right: 1rem; }
   @media all and (min-width: 73em) {
-    /* line 98, ../scss/scss/objects/_layout.scss */
+    /* line 104, ../scss/scss/objects/_layout.scss */
     .alignleft.size-small {
       margin-left: -6em; }
-    /* line 101, ../scss/scss/objects/_layout.scss */
+    /* line 107, ../scss/scss/objects/_layout.scss */
     .alignleft.size-medium, .alignleft.size-full {
       margin-left: -8em; }
-    /* line 104, ../scss/scss/objects/_layout.scss */
+    /* line 110, ../scss/scss/objects/_layout.scss */
     .alignleft.size-large {
       margin-left: -11em; }
-    /* line 107, ../scss/scss/objects/_layout.scss */
+    /* line 113, ../scss/scss/objects/_layout.scss */
     .right .alignleft {
       margin-left: 0px; } }
 
-/* line 113, ../scss/scss/objects/_layout.scss */
+/* line 119, ../scss/scss/objects/_layout.scss */
 .alignright {
   float: right;
   clear: both;
   margin-left: 1rem; }
   @media all and (min-width: 73em) {
-    /* line 118, ../scss/scss/objects/_layout.scss */
+    /* line 124, ../scss/scss/objects/_layout.scss */
     .alignright.size-small {
       margin-right: -6em; }
-    /* line 121, ../scss/scss/objects/_layout.scss */
+    /* line 127, ../scss/scss/objects/_layout.scss */
     .alignright.size-medium, .alignright.size-full {
       margin-right: -8em; }
-    /* line 124, ../scss/scss/objects/_layout.scss */
+    /* line 130, ../scss/scss/objects/_layout.scss */
     .alignright.size-large {
       margin-right: -11em; }
-    /* line 127, ../scss/scss/objects/_layout.scss */
+    /* line 133, ../scss/scss/objects/_layout.scss */
     .left .alignright {
       margin-right: 0px; } }
 
@@ -661,7 +670,7 @@ header[role=banner] {
 
 /* line 9, ../scss/scss/objects/_header.scss */
 #site-title a, .nav a, #site-title a:visited {
-  color: #346674; }
+  color: #ce4c00; }
 
 /* line 13, ../scss/scss/objects/_header.scss */
 .logo {
@@ -715,13 +724,13 @@ header[role=banner] {
     padding: 1rem 1rem 1rem 0;
     margin: 0rem 1rem 0rem 1rem;
     font-weight: bold;
-    color: #569eb3; }
+    color: #ff7c30; }
     /* line 14, ../scss/scss/objects/_nav.scss */
     .site-navigation a.active {
-      color: #121415; }
+      color: #fb5d00; }
     /* line 17, ../scss/scss/objects/_nav.scss */
     .site-navigation a:hover {
-      color: #3b7282;
+      color: #e25300;
       text-decoration: underline; }
   @media all and (min-width: 46.8em) {
     /* line 4, ../scss/scss/objects/_nav.scss */
@@ -2114,13 +2123,12 @@ article {
     margin-top: 6rem; }
   /* line 19, ../scss/scss/objects/_article.scss */
   article.sticky {
-    padding: 1rem;
-    border-bottom: 4px dashed #68a8bb;
-    background-image: url(../img/tag.png);
+    padding-bottom: 1rem;
+    border-bottom: 2px dashed #ff8c49;
     background-origin: content-box;
     background-position: top right;
     background-repeat: no-repeat; }
-  /* line 27, ../scss/scss/objects/_article.scss */
+  /* line 26, ../scss/scss/objects/_article.scss */
   article pre {
     white-space: pre-wrap;
     /* css-3 */
@@ -2134,50 +2142,60 @@ article {
     /* Internet Explorer 5.5+ */ }
 
 @media all and (min-width: 29.75em) {
-  /* line 39, ../scss/scss/objects/_article.scss */
+  /* line 38, ../scss/scss/objects/_article.scss */
   .featured-image + .entry-content {
     margin-left: 1rem; } }
 
-/* line 48, ../scss/scss/objects/_article.scss */
+/* line 47, ../scss/scss/objects/_article.scss */
 .entry-header h1 {
   font-size: 1.4375em; }
 
-/* line 53, ../scss/scss/objects/_article.scss */
+/* line 52, ../scss/scss/objects/_article.scss */
 .byline {
   font-size: 0.875em;
   margin-bottom: 0.5rem; }
 
 /* Wordpress Caption */
-/* line 59, ../scss/scss/objects/_article.scss */
+/* line 58, ../scss/scss/objects/_article.scss */
 .wp-caption-text {
   font-style: italic; }
 
-/* line 2, ../scss/scss/objects/_comments.scss */
-.comments li {
-  margin-bottom: 1rem; }
+/* line 1, ../scss/scss/objects/_comments.scss */
+.wordwrap {
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Firefox */
+  white-space: -pre-wrap;
+  /* Opera <7 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* IE */ }
 
-/* line 7, ../scss/scss/objects/_comments.scss */
-.comment-container {
-  overflow: hidden;
-  margin-bottom: 1rem; }
+/* line 11, ../scss/scss/objects/_comments.scss */
+.comment-meta img {
+  display: block;
+  margin-bottom: 0.5rem;
+  float: right; }
 
-/* line 12, ../scss/scss/objects/_comments.scss */
-.comment-meta {
-  float: left;
-  width: 6.5em; }
-  /* line 16, ../scss/scss/objects/_comments.scss */
-  .comment-meta img {
-    display: block;
-    border: 1px solid #eeeeee;
-    margin-bottom: 0.5rem; }
+/* line 17, ../scss/scss/objects/_comments.scss */
+.comment-content {
+  display: block; }
 
-/* line 23, ../scss/scss/objects/_comments.scss */
-.comment-name {
-  font-size: 0.75em; }
-
-/* line 27, ../scss/scss/objects/_comments.scss */
-.comment-text {
-  margin-left: 9em; }
+/* line 21, ../scss/scss/objects/_comments.scss */
+li.comment {
+  padding: 1rem;
+  word-wrap: break-word; }
+  /* line 24, ../scss/scss/objects/_comments.scss */
+  li.comment:nth-child(odd) {
+    background-color: #fffdfc; }
+  /* line 27, ../scss/scss/objects/_comments.scss */
+  li.comment > ul.children {
+    background-color: #CC0; }
+  /* line 30, ../scss/scss/objects/_comments.scss */
+  li.comment .bypostauthor {
+    background-color: white; }
 
 /* line 1, ../scss/scss/objects/_meta.scss */
 [class^="ss-"]:before {
@@ -2192,3 +2210,11 @@ header.entry-header {
 /* line 11, ../scss/scss/objects/_meta.scss */
 .posted-on, .bypostauthor, .byline {
   font-style: italic; }
+
+/* line 16, ../scss/scss/objects/_meta.scss */
+[rel="tag"]:before {
+  font-family: "SSStandard";
+  content: "tag";
+  color: #ff8c49;
+  font-size: 0.75em;
+  margin-right: 6px; }

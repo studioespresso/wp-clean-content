@@ -1,10 +1,17 @@
+.wordwrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+
 .comment-meta {
-	float: left;
-	width: 35%;
 
 	img {
 		display: block;
 		margin-bottom: $space-half;
+		float: right;
 	}
 }
 .comment-content {
@@ -12,14 +19,15 @@
 }
 
 li.comment  {
+	padding: $pad;
+	word-wrap: break-word;
 	&:nth-child(odd) {
-		background-color: lighten($midnight-3, 35%);
+		background-color: lighten($link, 35%);
 	}
-		> ul.children {
-			background-color: darken($midnight-3, 10%);
-			margin-left: 15%;
+		&>ul.children {
+			background-color: #CC0;
 		}
-	
-}
-
-li:nth-child(5) { margin-left: 0;}
+	& .bypostauthor {
+		background-color: lighten($link, 50%);
+	}
+}	

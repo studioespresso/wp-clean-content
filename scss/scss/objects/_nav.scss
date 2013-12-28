@@ -10,12 +10,12 @@
 		padding: $pad $pad $pad 0;
 		margin: $space-top;
 		font-weight: bold;
-		color: darken($midnight-3, 5%);
+		color: darken($link, 5%);
 		&.active {
-			color: darken($midnight-2, 15%);
+			color: darken($link, 15%);
 		}
 		&:hover {
-			color: darken($midnight-3, 20%);
+			color: darken($link, 20%);
 			text-decoration: underline;
 		}
 	}

@@ -6,10 +6,10 @@
 .container {
 	@include gs-span(cl,2, 11);
 	&.midnight {
-		background: $midnight-background;
+		background: $link;
 	}
 	&.light {
-		background: $light-background;
+		background: $link;
 	}
 	&.blue {
 	}
