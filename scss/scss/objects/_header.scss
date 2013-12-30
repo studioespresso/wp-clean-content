@@ -1,10 +1,4 @@
-header[role=banner] {
-	margin-top: $pad;
-	margin-bottom: $pad;
-	padding: 0;
-	border-bottom: 1px solid #dbdbdb;
-	@extend .lc;
-}
+
 
 #site-title a, .nav a, #site-title a:visited, {
 	color: darken($link, 24%);
@@ -21,20 +15,23 @@ header[role=banner] {
 }
 
 .nav-toggle {
-	float: right;
-	display: block;
-	padding: 0.9rem 1rem 0.7rem;
-	font-size: 1.3rem;
-	line-height: 1;
-	border-left: 1px solid #dbdbdb;
+
 
 	@media all and (min-width: $bp-med) {
 		display: none;
 	}
 }
 
-.header[role=banner] {
-    font-family: 'header', sans-serif;    
+header[role=banner] {
+    font-family: 'header', sans-serif;   
+    border-bottom: 1px dashed $link;
+    margin-bottom: $pad-double;
+    padding-bottom: $pad-double;
+}
+
+.site-branding {
+	max-width: 60%;
+	float: left;
 }
 
 .search-form {

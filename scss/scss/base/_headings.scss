@@ -2,7 +2,9 @@
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
 h1{ 
 	line-height: 1.2;
-
+	&.site-title {
+		font-size: $font-size-large*1.5;
+	}
 }
 
 h2 { 
