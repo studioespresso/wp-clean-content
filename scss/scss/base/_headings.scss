@@ -5,12 +5,18 @@ h1{
 	&.site-title {
 		font-size: $font-size-large*1.5;
 	}
+	&.entry-title {
+		font-size: $font-size-large*1.2;
+	} 
 }
 
 h2 { 
 	line-height: 1.2;
 	&.comments-title {
 		margin-bottom: $pad;
+	}
+	&.linked-list-single {
+		font-size: $font-size-large;
 	}
 }
 
