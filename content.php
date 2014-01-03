@@ -6,17 +6,19 @@
 
 <article  id="post-<?php the_ID(); ?>" <?php post_class('content article'); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
+		<?php if ( has_post_format( 'link' )): ?>
+			<h1 class="entry-title linked-list-item"><a href="<?php echo get_post_meta($post->ID, 'standard_link_url_field', true); ?>" title="<?php printf( esc_attr__( 'Link to %s', 'clean-content' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?> &rarr;</a></h1>
+		<?php else: ?>
+			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<?php endif; ?>
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php clean_content_posted_on(); ?>
-			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+			<div class="entry-meta">
+				<?php clean_content_posted_on(); ?>
+				<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+					<?php clean_content_meta_categories(); ?>
+				<?php endif; // End if 'post' == get_post_type() ?>
 
-			<?php clean_content_meta_categories(); ?>
-			<?php endif; // End if 'post' == get_post_type() ?>
-
-		</div><!-- .entry-meta -->
+			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
