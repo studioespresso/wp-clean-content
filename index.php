@@ -12,7 +12,7 @@
  */
 
 get_header(); ?>
-	<div id="blog" class="page">
+	<div class="page">
 		<div class="main left" >
 
 		<?php if ( have_posts() ) : ?>

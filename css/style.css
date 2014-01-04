@@ -590,51 +590,33 @@ iframe,
 object {
   max-width: 100%; }
 
-/* =Navigation
------------------------------------------------ */
-/* line 451, ../scss/scss/generic/_base.scss */
-.site-main [class*="navigation"] {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
-
-/* line 455, ../scss/scss/generic/_base.scss */
-[class*="navigation"] .nav-previous {
-  float: left;
-  width: 50%; }
-
-/* line 459, ../scss/scss/generic/_base.scss */
-[class*="navigation"] .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
-
 /* =Widgets
 ----------------------------------------------- */
-/* line 471, ../scss/scss/generic/_base.scss */
+/* line 455, ../scss/scss/generic/_base.scss */
 .widget {
   margin: 0 0 1.5em; }
 
 /* Make sure select elements fit in widgets */
-/* line 476, ../scss/scss/generic/_base.scss */
+/* line 460, ../scss/scss/generic/_base.scss */
 .widget select {
   max-width: 100%; }
 
 /* Search widget */
-/* line 481, ../scss/scss/generic/_base.scss */
+/* line 465, ../scss/scss/generic/_base.scss */
 .widget_search .search-submit {
   display: none; }
 
 /* =Infinite Scroll
 ----------------------------------------------- */
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-/* line 490, ../scss/scss/generic/_base.scss */
+/* line 474, ../scss/scss/generic/_base.scss */
 .infinite-scroll .paging-navigation,
 .infinite-scroll.neverending .site-footer {
   /* Theme Footer (when set to scrolling) */
   display: none; }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-/* line 496, ../scss/scss/generic/_base.scss */
+/* line 480, ../scss/scss/generic/_base.scss */
 .infinity-end.neverending .site-footer {
   display: block; }
 
@@ -743,14 +725,15 @@ body {
   margin: 0px;
   font-family: 'main', sans-serif;
   width: 100%;
-  padding: 1rem; }
+  padding: 1rem;
+  height: 100%; }
 
-/* line 11, ../scss/scss/base/_main.scss */
+/* line 12, ../scss/scss/base/_main.scss */
 a {
   color: #189730;
   text-decoration: none;
   outline: 0; }
-  /* line 16, ../scss/scss/base/_main.scss */
+  /* line 17, ../scss/scss/base/_main.scss */
   a:hover, a:focus {
     color: grey; }
 
@@ -905,8 +888,7 @@ button, input, select, textarea {
 
 /* line 31, ../scss/scss/base/_forms.scss */
 input, textarea {
-  background-color: #4ce368;
-  border: 0px;
+  border: 1px solid #189730;
   width: 100%;
   padding: 0.5rem 0.65rem; }
   /* line 36, ../scss/scss/base/_forms.scss */
@@ -1030,19 +1012,21 @@ td {
 #page {
   max-width: 1100px;
   margin: 0px auto;
-  max-height: 100%; }
+  max-height: 100%;
+  min-height: 100%;
+  margin-bottom: -42px; }
 
-/* line 6, ../scss/scss/objects/_layout.scss */
+/* line 10, ../scss/scss/objects/_layout.scss */
 .container {
   display: block;
   float: left;
   margin-left: 8.4592%;
   margin-right: -100%;
   width: 83.02951%; }
-  /* line 8, ../scss/scss/objects/_layout.scss */
+  /* line 12, ../scss/scss/objects/_layout.scss */
   .container.midnight {
     background: #189730; }
-  /* line 11, ../scss/scss/objects/_layout.scss */
+  /* line 15, ../scss/scss/objects/_layout.scss */
   .container.light {
     background: #189730; }
 
@@ -1050,146 +1034,146 @@ td {
     $LAYOUT
 \*------------------------------------*/
 /* Layout Container */
-/* line 24, ../scss/scss/objects/_layout.scss */
+/* line 28, ../scss/scss/objects/_layout.scss */
 .left {
   float: left; }
 
-/* line 27, ../scss/scss/objects/_layout.scss */
+/* line 31, ../scss/scss/objects/_layout.scss */
 .right {
   float: right; }
 
-/* line 31, ../scss/scss/objects/_layout.scss */
+/* line 35, ../scss/scss/objects/_layout.scss */
 .postcontent p {
   text-align: justify; }
 
 /* Two Column Layout */
-/* line 36, ../scss/scss/objects/_layout.scss */
+/* line 40, ../scss/scss/objects/_layout.scss */
 .main {
   max-width: 100%; }
   @media all and (min-width: 50em) {
-    /* line 39, ../scss/scss/objects/_layout.scss */
+    /* line 43, ../scss/scss/objects/_layout.scss */
     .main.page {
       display: block;
       float: left;
       margin-left: 8.4592%;
       margin-right: -100%;
       width: 83.02951%; }
-    /* line 40, ../scss/scss/objects/_layout.scss */
+    /* line 44, ../scss/scss/objects/_layout.scss */
     .main.left {
-      display: block;
-      float: left;
-      margin-left: 0%;
-      margin-right: -100%;
-      width: 74.57031%; }
-    /* line 41, ../scss/scss/objects/_layout.scss */
-    .main.right {
       display: block;
       float: left;
       margin-left: 25.3776%;
       margin-right: -100%;
-      width: 74.57031%; } }
-
-/* line 44, ../scss/scss/objects/_layout.scss */
-.sidebar {
-  height: 100%; }
-  @media all and (max-width: 50em) {
-    /* line 44, ../scss/scss/objects/_layout.scss */
-    .sidebar {
-      display: none; } }
-  @media all and (min-width: 50em) {
-    /* line 51, ../scss/scss/objects/_layout.scss */
-    .sidebar.right {
-      display: block;
-      float: left;
-      margin-left: 76.13281%;
-      margin-right: -100%;
-      width: 23.8151%; }
-    /* line 52, ../scss/scss/objects/_layout.scss */
-    .sidebar.left {
+      width: 74.57031%; }
+    /* line 45, ../scss/scss/objects/_layout.scss */
+    .main.right {
       display: block;
       float: left;
       margin-left: 0%;
       margin-right: -100%;
+      width: 74.57031%; } }
+
+/* line 48, ../scss/scss/objects/_layout.scss */
+.sidebar {
+  height: 100%; }
+  @media all and (max-width: 50em) {
+    /* line 48, ../scss/scss/objects/_layout.scss */
+    .sidebar {
+      display: none; } }
+  @media all and (min-width: 50em) {
+    /* line 54, ../scss/scss/objects/_layout.scss */
+    .left + .sidebar {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 23.8151%; }
+    /* line 55, ../scss/scss/objects/_layout.scss */
+    .right + .sidebar {
+      display: block;
+      float: left;
+      margin-left: 76.13281%;
+      margin-right: -100%;
       width: 23.8151%; } }
 
 /* Image sizes offsets */
-/* line 61, ../scss/scss/objects/_layout.scss */
+/* line 62, ../scss/scss/objects/_layout.scss */
 .size-small {
   max-width: 12em; }
 
-/* line 64, ../scss/scss/objects/_layout.scss */
+/* line 65, ../scss/scss/objects/_layout.scss */
 .size-medium {
   max-width: 16em; }
 
-/* line 68, ../scss/scss/objects/_layout.scss */
+/* line 69, ../scss/scss/objects/_layout.scss */
 .featured-image {
   display: table-cell;
   vertical-align: top;
   margin: 1rem; }
   @media all and (max-width: 29.75em) {
-    /* line 68, ../scss/scss/objects/_layout.scss */
+    /* line 69, ../scss/scss/objects/_layout.scss */
     .featured-image {
       width: 100%;
       display: inline;
       margin-bottom: 1rem; } }
 
 @media all and (min-width: 73em) {
-  /* line 78, ../scss/scss/objects/_layout.scss */
+  /* line 79, ../scss/scss/objects/_layout.scss */
   .wp-caption.alignleft {
     margin-left: -8em; } }
-/* line 82, ../scss/scss/objects/_layout.scss */
+/* line 83, ../scss/scss/objects/_layout.scss */
 .wp-caption.alignleft p.wp-caption-text {
   text-align: right;
   margin-right: 1rem;
   margin-bottom: 0px; }
 
-/* line 88, ../scss/scss/objects/_layout.scss */
+/* line 89, ../scss/scss/objects/_layout.scss */
 .alignnone {
   float: left;
   max-width: 100%; }
 
-/* line 93, ../scss/scss/objects/_layout.scss */
+/* line 94, ../scss/scss/objects/_layout.scss */
 .aligncenter {
   float: none;
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 99, ../scss/scss/objects/_layout.scss */
+/* line 100, ../scss/scss/objects/_layout.scss */
 .alignleft {
   float: left;
   clear: both;
   margin-right: 1rem; }
   @media all and (min-width: 73em) {
-    /* line 104, ../scss/scss/objects/_layout.scss */
+    /* line 105, ../scss/scss/objects/_layout.scss */
     .alignleft.size-small {
       margin-left: -6em; }
-    /* line 107, ../scss/scss/objects/_layout.scss */
+    /* line 108, ../scss/scss/objects/_layout.scss */
     .alignleft.size-medium, .alignleft.size-full {
       margin-left: -8em; }
-    /* line 110, ../scss/scss/objects/_layout.scss */
+    /* line 111, ../scss/scss/objects/_layout.scss */
     .alignleft.size-large {
       margin-left: -11em; }
-    /* line 113, ../scss/scss/objects/_layout.scss */
+    /* line 114, ../scss/scss/objects/_layout.scss */
     .right .alignleft {
       margin-left: 0px; } }
 
-/* line 119, ../scss/scss/objects/_layout.scss */
+/* line 120, ../scss/scss/objects/_layout.scss */
 .alignright {
   float: right;
   clear: both;
   margin-left: 1rem; }
   @media all and (min-width: 73em) {
-    /* line 124, ../scss/scss/objects/_layout.scss */
+    /* line 125, ../scss/scss/objects/_layout.scss */
     .alignright.size-small {
       margin-right: -6em; }
-    /* line 127, ../scss/scss/objects/_layout.scss */
+    /* line 128, ../scss/scss/objects/_layout.scss */
     .alignright.size-medium, .alignright.size-full {
       margin-right: -8em; }
-    /* line 130, ../scss/scss/objects/_layout.scss */
+    /* line 131, ../scss/scss/objects/_layout.scss */
     .alignright.size-large {
       margin-right: -11em; }
-    /* line 133, ../scss/scss/objects/_layout.scss */
+    /* line 134, ../scss/scss/objects/_layout.scss */
     .left .alignright {
       margin-right: 0px; } }
 
@@ -1323,21 +1307,45 @@ li ul.sub-menu {
   /* line 90, ../scss/scss/objects/_nav.scss */
   .main-navigation ul {
     display: none; } }
-/* line 95, ../scss/scss/objects/_nav.scss */
+/* =Navigation
+----------------------------------------------- */
+/* line 98, ../scss/scss/objects/_nav.scss */
+.site-main [class*="navigation"] {
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+
+/* line 105, ../scss/scss/objects/_nav.scss */
 #image-navigation span {
   padding: 0.5rem;
   background-color: #189730;
   color: #fff;
   margin-bottom: 1rem; }
-  /* line 100, ../scss/scss/objects/_nav.scss */
+  /* line 110, ../scss/scss/objects/_nav.scss */
   #image-navigation span.previous-image {
     float: left; }
-  /* line 103, ../scss/scss/objects/_nav.scss */
+  /* line 113, ../scss/scss/objects/_nav.scss */
   #image-navigation span.next-image {
     float: right; }
-  /* line 106, ../scss/scss/objects/_nav.scss */
+  /* line 116, ../scss/scss/objects/_nav.scss */
   #image-navigation span a {
     color: #fff; }
+
+/* line 121, ../scss/scss/objects/_nav.scss */
+.nav-links {
+  background-color: #baf4c5;
+  padding: 1rem; }
+  /* line 124, ../scss/scss/objects/_nav.scss */
+  .nav-links .nav-next, .nav-links a[rel="next"] {
+    float: right; }
+  /* line 127, ../scss/scss/objects/_nav.scss */
+  .nav-links .nav-previous, .nav-links a[rel="previous"] {
+    float: left; }
+  /* line 130, ../scss/scss/objects/_nav.scss */
+  .nav-links a {
+    color: #000; }
+    /* line 132, ../scss/scss/objects/_nav.scss */
+    .nav-links a:hover {
+      text-decoration: underline; }
 
 /*------------------------------------*\
     $FOOTER
@@ -1347,33 +1355,26 @@ li ul.sub-menu {
   clear: both;
   overflow: hidden;
   border-top: 1px solid grey;
-  color: #333333;
   line-height: 1.2; }
-  /* line 11, ../scss/scss/objects/_footer.scss */
-  .footer .lc {
-    padding: 1rem 1rem 0; }
-  /* line 16, ../scss/scss/objects/_footer.scss */
-  .footer a {
-    color: #f9f9f9; }
 
-/* line 24, ../scss/scss/objects/_footer.scss */
+/* line 14, ../scss/scss/objects/_footer.scss */
 .nav-footer {
   margin: -1rem -1rem 1rem; }
-  /* line 27, ../scss/scss/objects/_footer.scss */
+  /* line 17, ../scss/scss/objects/_footer.scss */
   .nav-footer li {
     border-bottom: 1px solid #333333; }
     @media all and (min-width: 46.8em) {
-      /* line 27, ../scss/scss/objects/_footer.scss */
+      /* line 17, ../scss/scss/objects/_footer.scss */
       .nav-footer li {
         border: 0;
         float: left; } }
-  /* line 36, ../scss/scss/objects/_footer.scss */
+  /* line 26, ../scss/scss/objects/_footer.scss */
   .nav-footer a {
     display: block;
     padding: 1rem; }
 
 @media all and (min-width: 46.8em) {
-  /* line 42, ../scss/scss/objects/_footer.scss */
+  /* line 32, ../scss/scss/objects/_footer.scss */
   .copyright {
     float: right; } }
 
