@@ -8,9 +8,11 @@
 	<header class="entry-header">
 		<?php if ( has_post_format( 'link' )): ?>
 			<h1 class="entry-title linked-list-item"><a href="<?php echo get_post_meta($post->ID, 'standard_link_url_field', true); ?>" title="<?php printf( esc_attr__( 'Link to %s', 'clean-content' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?> &rarr;</a></h1>
+		<?php elseif ( has_post_format( 'quote' )): ?>
 		<?php else: ?>
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 		<?php endif; ?>
+		<?php if ( !has_post_format( 'quote' )): ?>
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php clean_content_posted_on(); ?>
@@ -20,6 +22,7 @@
 
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
+	<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
@@ -33,8 +36,18 @@
 		  </a>
 		<?php endif; ?>
 	<div class="entry-content">
-
+	<?php if ( has_post_format( 'quote' )): ?>
+<blockquote>
+<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'clean-content' ) ); ?>
+<small class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></small>
+</blockquote>
+	<?php else: ?>
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'clean-content' ) ); ?>
+
+	<?php endif; ?>
+
+
+
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'clean-content' ),
@@ -43,7 +56,7 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-
+	<?php if ( !has_post_format( 'quote' )): ?>
 	<footer class="entry-meta">
 	<?php if ( has_post_format( 'link' )): ?>
 		<span class="permalink-title"><a href="<?php the_permalink(); ?>" rel="bookmark">&infin;</a></span>
@@ -66,4 +79,5 @@
 
 		<?php edit_post_link( __( 'Edit', 'clean-content' ), '<span class="edit-link">| ', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
+<?php endif; ?>
 </article><!-- #post-## -->
