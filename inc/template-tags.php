@@ -56,8 +56,8 @@ function clean_content_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'clean-content' ); ?></h1>
 		<div class="nav-links">
 
-			<?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'clean-content' ) ); ?>
-			<?php next_post_link(     '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'clean-content' ) ); ?>
+			<?php previous_post_link( '%link', _x( '<span class="meta-nav previous">&larr;</span> %title', 'Previous post link', 'clean-content' ) ); ?>
+			<?php next_post_link(     '%link', _x( '%title <span class="meta-nav next">&rarr;</span>', 'Next post link',     'clean-content' ) ); ?>
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
