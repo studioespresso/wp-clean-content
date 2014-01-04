@@ -5,14 +5,37 @@
 .main-navigation {
 	display: inline;
 	float: right;
-	max-width: 35%;
 }
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-
+	li {
+		display: inline-block;
+		position: relative;
+	}
 }
+li ul.sub-menu {
+	background-color: lighten($link, 50%);
+	margin-top: 20px;
+	border-top: 0;
+	padding: 0;
+	position: absolute;
+	left: -2px;
+	li a {
+			display: block;
+			font-size: $font-size-sm;
+			color: #000;
+		}
+		:hover {
+			background-color: $link;
+			a { 
+				color: #fff;
+			}
+		}
+}
+
+
 .main-navigation li {
 	float: left;
 	padding: $pad;
