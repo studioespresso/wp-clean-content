@@ -6,12 +6,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+
 		<?php if ( has_post_format( 'link' )): ?>
-			<h2 class="entry-title linked-list-single">
-				<a href="<?php echo get_post_meta($post->ID, 'standard_link_url_field', true); ?>" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?> &rarr;</a></h2>
+			<h1 class="entry-title linked-list-single">
+				<a href="<?php echo get_post_meta($post->ID, 'standard_link_url_field', true); ?>" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?> &rarr;</a></h1>
 			<?php else: ?>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php endif; ?>
+			
 			<div class="entry-meta">
 				<?php clean_content_posted_on(); ?>
 			</div><!-- .entry-meta -->
