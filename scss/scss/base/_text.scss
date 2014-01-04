@@ -14,11 +14,12 @@ blockquote {
     color: $black;
     padding-left: $pad;
     margin-bottom: $space;
-    .citation {
+    small {
         padding-top: $pad; 
         font-style: none;
+        font-size: $font-size-norm;
         a {
-            text-decoration: underline;
+            font-size: $font-size-slightly-larger;
         }
     }
 }

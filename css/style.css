@@ -808,15 +808,16 @@ blockquote {
   padding-left: 1rem;
   margin-bottom: 1rem; }
   /* line 17, ../scss/scss/base/_text.scss */
-  blockquote .citation {
+  blockquote small {
     padding-top: 1rem;
-    font-style: none; }
-    /* line 20, ../scss/scss/base/_text.scss */
-    blockquote .citation a {
-      text-decoration: underline; }
+    font-style: none;
+    font-size: 1em; }
+    /* line 21, ../scss/scss/base/_text.scss */
+    blockquote small a {
+      font-size: 1.3625em; }
 
 /* Horizontal Rule */
-/* line 27, ../scss/scss/base/_text.scss */
+/* line 28, ../scss/scss/base/_text.scss */
 hr {
   border: 0;
   height: 2px;
@@ -824,7 +825,7 @@ hr {
   margin: 2rem 0;
   clear: both; }
 
-/* line 35, ../scss/scss/base/_text.scss */
+/* line 36, ../scss/scss/base/_text.scss */
 abbr {
   border-bottom: 1px dotted grey;
   cursor: help; }

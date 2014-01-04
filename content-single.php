@@ -28,7 +28,7 @@
 	?>
 	<div class="entry-content">
 	<?php if ( has_post_format( 'quote' )): ?>
-<blockquote>
+<blockquote class="quote single">
 		<?php the_content(); ?>
 		<small class="entry-title"><?php the_title(); ?></small>
 

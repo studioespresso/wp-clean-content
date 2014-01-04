@@ -37,7 +37,7 @@
 		<?php endif; ?>
 	<div class="entry-content">
 	<?php if ( has_post_format( 'quote' )): ?>
-<blockquote>
+<blockquote class="quote">
 <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'clean-content' ) ); ?>
 <small class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></small>
 </blockquote>
