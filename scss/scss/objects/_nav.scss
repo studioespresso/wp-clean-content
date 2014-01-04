@@ -69,3 +69,19 @@
 	}
 }
 
+#image-navigation span {
+	padding: $space-half;
+	background-color: $link;
+	color: #fff;
+	margin-bottom: $pad;
+	&.previous-image {
+		float: left;
+	}
+	&.next-image {
+		float: right;
+	}
+	a {
+		color: #fff;
+	}
+}
+
