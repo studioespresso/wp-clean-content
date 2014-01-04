@@ -3,10 +3,10 @@
 h1{ 
 	line-height: 1.2;
 	&.site-title {
-		font-size: $font-size-large*1.5;
+		font-size: $font-size-larger;
 	}
-	&.entry-title {
-		font-size: $font-size-large*1.2;
+	&.entry-title, &.linked-list-single {
+		font-size: $font-size-larger;
 	} 
 }
 
@@ -14,9 +14,6 @@ h2 {
 	line-height: 1.2;
 	&.comments-title {
 		margin-bottom: $pad;
-	}
-	&.linked-list-single {
-		font-size: $font-size-large;
 	}
 }
 

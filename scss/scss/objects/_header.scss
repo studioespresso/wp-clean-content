@@ -1,5 +1,3 @@
-
-
 #site-title a, .nav a, #site-title a:visited, {
 	color: darken($link, 24%);
 } 
@@ -14,12 +12,9 @@
 	}
 }
 
-.nav-toggle {
-
-
-	@media all and (min-width: $bp-med) {
-		display: none;
-	}
+header#masthead {
+	padding-top: $pad;
+	padding-bottom: $pad;
 }
 
 header[role=banner] {

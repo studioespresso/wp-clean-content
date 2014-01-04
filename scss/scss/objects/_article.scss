@@ -19,10 +19,8 @@ article {
 	&.sticky {
 			padding-bottom: $pad;
 			border-bottom: 2px dashed $link;
-			background-origin: content-box;
-			background-position: top right;
-			background-repeat:no-repeat;
-	}
+
+			}
 	pre {
 	 white-space: pre-wrap;       /* css-3 */
 	 white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -32,20 +30,11 @@ article {
 	}
 }
 
-
-
 .entry-content {
 	.featured-image+& {
 		@media all and  (min-width: $bp-small-2) {
 			margin-left: $pad;	
 		}
-	}
-}
-
-
-.entry-header {
-	h1 {
-		font-size: $font-size-large;
 	}
 }
 
@@ -58,4 +47,3 @@ article {
 .wp-caption-text {
 	font-style: italic;
 }
-

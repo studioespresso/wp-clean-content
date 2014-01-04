@@ -12,7 +12,6 @@ blockquote {
     margin-top: $space-quad;
     margin-bottom: $space-quad;
     font-style: italic;
-    font-size: $font-size-larger;
     border-left: 7px solid $gray-light-4;
     color: $black;
     padding-left: $pad;
@@ -22,7 +21,6 @@ blockquote {
         font-style: none;
         a {
             text-decoration: underline;
-            font-size: $font-size-slightly-smaller;
         }
     }
 }

@@ -646,18 +646,18 @@ object {
 \*------------------------------------*/
 /* Clearfix */
 /* line 6, ../scss/scss/base/_global-classes.scss */
-.cf, [role=main] {
+.cf {
   *zoom: 1; }
 
 /* line 9, ../scss/scss/base/_global-classes.scss */
-.cf:before, [role=main]:before, .cf:after, [role=main]:after {
+.cf:before, .cf:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
 /* line 14, ../scss/scss/base/_global-classes.scss */
-.cf:after, [role=main]:after {
+.cf:after {
   clear: both; }
 
 /* Completely remove from the flow and screen readers. */
@@ -742,14 +742,15 @@ body {
   color: #333333;
   margin: 0px;
   font-family: 'main', sans-serif;
-  width: 100%; }
+  width: 100%;
+  padding: 1rem; }
 
-/* line 10, ../scss/scss/base/_main.scss */
+/* line 11, ../scss/scss/base/_main.scss */
 a {
   color: #ff8c49;
   text-decoration: none;
   outline: 0; }
-  /* line 15, ../scss/scss/base/_main.scss */
+  /* line 16, ../scss/scss/base/_main.scss */
   a:hover, a:focus {
     color: grey; }
 
@@ -760,31 +761,34 @@ h1 {
   line-height: 1.2; }
   /* line 5, ../scss/scss/base/_headings.scss */
   h1.site-title {
-    font-size: 2.15625em; }
+    font-size: 1.8em; }
+  /* line 8, ../scss/scss/base/_headings.scss */
+  h1.entry-title, h1.linked-list-single {
+    font-size: 1.8em; }
 
-/* line 10, ../scss/scss/base/_headings.scss */
+/* line 13, ../scss/scss/base/_headings.scss */
 h2 {
   line-height: 1.2; }
-  /* line 12, ../scss/scss/base/_headings.scss */
+  /* line 15, ../scss/scss/base/_headings.scss */
   h2.comments-title {
     margin-bottom: 1rem; }
 
-/* line 17, ../scss/scss/base/_headings.scss */
+/* line 20, ../scss/scss/base/_headings.scss */
 h3 {
   line-height: 1.2; }
 
 /* Site headings */
-/* line 35, ../scss/scss/base/_headings.scss */
+/* line 38, ../scss/scss/base/_headings.scss */
 h1#site-title {
   line-height: 1.4;
   display: inline; }
 
-/* line 42, ../scss/scss/base/_headings.scss */
+/* line 45, ../scss/scss/base/_headings.scss */
 h2.headline {
   clear: both; }
 
 /* Subheadings */
-/* line 46, ../scss/scss/base/_headings.scss */
+/* line 49, ../scss/scss/base/_headings.scss */
 .subheading {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: normal; }
@@ -1020,25 +1024,6 @@ td {
   border: 1px solid grey;
   padding: 0.2em; }
 
-/* line 1, ../scss/scss/base/_animation.scss */
-.animate-fade {
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -ms-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out; }
-  /* line 4, ../scss/scss/base/_animation.scss */
-  .animate-fade:hover {
-    opacity: 0; }
-
-/* line 10, ../scss/scss/base/_animation.scss */
-.animate-move > .demo-shape {
-  -webkit-transition: all 0.8s ease-in-out;
-  -moz-transition: all 0.8s ease-in-out;
-  -ms-transition: all 0.8s ease-in-out;
-  -o-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out; }
-
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
@@ -1212,43 +1197,43 @@ td {
 /*------------------------------------*\
     $PAGE STRUCTURE
 \*------------------------------------*/
-/* line 3, ../scss/scss/objects/_header.scss */
+/* line 1, ../scss/scss/objects/_header.scss */
 #site-title a, .nav a, #site-title a:visited {
   color: #ce4c00; }
 
-/* line 7, ../scss/scss/objects/_header.scss */
+/* line 5, ../scss/scss/objects/_header.scss */
 .logo {
   float: left;
   max-width: 8rem;
   margin: 0.4rem; }
   @media all and (min-width: 46.8em) {
-    /* line 7, ../scss/scss/objects/_header.scss */
+    /* line 5, ../scss/scss/objects/_header.scss */
     .logo {
       max-width: 9rem; } }
 
-@media all and (min-width: 46.8em) {
-  /* line 17, ../scss/scss/objects/_header.scss */
-  .nav-toggle {
-    display: none; } }
+/* line 15, ../scss/scss/objects/_header.scss */
+header#masthead {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 
-/* line 25, ../scss/scss/objects/_header.scss */
+/* line 20, ../scss/scss/objects/_header.scss */
 header[role=banner] {
   font-family: 'header', sans-serif;
   border-bottom: 1px dashed #ff8c49;
   margin-bottom: 2rem;
   padding-bottom: 2rem; }
 
-/* line 32, ../scss/scss/objects/_header.scss */
+/* line 27, ../scss/scss/objects/_header.scss */
 .site-branding {
   max-width: 60%;
   float: left; }
 
-/* line 37, ../scss/scss/objects/_header.scss */
+/* line 32, ../scss/scss/objects/_header.scss */
 .search-form {
   overflow: hidden;
   max-height: 0; }
   @media all and (min-width: 46.8em) {
-    /* line 37, ../scss/scss/objects/_header.scss */
+    /* line 32, ../scss/scss/objects/_header.scss */
     .search-form {
       float: right;
       max-height: none;
@@ -1316,12 +1301,21 @@ header[role=banner] {
   /* line 67, ../scss/scss/objects/_nav.scss */
   .main-navigation ul {
     display: none; } }
-/*------------------------------------*\
-    $MAIN CONTENT AREA
-\*------------------------------------*/
-/* line 4, ../scss/scss/objects/_main.scss */
-[role=main] {
-  padding: 0.5rem 0.5rem 2rem; }
+/* line 72, ../scss/scss/objects/_nav.scss */
+#image-navigation span {
+  padding: 0.5rem;
+  background-color: #ff8c49;
+  color: #fff;
+  margin-bottom: 1rem; }
+  /* line 77, ../scss/scss/objects/_nav.scss */
+  #image-navigation span.previous-image {
+    float: left; }
+  /* line 80, ../scss/scss/objects/_nav.scss */
+  #image-navigation span.next-image {
+    float: right; }
+  /* line 83, ../scss/scss/objects/_nav.scss */
+  #image-navigation span a {
+    color: #fff; }
 
 /*------------------------------------*\
     $FOOTER
@@ -1334,7 +1328,7 @@ header[role=banner] {
   color: #333333;
   line-height: 1.2; }
   /* line 11, ../scss/scss/objects/_footer.scss */
-  .footer .lc, .footer [role=main] {
+  .footer .lc {
     padding: 1rem 1rem 0; }
   /* line 16, ../scss/scss/objects/_footer.scss */
   .footer a {
@@ -2384,124 +2378,6 @@ html:hover [class^="ss-"] {
 .text-btn {
   font-style: italic; }
 
-/* Generic Placeholder Brick: REMOVE FOR PRODUCTION */
-/* line 2, ../scss/scss/objects/_blocks.scss */
-.brick {
-  background: #dcdddc;
-  padding: 2rem;
-  text-align: center;
-  font-weight: bold;
-  border-bottom: 1px solid #eeeeee; }
-
-/* Block */
-/* line 11, ../scss/scss/objects/_blocks.scss */
-.block {
-  overflow: hidden; }
-  /* line 14, ../scss/scss/objects/_blocks.scss */
-  .block p:last-child {
-    margin-bottom: 0; }
-
-/* line 19, ../scss/scss/objects/_blocks.scss */
-.headline {
-  line-height: 1.2; }
-
-/* Hero Block */
-/* line 24, ../scss/scss/objects/_blocks.scss */
-.block-hero {
-  margin-bottom: 0.5rem; }
-  /* line 28, ../scss/scss/objects/_blocks.scss */
-  .block-hero .b-thumb img {
-    display: block; }
-  @media all and (min-width: 50em) {
-    /* line 24, ../scss/scss/objects/_blocks.scss */
-    .block-hero {
-      position: relative; }
-      /* line 36, ../scss/scss/objects/_blocks.scss */
-      .block-hero .b-text {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        padding: 1.5rem; } }
-
-/* Block Thumbnail with Headline */
-/* line 49, ../scss/scss/objects/_blocks.scss */
-.block-thumb {
-  display: table;
-  width: 100%;
-  border-collapse: collapse; }
-  /* line 54, ../scss/scss/objects/_blocks.scss */
-  .block-thumb .b-inner {
-    display: table-row;
-    vertical-align: top;
-    overflow: hidden; }
-  @media all and (min-width: 29.75em) {
-    /* line 60, ../scss/scss/objects/_blocks.scss */
-    .block-thumb .b-thumb {
-      display: table-cell;
-      vertical-align: top;
-      width: 30%;
-      max-width: 10em; }
-      /* line 67, ../scss/scss/objects/_blocks.scss */
-      .block-thumb .b-thumb img {
-        display: block;
-        width: 100%;
-        height: auto; } }
-  @media all and (min-width: 29.75em) {
-    /* line 75, ../scss/scss/objects/_blocks.scss */
-    .block-thumb .b-text {
-      display: table-cell;
-      width: 70%;
-      padding: 0 1rem; } }
-
-/* Block Headline Summary */
-/* line 87, ../scss/scss/objects/_blocks.scss */
-.block-headline-summary a {
-  display: block;
-  padding: 0.5rem; }
-
-/* Block Inset */
-/* line 94, ../scss/scss/objects/_blocks.scss */
-.block-inset {
-  position: relative; }
-  /* line 97, ../scss/scss/objects/_blocks.scss */
-  .block-inset .b-thumb {
-    position: relative;
-    z-index: 0; }
-    /* line 101, ../scss/scss/objects/_blocks.scss */
-    .block-inset .b-thumb img {
-      display: block; }
-
-/* Hero Block */
-/* line 108, ../scss/scss/objects/_blocks.scss */
-.block-inset {
-  margin-bottom: 0.5rem;
-  position: relative; }
-  /* line 112, ../scss/scss/objects/_blocks.scss */
-  .block-inset .headline {
-    font-size: 1.1em; }
-  /* line 116, ../scss/scss/objects/_blocks.scss */
-  .block-inset .b-text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 0.5rem; }
-
-/* Block Thumb with Summary */
-/* line 129, ../scss/scss/objects/_blocks.scss */
-.block-thumb-summary .b-thumb {
-  float: left;
-  width: 50%; }
-/* line 134, ../scss/scss/objects/_blocks.scss */
-.block-thumb-summary .b-text {
-  margin-left: 50%;
-  padding: 0.5rem; }
-
 /* line 2, ../scss/scss/objects/_lists.scss */
 .inline-list li {
   display: inline-block; }
@@ -2592,35 +2468,6 @@ html:hover [class^="ss-"] {
     .tooltip {
       width: 30em; } }
 
-/* line 1, ../scss/scss/objects/_accordion.scss */
-.accordion {
-  margin-bottom: 1rem; }
-
-/* line 5, ../scss/scss/objects/_accordion.scss */
-.acc-handle {
-  background: #131313;
-  color: white;
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-weight: bold;
-  display: block;
-  position: relative;
-  padding: 0.5rem;
-  border-bottom: 1px solid #dddddd; }
-  /* line 15, ../scss/scss/objects/_accordion.scss */
-  .acc-handle:after {
-    content: "+";
-    float: right; }
-  /* line 20, ../scss/scss/objects/_accordion.scss */
-  .acc-handle:hover {
-    color: white;
-    background: #333333; }
-  /* line 26, ../scss/scss/objects/_accordion.scss */
-  .acc-handle.active {
-    background: #333333; }
-    /* line 29, ../scss/scss/objects/_accordion.scss */
-    .acc-handle.active:after {
-      content: "-"; }
-
 /* line 1, ../scss/scss/objects/_tabs.scss */
 .tabs {
   overflow: hidden; }
@@ -2678,11 +2525,8 @@ article {
   /* line 19, ../scss/scss/objects/_article.scss */
   article.sticky {
     padding-bottom: 1rem;
-    border-bottom: 2px dashed #ff8c49;
-    background-origin: content-box;
-    background-position: top right;
-    background-repeat: no-repeat; }
-  /* line 26, ../scss/scss/objects/_article.scss */
+    border-bottom: 2px dashed #ff8c49; }
+  /* line 24, ../scss/scss/objects/_article.scss */
   article pre {
     white-space: pre-wrap;
     /* css-3 */
@@ -2696,21 +2540,17 @@ article {
     /* Internet Explorer 5.5+ */ }
 
 @media all and (min-width: 29.75em) {
-  /* line 38, ../scss/scss/objects/_article.scss */
+  /* line 34, ../scss/scss/objects/_article.scss */
   .featured-image + .entry-content {
     margin-left: 1rem; } }
 
-/* line 47, ../scss/scss/objects/_article.scss */
-.entry-header h1 {
-  font-size: 1.4375em; }
-
-/* line 52, ../scss/scss/objects/_article.scss */
+/* line 41, ../scss/scss/objects/_article.scss */
 .byline {
   font-size: 0.875em;
   margin-bottom: 0.5rem; }
 
 /* Wordpress Caption */
-/* line 58, ../scss/scss/objects/_article.scss */
+/* line 47, ../scss/scss/objects/_article.scss */
 .wp-caption-text {
   font-style: italic; }
 
@@ -2758,7 +2598,7 @@ li.comment {
   font-size: 0.875em; }
 
 /* line 7, ../scss/scss/objects/_meta.scss */
-header.entry-header {
+header.entry-header, .entry-meta {
   margin-bottom: 0.5rem; }
 
 /* line 11, ../scss/scss/objects/_meta.scss */
