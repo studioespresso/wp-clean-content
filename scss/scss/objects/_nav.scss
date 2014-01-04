@@ -92,6 +92,16 @@ li ul.sub-menu {
 	}
 }
 
+/* =Navigation
+----------------------------------------------- */
+
+.site-main [class*="navigation"] {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+
+
 #image-navigation span {
 	padding: $space-half;
 	background-color: $link;
@@ -107,4 +117,22 @@ li ul.sub-menu {
 		color: #fff;
 	}
 }
+
+.nav-links {
+	background-color: lighten($link, 50%);
+	padding: $pad;
+	.nav-next, a[rel="next"] {
+		float: right;
+	}
+	.nav-previous, a[rel="previous"] {
+		float: left;
+	}
+	a {
+		color: #000;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
 

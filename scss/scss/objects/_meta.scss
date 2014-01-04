@@ -22,18 +22,3 @@ header.entry-header, .entry-meta {
 	}
 } 
 
-.nav-links {
-	background-color: lighten($link, 50%);
-	margin-bottom: $pad;
-
-	padding: $pad;
-	a {
-		color: #000;
-		&[rel="previous"] {
-			float: left;
-		}
-		&[rel="next"] {
-			float: right;
-		}
-	}
-}
