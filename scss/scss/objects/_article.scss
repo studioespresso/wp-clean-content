@@ -1,12 +1,18 @@
 //Article
 article {
+	&.post {
+		margin-top: $pad-quad;
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
 	vertical-align: top;
 	margin-bottom: $pad-double;	
 	p {
 		text-align: justify;
 	}
 	img {
-		margin-bottom: $pad;
+		margin: $pad;
 		display: block;	
 	}
 	&.quote {

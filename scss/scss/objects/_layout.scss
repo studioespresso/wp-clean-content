@@ -111,7 +111,7 @@
 		&.size-large {
 			margin-left: -$large-offset;
 		}
-		.right & {
+		.left & {
 			margin-left: 0px;
 		}
 	}
@@ -131,7 +131,7 @@
 		&.size-large {
 			margin-right: -$large-offset;
 		}
-		.left & {
+		.right & {
 			margin-right: 0px;
 		}
 	}
