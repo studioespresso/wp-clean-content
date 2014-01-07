@@ -11,8 +11,13 @@ article {
 	p {
 		text-align: justify;
 	}
+	dt.gallery-item img {
+		margin-bottom: $pad;
+		display: block;	
+	} 
 	img {
-		margin: $pad;
+		margin-bottom: $pad;
+		margin-top: $pad;
 		display: block;	
 	}
 	&.quote {
@@ -20,7 +25,6 @@ article {
 		margin-top: $pad-six;
 	}
 	&.image {
-
 	}
 	&.sticky {
 			padding-bottom: $pad;
@@ -52,4 +56,13 @@ article {
 /* Wordpress Caption */
 .wp-caption-text {
 	font-style: italic;
+}
+
+.gallery img {
+	margin-bottom: $pad;
+	margin-top: 0;
+}
+
+dd.gallery-caption {
+	bottom: 10px;
 }

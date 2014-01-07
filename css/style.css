@@ -659,7 +659,7 @@ object {
 /* line 36, ../scss/scss/base/_global-classes.scss */
 .right {
   float: right;
-  padding: 0 0 1rem 1rem; }
+  padding: 0 0 0 0; }
 
 /* line 41, ../scss/scss/base/_global-classes.scss */
 .right-search {
@@ -669,7 +669,7 @@ object {
 /* line 46, ../scss/scss/base/_global-classes.scss */
 .left {
   float: left;
-  padding: 0 1rem 1rem 0; }
+  padding: 0 0 0 0; }
 
 /* Text-Align */
 /* line 52, ../scss/scss/base/_global-classes.scss */
@@ -1149,7 +1149,7 @@ td {
     .alignleft.size-large {
       margin-left: -11em; }
     /* line 114, ../scss/scss/objects/_layout.scss */
-    .right .alignleft {
+    .left .alignleft {
       margin-left: 0px; } }
 
 /* line 120, ../scss/scss/objects/_layout.scss */
@@ -1168,7 +1168,7 @@ td {
     .alignright.size-large {
       margin-right: -11em; }
     /* line 134, ../scss/scss/objects/_layout.scss */
-    .left .alignright {
+    .right .alignright {
       margin-right: 0px; } }
 
 /*------------------------------------*\
@@ -2446,22 +2446,33 @@ html:hover [class^="ss-"] {
 article {
   vertical-align: top;
   margin-bottom: 2rem; }
-  /* line 5, ../scss/scss/objects/_article.scss */
+  /* line 3, ../scss/scss/objects/_article.scss */
+  article.post {
+    margin-top: 4rem; }
+    /* line 5, ../scss/scss/objects/_article.scss */
+    article.post:first-of-type {
+      margin-top: 0; }
+  /* line 11, ../scss/scss/objects/_article.scss */
   article p {
     text-align: justify; }
-  /* line 8, ../scss/scss/objects/_article.scss */
-  article img {
+  /* line 14, ../scss/scss/objects/_article.scss */
+  article dt.gallery-item img {
     margin-bottom: 1rem;
     display: block; }
-  /* line 12, ../scss/scss/objects/_article.scss */
+  /* line 18, ../scss/scss/objects/_article.scss */
+  article img {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: block; }
+  /* line 23, ../scss/scss/objects/_article.scss */
   article.quote {
     margin-bottom: 6rem;
     margin-top: 6rem; }
-  /* line 19, ../scss/scss/objects/_article.scss */
+  /* line 29, ../scss/scss/objects/_article.scss */
   article.sticky {
     padding-bottom: 1rem;
     border-bottom: 2px dashed #189730; }
-  /* line 24, ../scss/scss/objects/_article.scss */
+  /* line 34, ../scss/scss/objects/_article.scss */
   article pre {
     white-space: pre-wrap;
     /* css-3 */
@@ -2475,19 +2486,28 @@ article {
     /* Internet Explorer 5.5+ */ }
 
 @media all and (min-width: 29.75em) {
-  /* line 34, ../scss/scss/objects/_article.scss */
+  /* line 44, ../scss/scss/objects/_article.scss */
   .featured-image + .entry-content {
     margin-left: 1rem; } }
 
-/* line 41, ../scss/scss/objects/_article.scss */
+/* line 51, ../scss/scss/objects/_article.scss */
 .byline {
   font-size: 0.875em;
   margin-bottom: 0.5rem; }
 
 /* Wordpress Caption */
-/* line 47, ../scss/scss/objects/_article.scss */
+/* line 57, ../scss/scss/objects/_article.scss */
 .wp-caption-text {
   font-style: italic; }
+
+/* line 61, ../scss/scss/objects/_article.scss */
+.gallery img {
+  margin-bottom: 1rem;
+  margin-top: 0; }
+
+/* line 66, ../scss/scss/objects/_article.scss */
+dd.gallery-caption {
+  bottom: 10px; }
 
 /* line 1, ../scss/scss/objects/_comments.scss */
 .wordwrap {
