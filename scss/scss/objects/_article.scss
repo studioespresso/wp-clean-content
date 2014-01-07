@@ -6,6 +6,10 @@ article {
 			margin-top: 0;
 		}
 	}
+	&.format-quote {
+		margin-top: $space-quad*2;
+		margin-bottom: $space-quad*2;
+	}
 	vertical-align: top;
 	margin-bottom: $pad-double;	
 	p {
