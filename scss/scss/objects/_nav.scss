@@ -79,12 +79,15 @@ li ul.sub-menu {
 .menu-toggle {
 	cursor: pointer;
 	display: none;
+	color: #189730;
+	font-size: 2.5em;
 }
 
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
+		position: relative;
 	}
 
 	.main-navigation ul {
@@ -121,10 +124,11 @@ li ul.sub-menu {
 .nav-links {
 	background-color: lighten($link, 50%);
 	padding: $pad;
-	.nav-next, a[rel="next"] {
+	display: block;
+	a[rel="next"]  {
 		float: right;
 	}
-	.nav-previous, a[rel="previous"] {
+	a[rel="previous"] {
 		float: left;
 	}
 	a {

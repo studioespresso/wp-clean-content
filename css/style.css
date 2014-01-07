@@ -794,13 +794,11 @@ blockquote {
   blockquote small {
     padding-top: 1rem;
     font-style: none;
-    font-size: 1em; }
-    /* line 21, ../scss/scss/base/_text.scss */
-    blockquote small a {
-      font-size: 0.875em; }
+    font-size: 0.875em;
+    display: block; }
 
 /* Horizontal Rule */
-/* line 28, ../scss/scss/base/_text.scss */
+/* line 27, ../scss/scss/base/_text.scss */
 hr {
   border: 0;
   height: 2px;
@@ -808,7 +806,7 @@ hr {
   margin: 2rem 0;
   clear: both; }
 
-/* line 36, ../scss/scss/base/_text.scss */
+/* line 35, ../scss/scss/base/_text.scss */
 abbr {
   border-bottom: 1px dotted grey;
   cursor: help; }
@@ -1296,54 +1294,58 @@ li ul.sub-menu {
 /* line 79, ../scss/scss/objects/_nav.scss */
 .menu-toggle {
   cursor: pointer;
-  display: none; }
+  display: none;
+  color: #189730;
+  font-size: 2.5em; }
 
 @media screen and (max-width: 600px) {
-  /* line 85, ../scss/scss/objects/_nav.scss */
+  /* line 87, ../scss/scss/objects/_nav.scss */
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
-    display: block; }
+    display: block;
+    position: relative; }
 
-  /* line 90, ../scss/scss/objects/_nav.scss */
+  /* line 93, ../scss/scss/objects/_nav.scss */
   .main-navigation ul {
     display: none; } }
 /* =Navigation
 ----------------------------------------------- */
-/* line 98, ../scss/scss/objects/_nav.scss */
+/* line 101, ../scss/scss/objects/_nav.scss */
 .site-main [class*="navigation"] {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
-/* line 105, ../scss/scss/objects/_nav.scss */
+/* line 108, ../scss/scss/objects/_nav.scss */
 #image-navigation span {
   padding: 0.5rem;
   background-color: #189730;
   color: #fff;
   margin-bottom: 1rem; }
-  /* line 110, ../scss/scss/objects/_nav.scss */
+  /* line 113, ../scss/scss/objects/_nav.scss */
   #image-navigation span.previous-image {
     float: left; }
-  /* line 113, ../scss/scss/objects/_nav.scss */
+  /* line 116, ../scss/scss/objects/_nav.scss */
   #image-navigation span.next-image {
     float: right; }
-  /* line 116, ../scss/scss/objects/_nav.scss */
+  /* line 119, ../scss/scss/objects/_nav.scss */
   #image-navigation span a {
     color: #fff; }
 
-/* line 121, ../scss/scss/objects/_nav.scss */
+/* line 124, ../scss/scss/objects/_nav.scss */
 .nav-links {
   background-color: #baf4c5;
-  padding: 1rem; }
-  /* line 124, ../scss/scss/objects/_nav.scss */
-  .nav-links .nav-next, .nav-links a[rel="next"] {
+  padding: 1rem;
+  display: block; }
+  /* line 128, ../scss/scss/objects/_nav.scss */
+  .nav-links a[rel="next"] {
     float: right; }
-  /* line 127, ../scss/scss/objects/_nav.scss */
-  .nav-links .nav-previous, .nav-links a[rel="previous"] {
+  /* line 131, ../scss/scss/objects/_nav.scss */
+  .nav-links a[rel="previous"] {
     float: left; }
-  /* line 130, ../scss/scss/objects/_nav.scss */
+  /* line 134, ../scss/scss/objects/_nav.scss */
   .nav-links a {
     color: #000; }
-    /* line 132, ../scss/scss/objects/_nav.scss */
+    /* line 136, ../scss/scss/objects/_nav.scss */
     .nav-links a:hover {
       text-decoration: underline; }
 
