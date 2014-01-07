@@ -15,7 +15,24 @@
 		position: relative;
 	}
 }
-
+li ul.sub-menu {
+	background-color: lighten($link, 50%);
+	margin-top: 20px;
+	border-top: 0;
+	padding: 0;
+	position: absolute;
+	li a {
+			display: block;
+			font-size: $font-size-sm;
+			color: #000;
+		}
+		:hover {
+			background-color: $link;
+			a { 
+				color: #fff;
+			}
+		}
+}
 
 
 .main-navigation li {
@@ -88,15 +105,20 @@
 
 
 #image-navigation span {
-	padding: $space-half;
-	background-color: $link;
-	color: #fff;
-	margin-bottom: $pad;
-	&.previous-image {
+
+	&.previous-image a{
 		float: left;
+		padding: $space-half;
+		background-color: $link;
+		color: #fff;
+		margin-bottom: $pad;
 	}
-	&.next-image {
+	&.next-image a{
 		float: right;
+		padding: $space-half;
+		background-color: $link;
+		color: #fff;
+		margin-bottom: $pad;
 	}
 	a {
 		color: #fff;
