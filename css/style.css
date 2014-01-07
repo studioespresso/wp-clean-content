@@ -592,10 +592,6 @@ object {
 
 /* =Widgets
 ----------------------------------------------- */
-/* line 455, ../scss/scss/generic/_base.scss */
-.widget {
-  margin: 0 0 1.5em; }
-
 /* Make sure select elements fit in widgets */
 /* line 460, ../scss/scss/generic/_base.scss */
 .widget select {
@@ -1243,31 +1239,30 @@ li ul.sub-menu {
   margin-top: 20px;
   border-top: 0;
   padding: 0;
-  position: absolute;
-  left: -2px; }
-  /* line 25, ../scss/scss/objects/_nav.scss */
+  position: absolute; }
+  /* line 24, ../scss/scss/objects/_nav.scss */
   li ul.sub-menu li a {
     display: block;
     font-size: 0.75em;
     color: #000; }
-  /* line 30, ../scss/scss/objects/_nav.scss */
+  /* line 29, ../scss/scss/objects/_nav.scss */
   li ul.sub-menu :hover {
     background-color: #189730; }
-    /* line 32, ../scss/scss/objects/_nav.scss */
+    /* line 31, ../scss/scss/objects/_nav.scss */
     li ul.sub-menu :hover a {
       color: #fff; }
 
-/* line 39, ../scss/scss/objects/_nav.scss */
+/* line 38, ../scss/scss/objects/_nav.scss */
 .main-navigation li {
   float: left;
   padding: 1rem; }
 
-/* line 43, ../scss/scss/objects/_nav.scss */
+/* line 42, ../scss/scss/objects/_nav.scss */
 .main-navigation a {
   display: block;
   text-decoration: none; }
 
-/* line 47, ../scss/scss/objects/_nav.scss */
+/* line 46, ../scss/scss/objects/_nav.scss */
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   display: none;
@@ -1277,21 +1272,21 @@ li ul.sub-menu {
   top: 1.5em;
   z-index: 99999; }
 
-/* line 56, ../scss/scss/objects/_nav.scss */
+/* line 55, ../scss/scss/objects/_nav.scss */
 .main-navigation ul ul ul {
   left: 100%;
   top: 0; }
 
-/* line 60, ../scss/scss/objects/_nav.scss */
+/* line 59, ../scss/scss/objects/_nav.scss */
 .main-navigation ul ul a {
   width: 200px; }
 
-/* line 71, ../scss/scss/objects/_nav.scss */
+/* line 70, ../scss/scss/objects/_nav.scss */
 .main-navigation ul li:hover > ul {
   display: block; }
 
 /* Small menu */
-/* line 79, ../scss/scss/objects/_nav.scss */
+/* line 78, ../scss/scss/objects/_nav.scss */
 .menu-toggle {
   cursor: pointer;
   display: none;
@@ -1299,53 +1294,53 @@ li ul.sub-menu {
   font-size: 2.5em; }
 
 @media screen and (max-width: 600px) {
-  /* line 87, ../scss/scss/objects/_nav.scss */
+  /* line 86, ../scss/scss/objects/_nav.scss */
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block;
     position: relative; }
 
-  /* line 93, ../scss/scss/objects/_nav.scss */
+  /* line 92, ../scss/scss/objects/_nav.scss */
   .main-navigation ul {
     display: none; } }
 /* =Navigation
 ----------------------------------------------- */
-/* line 101, ../scss/scss/objects/_nav.scss */
+/* line 100, ../scss/scss/objects/_nav.scss */
 .site-main [class*="navigation"] {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
-/* line 108, ../scss/scss/objects/_nav.scss */
+/* line 107, ../scss/scss/objects/_nav.scss */
 #image-navigation span {
   padding: 0.5rem;
   background-color: #189730;
   color: #fff;
   margin-bottom: 1rem; }
-  /* line 113, ../scss/scss/objects/_nav.scss */
+  /* line 112, ../scss/scss/objects/_nav.scss */
   #image-navigation span.previous-image {
     float: left; }
-  /* line 116, ../scss/scss/objects/_nav.scss */
+  /* line 115, ../scss/scss/objects/_nav.scss */
   #image-navigation span.next-image {
     float: right; }
-  /* line 119, ../scss/scss/objects/_nav.scss */
+  /* line 118, ../scss/scss/objects/_nav.scss */
   #image-navigation span a {
     color: #fff; }
 
-/* line 124, ../scss/scss/objects/_nav.scss */
+/* line 123, ../scss/scss/objects/_nav.scss */
 .nav-links {
   background-color: #baf4c5;
   padding: 1rem;
   display: block; }
-  /* line 128, ../scss/scss/objects/_nav.scss */
+  /* line 127, ../scss/scss/objects/_nav.scss */
   .nav-links a[rel="next"] {
     float: right; }
-  /* line 131, ../scss/scss/objects/_nav.scss */
+  /* line 130, ../scss/scss/objects/_nav.scss */
   .nav-links a[rel="previous"] {
     float: left; }
-  /* line 134, ../scss/scss/objects/_nav.scss */
+  /* line 133, ../scss/scss/objects/_nav.scss */
   .nav-links a {
     color: #000; }
-    /* line 136, ../scss/scss/objects/_nav.scss */
+    /* line 135, ../scss/scss/objects/_nav.scss */
     .nav-links a:hover {
       text-decoration: underline; }
 
@@ -2572,6 +2567,11 @@ header.entry-header, .entry-meta {
   font-size: 0.75em;
   margin-right: 6px; }
 
+/* line 25, ../scss/scss/objects/_meta.scss */
+footer.entry-meta {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #189730; }
+
 /* line 1, ../scss/scss/objects/_plugins.scss */
 .widget_woodojo_instagram ul.alignleft li {
   margin: 0; }
@@ -2738,3 +2738,98 @@ header.entry-header, .entry-meta {
   width: auto;
   z-index: 100000;
   /* Above WP toolbar */ }
+
+/**
+ * 6.1 Widgets
+ * ----------------------------------------------------------------------------
+ */
+/* line 6, ../scss/scss/objects/_widgets.scss */
+.widget {
+  font-size: 14px;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  padding: 20px;
+  word-wrap: break-word; }
+
+/* line 16, ../scss/scss/objects/_widgets.scss */
+.widget .widget-title {
+  font: 300 italic 20px "Source Sans Pro", Helvetica, sans-serif;
+  margin: 0 0 10px; }
+
+/* line 21, ../scss/scss/objects/_widgets.scss */
+.widget ul,
+.widget ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+/* line 28, ../scss/scss/objects/_widgets.scss */
+.widget li {
+  padding: 5px 0; }
+
+/* line 32, ../scss/scss/objects/_widgets.scss */
+.widget .children li:last-child {
+  padding-bottom: 0; }
+
+/* line 36, ../scss/scss/objects/_widgets.scss */
+.widget li > ul,
+.widget li > ol {
+  margin-left: 20px; }
+
+/* Search widget */
+/* line 48, ../scss/scss/objects/_widgets.scss */
+.search-form .search-submit {
+  display: none; }
+
+/* RSS Widget */
+/* line 53, ../scss/scss/objects/_widgets.scss */
+.widget_rss .rss-date {
+  display: block; }
+
+/* line 61, ../scss/scss/objects/_widgets.scss */
+.widget ul li ul {
+  background-color: inherit;
+  margin-top: 0px;
+  border-top: 0;
+  padding: 0;
+  position: inherit; }
+  /* line 67, ../scss/scss/objects/_widgets.scss */
+  .widget ul li ul li a {
+    display: block;
+    font-size: inherit;
+    color: inherit; }
+  /* line 72, ../scss/scss/objects/_widgets.scss */
+  .widget ul li ul :hover {
+    background-color: inherit; }
+    /* line 74, ../scss/scss/objects/_widgets.scss */
+    .widget ul li ul :hover a {
+      color: inherit; }
+
+/* Calendar Widget */
+/* line 82, ../scss/scss/objects/_widgets.scss */
+.widget_calendar table,
+.widget_calendar td {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 1px; }
+
+/* line 89, ../scss/scss/objects/_widgets.scss */
+.widget_calendar caption {
+  font-size: 14px;
+  margin: 0; }
+
+/* line 94, ../scss/scss/objects/_widgets.scss */
+.widget_calendar th,
+.widget_calendar td {
+  padding: 0;
+  text-align: center; }
+
+/* line 100, ../scss/scss/objects/_widgets.scss */
+.widget_calendar a {
+  display: block; }
+
+/* line 113, ../scss/scss/objects/_widgets.scss */
+.widget_calendar tbody .pad, .site-footer .widget_calendar tbody .pad {
+  background-color: transparent; }
