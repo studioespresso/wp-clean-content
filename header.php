@@ -16,6 +16,8 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?>" href="/feed.xml">
+
 </head>
 
 <body <?php body_class(); ?>>
