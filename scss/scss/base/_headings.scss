@@ -1,17 +1,24 @@
 /* Headings */
-/*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
 h1{ 
 	line-height: 1.2;
+	color: $colour-h1;
 	&.site-title {
 		font-size: $font-size-larger;
 	}
-	&.entry-title, &.linked-list-single {
-		font-size: $font-size-larger;
-	} 
 }
 
 h2 { 
 	line-height: 1.2;
+	color: $colour-h2;
+	&.entry-title {
+		font-size: $font-size-larger;
+		a {
+			font-size: $font-size-slightly-larger;
+			} 
+	}
+	&.linked-list-item a, &.linked-list-single a {
+		font-size: $font-size-sm;
+	}
 	&.comments-title {
 		margin-bottom: $pad;
 	}

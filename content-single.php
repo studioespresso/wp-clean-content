@@ -8,11 +8,11 @@
 	<header class="entry-header">
 
 		<?php if ( has_post_format( 'link' )): ?>
-			<h1 class="entry-title linked-list-single">
-				<a href="<?php echo get_post_meta($post->ID, 'standard_link_url_field', true); ?>" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?> &rarr;</a></h1>
+			<h2 class="entry-title linked-list-single">
+				<a href="<?php echo get_post_meta($post->ID, 'standard_link_url_field', true); ?>" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?> &rarr;</a></h2>
 			<?php elseif ( has_post_format( 'quote' )): ?>
 			<?php else: ?>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h2 class="entry-title"><?php the_title(); ?></h2>
 			<?php endif; ?>
 			<?php if ( !has_post_format( 'quote' )): ?>
 			<div class="entry-meta">

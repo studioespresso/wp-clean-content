@@ -7,10 +7,10 @@
 <article  id="post-<?php the_ID(); ?>" <?php post_class('content article'); ?>>
 	<header class="entry-header">
 		<?php if ( has_post_format( 'link' )): ?>
-			<h1 class="entry-title linked-list-item"><a href="<?php echo get_post_meta($post->ID, 'standard_link_url_field', true); ?>" title="<?php printf( esc_attr__( 'Link to %s', 'clean-content' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?> &rarr;</a></h1>
+			<h2 class="entry-title linked-list-item"><a href="<?php echo get_post_meta($post->ID, 'standard_link_url_field', true); ?>" title="<?php printf( esc_attr__( 'Link to %s', 'clean-content' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?> &rarr;</a></h2>
 		<?php elseif ( has_post_format( 'quote' )): ?>
 		<?php else: ?>
-			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<?php endif; ?>
 		<?php if ( !has_post_format( 'quote' )): ?>
 		<?php if ( 'post' == get_post_type() ) : ?>
