@@ -197,8 +197,8 @@ function cc_register_theme_customizer( $wp_customize ) {
     			'label'		=>__('Sidebar Position', 'clean-content'),
     			'type'		=> 'radio',
     			'choices'	=> array(
-    				'sidebar-left' => __('Sidebar on the left', 'clean-content'),
-    				'sidebar-right' => __('Sidebar on the right', 'clean-content')
+    				'left' => __('Sidebar on the left', 'clean-content'),
+    				'right' => __('Sidebar on the right', 'clean-content')
     				),
     			'section'	=> 'cc_layout',
     			'settings'	=> 'cc_sidebar_control'
@@ -235,11 +235,13 @@ function cc_register_theme_customizer( $wp_customize ) {
     	);
 }
 
-/** Adds bodyt classes **/
+/** Adds body classes **/
 
 function cleancontent_layout_classes( $classes ) {
     $options = get_theme_mod('cc_sidebar_control');
-    if ($options && 'sidebar-left' == $options)
+    if ($options && 'left' == $options)
+        $classes[] = $options;
+    if ($options && 'right' == $options)
         $classes[] = $options;
 
     return $classes;
@@ -249,12 +251,7 @@ add_filter( 'body_class', 'cleancontent_layout_classes' );
 
 add_action( 'customize_register', 'cc_register_theme_customizer' );
 
-function cc_customizer_css() {
-    ?>
-
-    <?php
-}
-add_action( 'wp_head', 'cc_customizer_css' );
+/** Theme customize live preview **/
 
 function cc_customizer_live_preview() {
  

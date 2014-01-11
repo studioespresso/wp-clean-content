@@ -13,7 +13,7 @@
 
 get_header(); ?>
 	<div class="page">
-		<div class="main right" >
+		<div class="main" >
 
 		<?php if ( have_posts() ) : ?>
 
