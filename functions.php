@@ -178,8 +178,7 @@ add_action('init', 'add_custom_feed');
 /*-----------------------------------------------------------------------------
   Theme customizer
 -----------------------------------------------------------------------------*/
-
-
+/** Add layout section**/
 function cc_register_theme_customizer( $wp_customize ) {
     $wp_customize->add_section( 'cc_layout' , array(
         'title'      => __('Layout','clean-content'),
@@ -204,7 +203,24 @@ function cc_register_theme_customizer( $wp_customize ) {
     			'settings'	=> 'cc_sidebar_control'
     		)
     	);
-
+/** Colour control **/
+    $wp_customize->add_setting(
+            'cc_link_color',
+            array(
+                'default'     => '#093883'
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'link_color',
+                array(
+                    'label'      => __( 'Link Color', 'cc' ),
+                    'section'    => 'colors',
+                    'settings'   => 'cc_link_color'
+                )
+            )
+        );
 /** Tagline control **/
     $wp_customize->add_setting(
     	'cc_show_tagline',
@@ -219,20 +235,6 @@ function cc_register_theme_customizer( $wp_customize ) {
     		'settings'	=> 'cc_show_tagline',
     		)
     	);
-/** Sticky Menu **/
-    $wp_customize->add_setting(
-    	'cc_sticky_menu',
-    	array (
-    		'default'	=> 'y',)
-    	);
-    $wp_customize->add_control(
-    	'sticky_menu', array(
-    		'label'		=> __('Sticky menu to top', 'clean-content'),
-    		'section'	=> 'cc_layout',
-    		'settings'	=> 'cc_sticky_menu',
-    		'type'		=> 'checkbox',
-    		)
-    	);
 }
 
 /** Adds body classes **/
@@ -243,15 +245,23 @@ function cleancontent_layout_classes( $classes ) {
         $classes[] = $options;
     if ($options && 'right' == $options)
         $classes[] = $options;
-
     return $classes;
 }
 
 add_filter( 'body_class', 'cleancontent_layout_classes' );
-
 add_action( 'customize_register', 'cc_register_theme_customizer' );
 
 /** Theme customize live preview **/
+
+function cc_customizer_css() {
+    ?>
+    <style type="text/css">
+        a { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
+        .entry-meta a:hover, .nav-links, textarea, input {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'cc_customizer_css' );
 
 function cc_customizer_live_preview() {
  
