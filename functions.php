@@ -117,6 +117,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Load welcome message.
+ */
+require get_template_directory() . '/inc/theme-welcome.php';
+
 add_action( 'init', 'cd_add_editor_styles' );
 /**
  * Apply theme's stylesheet to the visual editor.
