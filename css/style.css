@@ -1341,28 +1341,35 @@ li ul.sub-menu {
   clear: both;
   overflow: hidden;
   border-top: 1px solid grey;
-  line-height: 1.2; }
+  line-height: 1.2;
+  height: 120px;
+  padding: 1rem; }
 
-/* line 14, ../scss/scss/objects/_footer.scss */
+/* line 16, ../scss/scss/objects/_footer.scss */
 .nav-footer {
   margin: -1rem -1rem 1rem; }
-  /* line 17, ../scss/scss/objects/_footer.scss */
+  /* line 19, ../scss/scss/objects/_footer.scss */
   .nav-footer li {
     border-bottom: 1px solid #333333; }
     @media all and (min-width: 46.8em) {
-      /* line 17, ../scss/scss/objects/_footer.scss */
+      /* line 19, ../scss/scss/objects/_footer.scss */
       .nav-footer li {
         border: 0;
         float: left; } }
-  /* line 26, ../scss/scss/objects/_footer.scss */
+  /* line 28, ../scss/scss/objects/_footer.scss */
   .nav-footer a {
     display: block;
     padding: 1rem; }
 
 @media all and (min-width: 46.8em) {
-  /* line 32, ../scss/scss/objects/_footer.scss */
+  /* line 34, ../scss/scss/objects/_footer.scss */
   .copyright {
     float: right; } }
+
+/* line 40, ../scss/scss/objects/_footer.scss */
+span.onedge {
+  float: right;
+  text-align: right; }
 
 /*------------------------------------*\
     $TEXT Styles
