@@ -1,6 +1,7 @@
 /* Headings */
 h1{ 
 	line-height: 1.2;
+	font-size: $font-size-large;
 	color: $colour-h1;
 	&.site-title {
 		font-size: $font-size-larger;
@@ -15,6 +16,10 @@ h2 {
 		a {
 			font-size: $font-size-slightly-larger;
 			} 
+			&:hover {
+				color: inherit;
+				text-decoration: underline;
+			}
 	}
 	&.linked-list-item a, &.linked-list-single a {
 		font-size: $font-size-sm;

@@ -58,24 +58,26 @@
 .widget_rss li > cite {
 }
 
-.widget ul li ul {
-		background-color: inherit;
-		margin-top: 10px;
-		border-top: 0;
-		padding: 0;
-		position: inherit;
-		li a {
+.widget ul li {
+		font-size: $font-size-slightly-larger;
+			ul {
+			background-color: inherit;
+			margin-top: 10px;
+			border-top: 0;	
+			padding: 0;
+			position: inherit;
+				li a {
 				display: block;
-				font-size: inherit;
 				color: inherit;
-			}
-			:hover {
-				background-color: inherit;
+				}
+					:hover {
+					background-color: inherit;
 				a { 
 					color: inherit;
 				}
 			}
 	}
+}
 
 
 /* Calendar Widget */

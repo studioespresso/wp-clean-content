@@ -29,13 +29,14 @@ button, input, select, textarea {
 }
 
 input, textarea {
-	background-color: lighten($link, 25%);
+	background-color: $form;
 	border: 0px;
 	width: 100%;
 	padding: $pad-half 0.65rem;
+	color: #fff;
 	&:focus {
-		background-color: lighten($link, 45%);
-
+		background-color: $form-focus;
+		color: #fff;
 	}
 }
 

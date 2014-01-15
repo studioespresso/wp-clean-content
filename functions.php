@@ -256,8 +256,8 @@ add_action( 'customize_register', 'cc_register_theme_customizer' );
 function cc_customizer_css() {
     ?>
     <style type="text/css">
-        a { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
-        .entry-meta a:hover, .nav-links, textarea, input {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
+        a, h1, h2, .menu-toggle { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
+        .entry-meta a:hover, .nav-links, textarea, input, button, input[type="submit"] {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
     </style>
     <?php
 }

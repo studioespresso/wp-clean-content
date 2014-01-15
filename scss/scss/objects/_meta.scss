@@ -4,8 +4,13 @@
 	font-size: $font-size-slightly-smaller;
 }
 
-header.entry-header, .entry-meta {
+.entry-meta {
 	margin-bottom: $pad-half;
+	color: $colour-meta;
+	& a:hover {
+		background-color: $link;
+		color: #fff;
+	}
 }
 
 .posted-on, .bypostauthor, .byline {

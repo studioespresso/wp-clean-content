@@ -1,19 +1,17 @@
 body {
 	font: 100%/1.5 $font;
 	-webkit-text-size-adjust: 100%;
-	color: #666;
-	margin:0px; 
+	color: $text;
 	font-family: 'main', sans-serif;
 	width: 100%;
-	padding: $pad;
-}
+	@media all and (max-width: $bp-xl) {
+		padding: 0 $pad-and-half 0 $pad-and-half;
+	}
+}	
 
 a {
 	color: lighten($link, 0%);
 	text-decoration: none;
 	outline: 0;
-	
-	&:hover, &:focus {
-		color: $gray;
-	}
+
 }

@@ -126,7 +126,7 @@ li ul.sub-menu {
 }
 
 .nav-links {
-	background-color: lighten($link, 50%);
+	background-color: $bg-meta;
 	padding: $pad;
 	display: block;
 	a[rel="next"]  {
@@ -136,7 +136,7 @@ li ul.sub-menu {
 		float: left;
 	}
 	a {
-		color: #000;
+		color: #fff;
 		&:hover {
 			text-decoration: underline;
 		}

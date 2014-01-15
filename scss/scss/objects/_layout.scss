@@ -41,8 +41,12 @@
 	max-width: 100%;
 	@media all and (min-width: $bp-large) {
 		&.page {@include gs-span(cl, 2, 11);}
-		&.left {@include gs-span(cl, 4, 12);}
-		&.right {@include gs-span(cl, 1, 9);}
+		body.left & {@include gs-span(cl, 4, 12);}
+		body.right & {@include gs-span(cl, 1, 9);}
+		body[class*='fullwidth'].right &,
+		body[class*='fullwidth'].left &,
+		body[class*="image"].left &,
+		body[class*="image"].right & {@include gs-span(cl, 1, 12);}
 	}
 }
 .sidebar {
@@ -51,8 +55,8 @@
 		display: none;
 	}
 	@media all and (min-width: $bp-large) {
-		.left+& {@include gs-span(cl, 1, 3);}
-		.right+& {@include gs-span(cl, 10, 12)};
+		body.left & {@include gs-span(cl, 1, 3);}
+		body.right & {@include gs-span(cl, 10, 12)};
 	}
 }
 
@@ -81,7 +85,6 @@
 	margin-left: -$medium-offset;
 }
 	p.wp-caption-text {
-		text-align: right;
 		margin-right: $pad;
 		margin-bottom: 0px;
 	}
