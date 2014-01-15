@@ -23,13 +23,14 @@ function clean_content_paging_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'clean-content' ); ?></h1>
 		<div class="nav-links">
 
-			<?php if ( get_next_posts_link() ) : ?>
-				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'clean-content' ) ); ?></div>
+		<?php if ( get_next_posts_link() ) : ?>
+			<span class="meta-nav next"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'clean-content' ) ); ?></span>
+		<?php endif; ?>
+			<?php if ( get_previous_posts_link() ) : ?>
+				<span class="meta-nav previous"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'clean-content' ) ); ?></span>
 			<?php endif; ?>
 
-			<?php if ( get_previous_posts_link() ) : ?>
-				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'clean-content' ) ); ?></div>
-			<?php endif; ?>
+
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
