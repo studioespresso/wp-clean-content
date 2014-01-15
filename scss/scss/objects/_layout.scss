@@ -55,6 +55,7 @@
 		display: none;
 	}
 	@media all and (min-width: $bp-large) {
+		body.nosidebar & {display:none;}
 		body.left & {@include gs-span(cl, 1, 3);}
 		body.right & {@include gs-span(cl, 10, 12)};
 	}
