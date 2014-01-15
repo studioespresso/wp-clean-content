@@ -9,8 +9,8 @@
 
 get_header(); ?>
 
-<div id="blog" class="page">
-	<div class="main left" >
+<div id="archive" class="page">
+	<div class="main" >
 
 		<?php if ( have_posts() ) : ?>
 
