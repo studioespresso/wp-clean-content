@@ -1343,30 +1343,31 @@ li ul.sub-menu {
   border-top: 1px solid grey;
   line-height: 1.2;
   height: 120px;
-  padding: 1rem; }
+  padding: 1rem;
+  margin-top: 1rem; }
 
-/* line 16, ../scss/scss/objects/_footer.scss */
+/* line 17, ../scss/scss/objects/_footer.scss */
 .nav-footer {
   margin: -1rem -1rem 1rem; }
-  /* line 19, ../scss/scss/objects/_footer.scss */
+  /* line 20, ../scss/scss/objects/_footer.scss */
   .nav-footer li {
     border-bottom: 1px solid #333333; }
     @media all and (min-width: 46.8em) {
-      /* line 19, ../scss/scss/objects/_footer.scss */
+      /* line 20, ../scss/scss/objects/_footer.scss */
       .nav-footer li {
         border: 0;
         float: left; } }
-  /* line 28, ../scss/scss/objects/_footer.scss */
+  /* line 29, ../scss/scss/objects/_footer.scss */
   .nav-footer a {
     display: block;
     padding: 1rem; }
 
 @media all and (min-width: 46.8em) {
-  /* line 34, ../scss/scss/objects/_footer.scss */
+  /* line 35, ../scss/scss/objects/_footer.scss */
   .copyright {
     float: right; } }
 
-/* line 40, ../scss/scss/objects/_footer.scss */
+/* line 41, ../scss/scss/objects/_footer.scss */
 span.onedge {
   float: right;
   text-align: right; }
@@ -2594,6 +2595,23 @@ li.comment {
   color: #09388c;
   font-size: 0.75em;
   margin-right: 6px; }
+
+/* line 29, ../scss/scss/objects/_meta.scss */
+.paging-navigation .meta-nav.previous {
+  float: right; }
+
+/* line 32, ../scss/scss/objects/_meta.scss */
+span.tags-links {
+  white-space: pre-line;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ }
 
 /* line 1, ../scss/scss/objects/_plugins.scss */
 .widget_woodojo_instagram ul.alignleft li {
