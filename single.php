@@ -10,7 +10,7 @@ get_header(); ?>
 <?php if ( has_post_format( 'image' )): ?>
 	<div id="main" class="main" role="main">
 <?php else: ?>
-		<div id="main" class="main right" role="main">
+		<div id="main" class="main" role="main">
 		<?php endif; ?>
 
 			<div id="single-post" class="page">

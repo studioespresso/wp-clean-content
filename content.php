@@ -64,10 +64,10 @@
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
 				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ' ', 'clean-content' ) );
+				$tags_list = get_the_tag_list( '', __( ' / ', 'clean-content' ) );
 				if ( $tags_list ) :
 			?>
-			<span class="tags-links ss-icon">
+			<span>
 				<?php printf( __( '%1$s', 'clean-content' ), $tags_list ); ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
