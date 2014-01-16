@@ -1,8 +1,3 @@
-[class^="ss-"]:before {
-	margin-right: $pad-quarter;
-	color: $gray;
-	font-size: $font-size-slightly-smaller;
-}
 
 .entry-meta {
 	margin-bottom: $pad-half;
@@ -18,13 +13,8 @@
 }
 
 [rel="tag"]{	
-	&:before {
-		font-family: "SSStandard";
 		content: "tag";
-		color: $link;
-		font-size: $font-size-sm;
-		margin-right: 6px;
-	}
+		
 } 
 .paging-navigation .meta-nav.previous {
 	float: right;

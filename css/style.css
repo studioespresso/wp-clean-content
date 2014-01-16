@@ -683,6 +683,7 @@ object {
 /* line 1, ../scss/scss/base/_main.scss */
 body {
   font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
   -webkit-text-size-adjust: 100%;
   color: #626262;
   font-family: 'main', sans-serif;
@@ -692,7 +693,7 @@ body {
     body {
       padding: 0 1.5rem 0 1.5rem; } }
 
-/* line 12, ../scss/scss/base/_main.scss */
+/* line 13, ../scss/scss/base/_main.scss */
 a {
   color: #09388c;
   text-decoration: none;
@@ -702,11 +703,11 @@ a {
 /* line 2, ../scss/scss/base/_headings.scss */
 h1 {
   line-height: 1.2;
-  font-size: 2.6375em;
+  font-size: 2.3375em;
   color: #2e4367; }
   /* line 6, ../scss/scss/base/_headings.scss */
   h1.site-title {
-    font-size: 1.8em; }
+    font-size: 1.5em; }
 
 /* line 11, ../scss/scss/base/_headings.scss */
 h2 {
@@ -714,17 +715,17 @@ h2 {
   color: #4b4b4b; }
   /* line 14, ../scss/scss/base/_headings.scss */
   h2.entry-title {
-    font-size: 1.8em; }
+    font-size: 1.5em; }
     /* line 16, ../scss/scss/base/_headings.scss */
     h2.entry-title a {
-      font-size: 1.2625em; }
+      font-size: 1.225em; }
     /* line 19, ../scss/scss/base/_headings.scss */
     h2.entry-title:hover {
       color: inherit;
       text-decoration: underline; }
   /* line 24, ../scss/scss/base/_headings.scss */
   h2.linked-list-item a, h2.linked-list-single a {
-    font-size: 0.75em; }
+    font-size: 0.55em; }
   /* line 27, ../scss/scss/base/_headings.scss */
   h2.comments-title {
     margin-bottom: 1rem; }
@@ -762,12 +763,12 @@ blockquote {
   border-left: 7px solid #bbbbbb;
   padding-left: 1rem;
   margin-bottom: 1rem;
-  font-size: 1.2625em; }
+  font-size: 1.225em; }
   /* line 17, ../scss/scss/base/_text.scss */
   blockquote small {
     padding-top: 1rem;
     font-style: none;
-    font-size: 0.875em;
+    font-size: 0.85em;
     display: block; }
 
 /* Horizontal Rule */
@@ -905,7 +906,7 @@ input[type="search"]::-webkit-search-decoration {
   position: relative; }
 /* line 81, ../scss/scss/base/_forms.scss */
 .inline-form input[type=submit], .inline-form button, .inline-form .btn {
-  font-size: 0.875em;
+  font-size: 0.85em;
   padding: 0.65rem 1.3rem;
   position: absolute;
   top: 0;
@@ -1063,13 +1064,16 @@ td {
       display: none; } }
   @media all and (min-width: 50em) {
     /* line 58, ../scss/scss/objects/_layout.scss */
+    body.nosidebar .sidebar {
+      display: none; }
+    /* line 59, ../scss/scss/objects/_layout.scss */
     body.left .sidebar {
       display: block;
       float: left;
       margin-left: 0%;
       margin-right: -100%;
       width: 23.8151%; }
-    /* line 59, ../scss/scss/objects/_layout.scss */
+    /* line 60, ../scss/scss/objects/_layout.scss */
     body.right .sidebar {
       display: block;
       float: left;
@@ -1078,82 +1082,82 @@ td {
       width: 23.8151%; } }
 
 /* Image sizes offsets */
-/* line 66, ../scss/scss/objects/_layout.scss */
+/* line 67, ../scss/scss/objects/_layout.scss */
 .size-small {
   max-width: 12em; }
 
-/* line 69, ../scss/scss/objects/_layout.scss */
+/* line 70, ../scss/scss/objects/_layout.scss */
 .size-medium {
   max-width: 16em; }
 
-/* line 73, ../scss/scss/objects/_layout.scss */
+/* line 74, ../scss/scss/objects/_layout.scss */
 .featured-image {
   display: table-cell;
   vertical-align: top;
   margin: 1rem; }
   @media all and (max-width: 29.75em) {
-    /* line 73, ../scss/scss/objects/_layout.scss */
+    /* line 74, ../scss/scss/objects/_layout.scss */
     .featured-image {
       width: 100%;
       display: inline;
       margin-bottom: 1rem; } }
 
 @media all and (min-width: 73em) {
-  /* line 83, ../scss/scss/objects/_layout.scss */
+  /* line 84, ../scss/scss/objects/_layout.scss */
   .wp-caption.alignleft {
     margin-left: -8em; } }
-/* line 87, ../scss/scss/objects/_layout.scss */
+/* line 88, ../scss/scss/objects/_layout.scss */
 .wp-caption.alignleft p.wp-caption-text {
   margin-right: 1rem;
   margin-bottom: 0px; }
 
-/* line 92, ../scss/scss/objects/_layout.scss */
+/* line 93, ../scss/scss/objects/_layout.scss */
 .alignnone {
   float: left;
   max-width: 100%; }
 
-/* line 97, ../scss/scss/objects/_layout.scss */
+/* line 98, ../scss/scss/objects/_layout.scss */
 .aligncenter {
   float: none;
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 103, ../scss/scss/objects/_layout.scss */
+/* line 104, ../scss/scss/objects/_layout.scss */
 .alignleft {
   float: left;
   clear: both;
   margin-right: 1rem; }
   @media all and (min-width: 73em) {
-    /* line 108, ../scss/scss/objects/_layout.scss */
+    /* line 109, ../scss/scss/objects/_layout.scss */
     .alignleft.size-small {
       margin-left: -6em; }
-    /* line 111, ../scss/scss/objects/_layout.scss */
+    /* line 112, ../scss/scss/objects/_layout.scss */
     .alignleft.size-medium, .alignleft.size-full {
       margin-left: -8em; }
-    /* line 114, ../scss/scss/objects/_layout.scss */
+    /* line 115, ../scss/scss/objects/_layout.scss */
     .alignleft.size-large {
       margin-left: -11em; }
-    /* line 117, ../scss/scss/objects/_layout.scss */
+    /* line 118, ../scss/scss/objects/_layout.scss */
     .left .alignleft {
       margin-left: 0px; } }
 
-/* line 123, ../scss/scss/objects/_layout.scss */
+/* line 124, ../scss/scss/objects/_layout.scss */
 .alignright {
   float: right;
   clear: both;
   margin-left: 1rem; }
   @media all and (min-width: 73em) {
-    /* line 128, ../scss/scss/objects/_layout.scss */
+    /* line 129, ../scss/scss/objects/_layout.scss */
     .alignright.size-small {
       margin-right: -6em; }
-    /* line 131, ../scss/scss/objects/_layout.scss */
+    /* line 132, ../scss/scss/objects/_layout.scss */
     .alignright.size-medium, .alignright.size-full {
       margin-right: -8em; }
-    /* line 134, ../scss/scss/objects/_layout.scss */
+    /* line 135, ../scss/scss/objects/_layout.scss */
     .alignright.size-large {
       margin-right: -11em; }
-    /* line 137, ../scss/scss/objects/_layout.scss */
+    /* line 138, ../scss/scss/objects/_layout.scss */
     .right .alignright {
       margin-right: 0px; } }
 
@@ -1183,21 +1187,20 @@ header#masthead {
 header[role=banner] {
   font-family: 'header', sans-serif;
   border-bottom: 1px solid;
-  box-shadow: 1px;
   margin-bottom: 2rem;
   padding-bottom: 2rem; }
 
-/* line 29, ../scss/scss/objects/_header.scss */
+/* line 28, ../scss/scss/objects/_header.scss */
 .site-branding {
   max-width: 60%;
   float: left; }
 
-/* line 34, ../scss/scss/objects/_header.scss */
+/* line 33, ../scss/scss/objects/_header.scss */
 .search-form {
   overflow: hidden;
   max-height: 0; }
   @media all and (min-width: 46.8em) {
-    /* line 34, ../scss/scss/objects/_header.scss */
+    /* line 33, ../scss/scss/objects/_header.scss */
     .search-form {
       float: right;
       max-height: none;
@@ -1230,7 +1233,7 @@ li ul.sub-menu {
   /* line 24, ../scss/scss/objects/_nav.scss */
   li ul.sub-menu li a {
     display: block;
-    font-size: 0.75em;
+    font-size: 0.55em;
     color: #000; }
   /* line 29, ../scss/scss/objects/_nav.scss */
   li ul.sub-menu :hover {
@@ -2515,7 +2518,7 @@ article {
 
 /* line 57, ../scss/scss/objects/_article.scss */
 .byline {
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin-bottom: 0.5rem; }
 
 /* Wordpress Caption */
@@ -2545,62 +2548,75 @@ dd.gallery-caption {
   word-wrap: break-word;
   /* IE */ }
 
-/* line 11, ../scss/scss/objects/_comments.scss */
+/* line 8, ../scss/scss/objects/_comments.scss */
+.comments-area {
+  margin-top: 1rem; }
+
+/* line 13, ../scss/scss/objects/_comments.scss */
 .comment-meta img {
   display: block;
   margin-bottom: 0.5rem;
   float: right; }
 
-/* line 17, ../scss/scss/objects/_comments.scss */
+/* line 19, ../scss/scss/objects/_comments.scss */
 .comment-content {
   display: block; }
 
-/* line 21, ../scss/scss/objects/_comments.scss */
+/* line 23, ../scss/scss/objects/_comments.scss */
 li.comment {
+  margin-top: 1rem;
   padding: 1rem;
+  margin-bottom: 2rem;
   word-wrap: break-word; }
-  /* line 24, ../scss/scss/objects/_comments.scss */
-  li.comment:nth-child(odd) {
-    background-color: #548df4; }
-  /* line 27, ../scss/scss/objects/_comments.scss */
-  li.comment > ul.children {
-    background-color: #CC0; }
-  /* line 30, ../scss/scss/objects/_comments.scss */
-  li.comment .bypostauthor {
-    background-color: #9bbdf9; }
 
-/* line 1, ../scss/scss/objects/_meta.scss */
-[class^="ss-"]:before {
-  margin-right: 0.25rem;
-  color: grey;
-  font-size: 0.875em; }
+/* line 33, ../scss/scss/objects/_comments.scss */
+li.pingback {
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem; }
 
-/* line 7, ../scss/scss/objects/_meta.scss */
+/* line 43, ../scss/scss/objects/_comments.scss */
+ol.comment-list li.depth-1:nth-child(odd) {
+  background-color: #C0C0C0; }
+  /* line 45, ../scss/scss/objects/_comments.scss */
+  ol.comment-list li.depth-1:nth-child(odd) ul.children {
+    background-color: #C0C0C0; }
+    /* line 47, ../scss/scss/objects/_comments.scss */
+    ol.comment-list li.depth-1:nth-child(odd) ul.children li.depth-2:nth-child(odd) {
+      background-color: white; }
+      /* line 49, ../scss/scss/objects/_comments.scss */
+      ol.comment-list li.depth-1:nth-child(odd) ul.children li.depth-2:nth-child(odd) ul.children {
+        background-color: white; }
+        /* line 51, ../scss/scss/objects/_comments.scss */
+        ol.comment-list li.depth-1:nth-child(odd) ul.children li.depth-2:nth-child(odd) ul.children li.depth-3:nth-child(odd) {
+          background-color: #C0C0C0; }
+
+/* line 60, ../scss/scss/objects/_comments.scss */
+li.bypostauthor {
+  border: 1.5px dashed black; }
+
+/* line 2, ../scss/scss/objects/_meta.scss */
 .entry-meta {
   margin-bottom: 0.5rem;
   color: #4b4b4b; }
-  /* line 10, ../scss/scss/objects/_meta.scss */
+  /* line 5, ../scss/scss/objects/_meta.scss */
   .entry-meta a:hover {
     background-color: #09388c;
     color: #fff; }
 
-/* line 16, ../scss/scss/objects/_meta.scss */
+/* line 11, ../scss/scss/objects/_meta.scss */
 .posted-on, .bypostauthor, .byline {
   font-style: italic; }
 
-/* line 21, ../scss/scss/objects/_meta.scss */
-[rel="tag"]:before {
-  font-family: "SSStandard";
-  content: "tag";
-  color: #09388c;
-  font-size: 0.75em;
-  margin-right: 6px; }
+/* line 15, ../scss/scss/objects/_meta.scss */
+[rel="tag"] {
+  content: "tag"; }
 
-/* line 29, ../scss/scss/objects/_meta.scss */
+/* line 19, ../scss/scss/objects/_meta.scss */
 .paging-navigation .meta-nav.previous {
   float: right; }
 
-/* line 32, ../scss/scss/objects/_meta.scss */
+/* line 22, ../scss/scss/objects/_meta.scss */
 span.tags-links {
   white-space: pre-line;
   /* css-3 */
@@ -2831,7 +2847,7 @@ span.tags-links {
 
 /* line 61, ../scss/scss/objects/_widgets.scss */
 .widget ul li {
-  font-size: 1.2625em; }
+  font-size: 1.225em; }
   /* line 63, ../scss/scss/objects/_widgets.scss */
   .widget ul li ul {
     background-color: inherit;
