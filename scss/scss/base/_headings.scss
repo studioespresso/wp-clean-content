@@ -1,10 +1,14 @@
 /* Headings */
-h1{ 
+h1 { 
 	line-height: 1.2;
 	font-size: $font-size-large;
 	color: $colour-h1;
 	&.site-title {
 		font-size: $font-size-larger;
+	}
+	&#site-title {
+		line-height: 1.4;
+		display: inline;
 	}
 }
 
@@ -15,17 +19,20 @@ h2 {
 		font-size: $font-size-larger;
 		a {
 			font-size: $font-size-slightly-larger;
-			} 
-			&:hover {
-				color: inherit;
-				text-decoration: underline;
-			}
+		} 
+		&:hover {
+			color: inherit;
+			text-decoration: underline;
+		}
 	}
 	&.linked-list-item a, &.linked-list-single a {
 		font-size: $font-size-sm;
 	}
 	&.comments-title {
 		margin-bottom: $pad;
+	}
+	&.headline {
+		clear: both;
 	}
 }
 
@@ -45,18 +52,6 @@ h6 {
 	
 }
 
-/* Site headings */
-
-h1#site-title {
-	line-height: 1.4;
-	display: inline;
-}
-
-
-
-h2.headline {
-	clear: both;
-}
 /* Subheadings */
 .subheading {
 	font-family: $font-secondary;

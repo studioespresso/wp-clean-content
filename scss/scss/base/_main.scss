@@ -2,7 +2,6 @@ body {
 	font: 100%/1.5 $font;
 	font-size: 18px;
 	-webkit-text-size-adjust: 100%;
-	color: $text;
 	font-family: 'main', sans-serif;
 	width: 100%;
 	@media all and (max-width: $bp-xl) {
@@ -11,7 +10,6 @@ body {
 }	
 
 a {
-	color: lighten($link, 0%);
 	text-decoration: none;
 	outline: 0;
 
