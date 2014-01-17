@@ -150,7 +150,7 @@ remove_action( 'do_feed_rss2', 'do_feed_rss2', 10, 1 );
 remove_action( 'do_feed_atom', 'do_feed_atom', 10, 1 );
 
 function create_custom_feed() {
-    load_template( TEMPLATEPATH . '/feed-rss2.php');
+    load_template( get_template_directory() . '/feed-rss2.php');
 }
 add_action('do_feed_custom_feed', 'create_custom_feed', 10, 1);
 
