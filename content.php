@@ -77,7 +77,7 @@
 		<span class="comments-link"> <?php comments_popup_link( __( 'Leave a comment', 'clean-content' ), __( '1 Comment', 'clean-content' ), __( '% Comments', 'clean-content' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', 'clean-content' ), '<span class="edit-link">| ', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'clean-content' ), '<span class="edit-link"> ', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 <?php endif; ?>
 </article><!-- #post-## -->
