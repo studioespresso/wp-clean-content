@@ -26,7 +26,10 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description" <?php echo ( get_theme_mod( 'cc_show_tagline' ) ) ? "style='display:none;'" : "" ?>><?php bloginfo( 'description' ); ?></h2>
+			<?php if ( get_theme_mod( 'cc_show_tagline' ) )  { ?>
+
+			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<?php } ?>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">

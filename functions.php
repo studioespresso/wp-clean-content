@@ -117,11 +117,6 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-/**
- * Load welcome message.
- */
-require get_template_directory() . '/inc/theme-welcome.php';
-
 add_action( 'init', 'cd_add_editor_styles' );
 /**
  * Apply theme's stylesheet to the visual editor.
@@ -188,7 +183,7 @@ function cc_register_theme_customizer( $wp_customize ) {
     $wp_customize->add_setting(
     	'cc_sidebar_control',
     	array (
-    		'default'	=> 'sidebar-left',
+    		'default'	=> 'right',
     		)
     	);
     $wp_customize->add_control(
@@ -208,7 +203,7 @@ function cc_register_theme_customizer( $wp_customize ) {
     $wp_customize->add_setting(
             'cc_link_color',
             array(
-                'default'     => '#093883'
+                'default'     => '#0e2c6c'
             )
         );
         $wp_customize->add_control(
@@ -230,7 +225,7 @@ function cc_register_theme_customizer( $wp_customize ) {
     	);
     $wp_customize->add_control(
     	'show_tagline', array(
-    		'label'		=> __('Hide tagline','clean-content'),
+    		'label'		=> __('Show tagline','clean-content'),
     		'type'		=> 'checkbox',
     		'section' 	=> 'title_tagline',
     		'settings'	=> 'cc_show_tagline',
