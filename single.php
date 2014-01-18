@@ -7,26 +7,33 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area cl4-cl9">
-		<main id="main" class="site-main" role="main">
+<?php if ( has_post_format( 'image' )): ?>
+	<div id="main" class="main" role="main">
+<?php else: ?>
+		<div id="main" class="main" role="main">
+		<?php endif; ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			<div id="single-post" class="page">
 
-			<?php get_template_part( 'content', 'single' ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php clean_content_post_nav(); ?>
 
-			<?php
+					<?php get_template_part( 'content', 'single' ); ?>
+
+					<?php clean_content_post_nav(); ?>
+
+					<?php
 				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+					if ( comments_open() || '0' != get_comments_number() ) :
+						comments_template();
+					endif;
+					?>
 
-		<?php endwhile; // end of the loop. ?>
+				<?php endwhile; // end of the loop. ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+			</div><!-- #main -->
+		</div><!-- #primary -->
+		<?php if ( !has_post_format( 'image' )): ?>
+			<?php get_sidebar(); ?>
+		<?php endif; ?>
+		<?php get_footer(); ?>

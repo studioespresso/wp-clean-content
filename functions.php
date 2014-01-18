@@ -38,7 +38,9 @@ function clean_content_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 672, 372, true );
+    add_image_size( 'clean-content-full-width', 1038, 576, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -57,6 +59,8 @@ function clean_content_setup() {
 endif; // clean_content_setup
 add_action( 'after_setup_theme', 'clean_content_setup' );
 
+// This theme uses its own gallery styles.
+add_filter( 'use_default_gallery_style', '__return_false' );
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
@@ -113,17 +117,73 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+add_action( 'init', 'cd_add_editor_styles' );
+/**
+ * Apply theme's stylesheet to the visual editor.
+ *
+ * @uses add_editor_style() Links a stylesheet to visual editor
+ * @uses get_stylesheet_uri() Returns URI of theme stylesheet
+ */
+function cd_add_editor_styles() {
+ 
+    add_editor_style( get_stylesheet_uri() );
+ 
+}
 
+
+/*-----------------------------------------------------------------------------
+  RSS modification handling functions
+-----------------------------------------------------------------------------*/
+// Remove automatic links to feeds
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'feed_links_extra', 3);
+
+// Disable automatic feeds
+remove_action( 'do_feed_rdf', 'do_feed_rdf', 10, 1 );
+remove_action( 'do_feed_rss', 'do_feed_rss', 10, 1 );
+remove_action( 'do_feed_rss2', 'do_feed_rss2', 10, 1 );
+remove_action( 'do_feed_atom', 'do_feed_atom', 10, 1 );
+
+function create_custom_feed() {
+    load_template( get_template_directory() . '/feed-rss2.php');
+}
+add_action('do_feed_custom_feed', 'create_custom_feed', 10, 1);
+
+function customise_feed_rules($rules) {
+    // Remove all feed related rules
+    $filtered_rules = array_filter($rules, function($rule) {
+        return !preg_match("/feed/i", $rule);
+    });
+    // Add the rule(s) for your custom feed(s)
+    $new_rules = array(
+        'feed\.xml$' => 'index.php?feed=custom_feed'
+    );
+    return $new_rules + $filtered_rules;
+}
+
+function add_custom_feed() {
+    global $wp_rewrite;
+    add_action('do_feed_custom_feed', 'create_custom_feed', 10, 1);
+    add_filter('rewrite_rules_array','customise_feed_rules');
+    $wp_rewrite->flush_rules();
+}
+
+add_action('init', 'add_custom_feed');
+
+/*-----------------------------------------------------------------------------
+  Theme customizer
+-----------------------------------------------------------------------------*/
+/** Add layout section**/
 function cc_register_theme_customizer( $wp_customize ) {
     $wp_customize->add_section( 'cc_layout' , array(
         'title'      => __('Layout','clean-content'),
         'priority'   => 130,
     ) );
-
+/** Sidebar control **/
     $wp_customize->add_setting(
     	'cc_sidebar_control',
     	array (
-    		'default'	=> 'sidebar-left',
+    		'default'	=> 'right',
     		)
     	);
     $wp_customize->add_control(
@@ -131,14 +191,33 @@ function cc_register_theme_customizer( $wp_customize ) {
     			'label'		=>__('Sidebar Position', 'clean-content'),
     			'type'		=> 'radio',
     			'choices'	=> array(
-    				'sidebar-left' => __('Sidebar on the left', 'clean-content'),
-    				'sidebar-right' => __('Sidebar on the right', 'clean-content')
+    				'left' => __('Sidebar on the left', 'clean-content'),
+    				'right' => __('Sidebar on the right', 'clean-content'),
+                    'nosidebar' => __('No sidebar', 'clean-content')
     				),
     			'section'	=> 'cc_layout',
     			'settings'	=> 'cc_sidebar_control'
     		)
     	);
-
+/** Colour control **/
+    $wp_customize->add_setting(
+            'cc_link_color',
+            array(
+                'default'     => '#0e2c6c'
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'link_color',
+                array(
+                    'label'      => __( 'Link Color', 'cc' ),
+                    'section'    => 'colors',
+                    'settings'   => 'cc_link_color'
+                )
+            )
+        );
+/** Tagline control **/
     $wp_customize->add_setting(
     	'cc_show_tagline',
     	array (
@@ -146,43 +225,37 @@ function cc_register_theme_customizer( $wp_customize ) {
     	);
     $wp_customize->add_control(
     	'show_tagline', array(
-    		'label'		=> __('Hide tagline','clean-content'),
+    		'label'		=> __('Show tagline','clean-content'),
     		'type'		=> 'checkbox',
     		'section' 	=> 'title_tagline',
     		'settings'	=> 'cc_show_tagline',
     		)
     	);
-
-    $wp_customize->add_setting(
-    	'cc_sticky_menu',
-    	array (
-    		'default'	=> 'y',)
-    	);
-    $wp_customize->add_control(
-    	'sticky_menu', array(
-    		'label'		=> __('Sticky menu to top', 'clean-content'),
-    		'section'	=> 'cc_layout',
-    		'settings'	=> 'cc_sticky_menu',
-    		'type'		=> 'checkbox',
-    		)
-    	);
 }
+
+/** Adds body classes **/
 
 function cleancontent_layout_classes( $classes ) {
-	$options = get_theme_mod('cc_sidebar_control');
-	if ($options && 'sidebar-left' == $options)
-		$classes[] = $options;
-
-	return $classes;
+    $options = get_theme_mod('cc_sidebar_control');
+    if ($options && 'left' == $options)
+        $classes[] = $options;
+    if ($options && 'right' == $options)
+        $classes[] = $options;
+    if ($options && 'nosidebar' == $options)
+        $classes[] = $options;
+    return $classes;
 }
-add_filter( 'body_class', 'cleancontent_layout_classes' );
 
+add_filter( 'body_class', 'cleancontent_layout_classes' );
 add_action( 'customize_register', 'cc_register_theme_customizer' );
+
+/** Theme customize live preview **/
 
 function cc_customizer_css() {
     ?>
     <style type="text/css">
-        a { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
+        a, h1, h2, .menu-toggle { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
+        .entry-meta a:hover, .nav-links, textarea, input, button, input[type="submit"] {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
     </style>
     <?php
 }

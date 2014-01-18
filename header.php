@@ -14,28 +14,31 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<!-- Gridset CSS -->
-<!--[if (!IE) | (gt IE 9)]><!--><link rel="stylesheet" href="./wp-content/themes/clean-content/css/gridset.css" /><!--<![endif]-->
-<!--[if lte IE 9]><link rel="stylesheet" href="./css/gridset-ie-9.css" /><![endif]-->
 
 <?php wp_head(); ?>
+<link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?>" href="/feed.xml">
+
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-	<header id="masthead" class="site-header" role="banner" <?php echo ( get_theme_mod( 'cc_sticky_menu' ) ) ? "style='position:fixed;'" : "" ?>>
+	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"<?php echo ( get_theme_mod( 'cc_show_tagline' ) ) ? "style='display:none;'" : "" ?>><?php bloginfo( 'description' ); ?></h2>
+			<?php if ( get_theme_mod( 'cc_show_tagline' ) )  { ?>
+
+			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<?php } ?>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'clean-content' ); ?></h1>
+			<h1 class="menu-toggle"><?php _e( '&#9776;', 'clean-content' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'clean-content' ); ?></a>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-
 	<div id="content" class="site-content">
+
+	

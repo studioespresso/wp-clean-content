@@ -1,0 +1,148 @@
+
+/* =Menu
+----------------------------------------------- */
+
+.main-navigation {
+	display: inline;
+	float: right;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	li {
+		display: inline-block;
+		position: relative;
+	}
+}
+li ul.sub-menu {
+	background-color: lighten($link, 50%);
+	margin-top: 20px;
+	border-top: 0;
+	padding: 0;
+	position: absolute;
+	li a {
+			display: block;
+			font-size: $font-size-sm;
+			color: #000;
+		}
+		:hover {
+			background-color: $link;
+			a { 
+				color: #fff;
+			}
+		}
+}
+
+
+.main-navigation li {
+	float: left;
+	padding: $pad;
+}
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	display: none;
+	float: left;
+	left: 0;
+	position: absolute;
+	top: 1.5em;
+	z-index: 99999;
+	background-color: #fff;
+}
+.main-navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.main-navigation ul ul a {
+	width: 200px;
+}
+.main-navigation ul ul li {
+}
+.main-navigation li:hover > a {
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
+}
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+	display: none;
+	color: #189730;
+	font-size: 2.5em;
+}
+
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+		position: relative;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+}
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-main [class*="navigation"] {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+
+
+#image-navigation span {
+
+	&.previous-image a{
+		float: left;
+		padding: $space-half;
+		background-color: $link;
+		color: #fff;
+		margin-bottom: $pad;
+	}
+	&.next-image a{
+		float: right;
+		padding: $space-half;
+		background-color: $link;
+		color: #fff;
+		margin-bottom: $pad;
+	}
+	a {
+		color: #fff;
+	}
+}
+
+.nav-links {
+	background-color: $bg-meta;
+	padding: $pad;
+	display: block;
+	a[rel="next"]  {
+		float: right;
+	}
+	a[rel="previous"] {
+		float: left;
+	}
+	a {
+		color: #fff;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+

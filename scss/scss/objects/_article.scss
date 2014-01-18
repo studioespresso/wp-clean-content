@@ -1,0 +1,72 @@
+//Article
+article {
+	&.post {
+		margin-top: $pad-quad;
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+	&.format-quote {
+		margin-top: $space-quad*2;
+		margin-bottom: $space-quad*2;
+		#single-post & {
+			margin-bottom: 0;
+		}
+	}
+	vertical-align: top;
+	margin-bottom: $pad-double;	
+	
+	dt.gallery-item img {
+		margin-bottom: $pad;
+		display: block;	
+	} 
+	img {
+		margin-bottom: $pad;
+		margin-top: $pad;
+		display: block;	
+	}
+	&.quote {
+		margin-bottom: $pad-six;
+		margin-top: $pad-six;
+	}
+	&.image {
+	}
+	&.sticky {
+			padding-bottom: $pad;
+			border-bottom: 2px dashed ;
+			}
+	pre {
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	}
+}
+
+.entry-content {
+	.featured-image+& {
+		@media all and  (min-width: $bp-small-2) {
+			margin-left: $pad;	
+		}
+	}
+}
+
+.byline {
+	font-size: $font-size-slightly-smaller;
+	margin-bottom: $space-half;
+}
+
+/* Wordpress Caption */
+.wp-caption-text {
+	font-style: italic;
+}
+
+.gallery img {
+	margin-bottom: $pad;
+	margin-top: 0;
+}
+
+dd.gallery-caption {
+	bottom: 10px;
+}

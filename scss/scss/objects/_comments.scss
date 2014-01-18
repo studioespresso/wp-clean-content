@@ -1,0 +1,62 @@
+.wordwrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+.comments-area {
+	margin-top: $space;	
+}
+
+.comment-meta {
+	img {
+		display: block;
+		margin-bottom: $space-half;
+		float: right;
+	}
+}
+.comment-content {
+	display: block;
+}
+
+li.comment  {
+	margin-top: $pad;
+	padding: $pad;
+	margin-bottom: $pad-double;
+
+	word-wrap: break-word;
+	& .bypostauthor {
+	}
+}	
+
+li.pingback {
+	padding-left: $space;
+	padding-bottom: $space-half;
+	padding-top: $space-half;
+	&:nth-child(odd) {
+
+	}
+}
+
+ol.comment-list {
+	& li.depth-1:nth-child(odd){
+		background-color: #C0C0C0;
+		& ul.children {
+			background-color: #C0C0C0;
+			& li.depth-2:nth-child(odd) {
+				background-color: white;
+				ul.children {
+					background-color: white;
+					& li.depth-3:nth-child(odd) {
+						background-color: #C0C0C0;
+					}
+				}
+			}
+		}
+	}  
+}  
+
+li.bypostauthor {
+	border: 1.5px dashed black;
+}

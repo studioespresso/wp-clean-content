@@ -6,15 +6,36 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
 
-		<div class="entry-meta">
-			<?php clean_content_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
-
+		<?php if ( has_post_format( 'link' )): ?>
+			<h2 class="entry-title linked-list-single">
+				<a href="<?php echo get_post_meta($post->ID, 'standard_link_url_field', true); ?>" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?> &rarr;</a></h2>
+			<?php elseif ( has_post_format( 'quote' )): ?>
+			<?php else: ?>
+				<h2 class="entry-title"><?php the_title(); ?></h2>
+			<?php endif; ?>
+			<?php if ( !has_post_format( 'quote' )): ?>
+			<div class="entry-meta">
+				<?php clean_content_posted_on(); ?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
+		</header><!-- .entry-header -->
+	<?php 
+	if ( has_post_thumbnail()) {
+	  $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
+	  the_post_thumbnail('full');
+	}
+	?>
 	<div class="entry-content">
+	<?php if ( has_post_format( 'quote' )): ?>
+<blockquote class="quote single">
 		<?php the_content(); ?>
+		<small class="entry-title"><?php the_title(); ?></small>
+
+		</blockquote>
+	<?php else: ?>
+	<?php the_content(); ?>
+<?php endif; ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'clean-content' ),
@@ -25,6 +46,9 @@
 
 	<footer class="entry-meta">
 		<?php
+
+			/* date posted */
+			$posted_on = clean_content_posted_on();
 			/* translators: used between list items, there is a space after the comma */
 			$category_list = get_the_category_list( __( ', ', 'clean-content' ) );
 
@@ -42,15 +66,17 @@
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'clean-content' );
+					$meta_text = __( ' in %2$s and tagged %3$s. Bookmark the <a href="%4$s" rel="bookmark">permalink</a>.', 'clean-content' );
 				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'clean-content' );
+					$meta_text = __( ' in %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'clean-content' );
 				}
 
 			} // end check for categories on this blog
 
 			printf(
+
 				$meta_text,
+				$posted_on,
 				$category_list,
 				$tag_list,
 				get_permalink()

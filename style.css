@@ -1,1 +1,17 @@
+/*
+Theme Name: Clean Content
+Theme URI: http://onedge.be/cleancontent
+Author: Jan Henckens
+Author URI: http://onedge.be
+Description: A simple and clean theme the focusses on displaying your content and images on every device.
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, white, light, one-column, two-columns, right-sidebar, left-sidebar, responsive-layout, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: clean_content
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
 @import url("css/style.css");
