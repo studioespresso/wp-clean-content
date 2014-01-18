@@ -1374,27 +1374,24 @@ article {
     /* line 12, ../scss/scss/objects/_article.scss */
     #single-post article.format-quote {
       margin-bottom: 0; }
-  /* line 18, ../scss/scss/objects/_article.scss */
-  article p {
-    text-align: justify; }
-  /* line 21, ../scss/scss/objects/_article.scss */
+  /* line 19, ../scss/scss/objects/_article.scss */
   article dt.gallery-item img {
     margin-bottom: 1rem;
     display: block; }
-  /* line 25, ../scss/scss/objects/_article.scss */
+  /* line 23, ../scss/scss/objects/_article.scss */
   article img {
     margin-bottom: 1rem;
     margin-top: 1rem;
     display: block; }
-  /* line 30, ../scss/scss/objects/_article.scss */
+  /* line 28, ../scss/scss/objects/_article.scss */
   article.quote {
     margin-bottom: 6rem;
     margin-top: 6rem; }
-  /* line 36, ../scss/scss/objects/_article.scss */
+  /* line 34, ../scss/scss/objects/_article.scss */
   article.sticky {
     padding-bottom: 1rem;
     border-bottom: 2px dashed; }
-  /* line 40, ../scss/scss/objects/_article.scss */
+  /* line 38, ../scss/scss/objects/_article.scss */
   article pre {
     white-space: pre-wrap;
     /* css-3 */
@@ -1408,26 +1405,26 @@ article {
     /* Internet Explorer 5.5+ */ }
 
 @media all and (min-width: 29.75em) {
-  /* line 50, ../scss/scss/objects/_article.scss */
+  /* line 48, ../scss/scss/objects/_article.scss */
   .featured-image + .entry-content {
     margin-left: 1rem; } }
 
-/* line 57, ../scss/scss/objects/_article.scss */
+/* line 55, ../scss/scss/objects/_article.scss */
 .byline {
   font-size: 0.85em;
   margin-bottom: 0.5rem; }
 
 /* Wordpress Caption */
-/* line 63, ../scss/scss/objects/_article.scss */
+/* line 61, ../scss/scss/objects/_article.scss */
 .wp-caption-text {
   font-style: italic; }
 
-/* line 67, ../scss/scss/objects/_article.scss */
+/* line 65, ../scss/scss/objects/_article.scss */
 .gallery img {
   margin-bottom: 1rem;
   margin-top: 0; }
 
-/* line 72, ../scss/scss/objects/_article.scss */
+/* line 70, ../scss/scss/objects/_article.scss */
 dd.gallery-caption {
   bottom: 10px; }
 
