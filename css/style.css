@@ -695,42 +695,42 @@ h1 {
   color: #2e4367; }
   /* line 6, ../scss/scss/base/_headings.scss */
   h1.site-title {
-    font-size: 1.5em; }
-  /* line 9, ../scss/scss/base/_headings.scss */
+    font-size: 2.4375em; }
+  /* line 10, ../scss/scss/base/_headings.scss */
   h1#site-title {
     line-height: 1.4;
     display: inline; }
 
-/* line 15, ../scss/scss/base/_headings.scss */
+/* line 16, ../scss/scss/base/_headings.scss */
 h2 {
   line-height: 1.2;
   color: #4b4b4b; }
-  /* line 18, ../scss/scss/base/_headings.scss */
+  /* line 19, ../scss/scss/base/_headings.scss */
   h2.entry-title {
     font-size: 1.5em; }
-    /* line 20, ../scss/scss/base/_headings.scss */
+    /* line 21, ../scss/scss/base/_headings.scss */
     h2.entry-title a {
       font-size: 1.225em; }
-    /* line 23, ../scss/scss/base/_headings.scss */
+    /* line 24, ../scss/scss/base/_headings.scss */
     h2.entry-title:hover {
       color: inherit;
       text-decoration: underline; }
-  /* line 28, ../scss/scss/base/_headings.scss */
+  /* line 29, ../scss/scss/base/_headings.scss */
   h2.linked-list-item a, h2.linked-list-single a {
     font-size: 0.55em; }
-  /* line 31, ../scss/scss/base/_headings.scss */
+  /* line 32, ../scss/scss/base/_headings.scss */
   h2.comments-title {
     margin-bottom: 1rem; }
-  /* line 34, ../scss/scss/base/_headings.scss */
+  /* line 35, ../scss/scss/base/_headings.scss */
   h2.headline {
     clear: both; }
 
-/* line 39, ../scss/scss/base/_headings.scss */
+/* line 40, ../scss/scss/base/_headings.scss */
 h3 {
   line-height: 1.2; }
 
 /* Subheadings */
-/* line 56, ../scss/scss/base/_headings.scss */
+/* line 57, ../scss/scss/base/_headings.scss */
 .subheading {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: normal; }
