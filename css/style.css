@@ -708,7 +708,7 @@ h1 {
 h2 {
   line-height: 1.2;
   color: #4b4b4b;
-  font-family: 'heading', sans-serif; }
+  font-family: 'heading', 'Verdana', sans-serif; }
   /* line 20, ../scss/scss/base/_headings.scss */
   h2.entry-title {
     font-size: 1.5em; }
@@ -732,13 +732,13 @@ h2 {
 /* line 41, ../scss/scss/base/_headings.scss */
 h3 {
   line-height: 1.2;
-  font-family: 'heading', sans-serif; }
+  font-family: 'heading', 'Verdana', sans-serif; }
 
 /* Text-Related Elements */
 /* line 3, ../scss/scss/base/_text.scss */
 p {
   margin-bottom: 1rem;
-  font-family: 'main', sans-serif; }
+  font-family: 'main', 'Verdana', sans-serif; }
 
 /* Blockquote */
 /* line 11, ../scss/scss/base/_text.scss */
@@ -1125,7 +1125,7 @@ header#masthead {
 
 /* line 20, ../scss/scss/objects/_header.scss */
 header[role=banner] {
-  font-family: 'siteheader', sans-serif;
+  font-family: 'siteheader', 'Verdana', sans-serif;
   border-bottom: 1px solid;
   margin-bottom: 2rem;
   padding-bottom: 2rem; }
