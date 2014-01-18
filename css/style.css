@@ -885,14 +885,13 @@ input[type="search"]::-webkit-search-decoration {
 /* Search Form */
 /* line 131, ../scss/scss/base/_forms.scss */
 input.search-field {
-  width: 95%;
-  border: 1px solid grey; }
+  width: 95%; }
 
-/* line 139, ../scss/scss/base/_forms.scss */
+/* line 138, ../scss/scss/base/_forms.scss */
 .search-field {
   padding-right: 3em; }
 
-/* line 142, ../scss/scss/base/_forms.scss */
+/* line 141, ../scss/scss/base/_forms.scss */
 .inline-form .search-submit {
   background: none;
   border: 0;

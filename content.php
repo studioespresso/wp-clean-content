@@ -43,11 +43,7 @@
 </blockquote>
 	<?php else: ?>
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'clean-content' ) ); ?>
-
 	<?php endif; ?>
-
-
-
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'clean-content' ),
