@@ -74,11 +74,14 @@ header, footer, nav, section, article, hgroup, figure {
   display: block; }
 
 @font-face {
-  font-family: header;
+  font-family: siteheader;
   src: url("../fonts/VarelaRound-Regular.ttf"); }
 @font-face {
-  font-family: main;
+  font-family: heading;
   src: url("../fonts/SourceSansPro-Regular.ttf"); }
+@font-face {
+  font-family: main;
+  src: url("../fonts/SourceSansPro-Light.ttf"); }
 /*
 Theme Name: Clean Content
 Theme URI: http://underscores.me/
@@ -704,36 +707,32 @@ h1 {
 /* line 16, ../scss/scss/base/_headings.scss */
 h2 {
   line-height: 1.2;
-  color: #4b4b4b; }
-  /* line 19, ../scss/scss/base/_headings.scss */
+  color: #4b4b4b;
+  font-family: 'heading', sans-serif; }
+  /* line 20, ../scss/scss/base/_headings.scss */
   h2.entry-title {
     font-size: 1.5em; }
-    /* line 21, ../scss/scss/base/_headings.scss */
+    /* line 22, ../scss/scss/base/_headings.scss */
     h2.entry-title a {
       font-size: 1.225em; }
-    /* line 24, ../scss/scss/base/_headings.scss */
+    /* line 25, ../scss/scss/base/_headings.scss */
     h2.entry-title:hover {
       color: inherit;
       text-decoration: underline; }
-  /* line 29, ../scss/scss/base/_headings.scss */
+  /* line 30, ../scss/scss/base/_headings.scss */
   h2.linked-list-item a, h2.linked-list-single a {
     font-size: 0.55em; }
-  /* line 32, ../scss/scss/base/_headings.scss */
+  /* line 33, ../scss/scss/base/_headings.scss */
   h2.comments-title {
     margin-bottom: 1rem; }
-  /* line 35, ../scss/scss/base/_headings.scss */
+  /* line 36, ../scss/scss/base/_headings.scss */
   h2.headline {
     clear: both; }
 
-/* line 40, ../scss/scss/base/_headings.scss */
+/* line 41, ../scss/scss/base/_headings.scss */
 h3 {
-  line-height: 1.2; }
-
-/* Subheadings */
-/* line 57, ../scss/scss/base/_headings.scss */
-.subheading {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-weight: normal; }
+  line-height: 1.2;
+  font-family: 'heading', sans-serif; }
 
 /* Text-Related Elements */
 /* line 3, ../scss/scss/base/_text.scss */
@@ -1126,7 +1125,7 @@ header#masthead {
 
 /* line 20, ../scss/scss/objects/_header.scss */
 header[role=banner] {
-  font-family: 'header', sans-serif;
+  font-family: 'siteheader', sans-serif;
   border-bottom: 1px solid;
   margin-bottom: 2rem;
   padding-bottom: 2rem; }

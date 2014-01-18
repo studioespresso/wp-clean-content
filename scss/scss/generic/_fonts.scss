@@ -1,9 +1,14 @@
 @font-face {
-font-family: header;
+font-family: siteheader;
 src: url('../fonts/VarelaRound-Regular.ttf')
 }
 
 @font-face {
-font-family: main;
+font-family: heading;
 src: url('../fonts/SourceSansPro-Regular.ttf')
+}
+
+@font-face {
+font-family: main;
+src: url('../fonts/SourceSansPro-Light.ttf')
 }
