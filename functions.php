@@ -255,7 +255,7 @@ function cc_customizer_css() {
     ?>
     <style type="text/css">
         a, h1, h2, .menu-toggle { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
-        .entry-meta a:hover, .nav-links, textarea, input, button, {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
+        .entry-meta a:hover, .nav-links, textarea, input, button {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
     </style>
     <?php
 }
