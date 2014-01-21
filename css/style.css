@@ -1732,7 +1732,7 @@ span.tags-links {
 
 /* line 56, ../scss/scss/objects/_widgets.scss */
 .widget ul li {
-  font-size: 1.225em; }
+  font-size: 16px; }
   /* line 58, ../scss/scss/objects/_widgets.scss */
   .widget ul li ul {
     background-color: inherit;
