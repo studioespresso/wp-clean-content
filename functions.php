@@ -203,7 +203,7 @@ function cc_register_theme_customizer( $wp_customize ) {
     $wp_customize->add_setting(
             'cc_link_color',
             array(
-                'default'     => '#0e2c6c'
+                'default'     => '#284a60'
             )
         );
         $wp_customize->add_control(
