@@ -32,9 +32,6 @@
 	float: right;
 }
 
-.postcontent p {
-	text-align: justify;
-}
 
 /* Two Column Layout */
 .main {
@@ -106,10 +103,10 @@
 	clear: both;
 	margin-right: $pad;
 	@media all and  (min-width: $bp-xl) {
-		&.size-small {
+		&.size-small, &.size-thumbnail {
 			margin-left: -$small-offset;
 		}
-		&.size-medium, &.size-full {
+		&.size-medium, &.size-full,  {
 			margin-left: -$medium-offset;
 		}
 		&.size-large {
@@ -126,7 +123,7 @@
 	clear: both;
 	margin-left: $pad;
 	@media all and  (min-width: $bp-xl) {
-		&.size-small  {
+		&.size-small, &.size-thumbnail {
 			margin-right: -$small-offset;
 		}
 		&.size-medium, &.size-full {

@@ -955,37 +955,33 @@ td {
 .right {
   float: right; }
 
-/* line 35, ../scss/scss/objects/_layout.scss */
-.postcontent p {
-  text-align: justify; }
-
 /* Two Column Layout */
-/* line 40, ../scss/scss/objects/_layout.scss */
+/* line 37, ../scss/scss/objects/_layout.scss */
 .main {
   max-width: 100%; }
   @media all and (min-width: 50em) {
-    /* line 43, ../scss/scss/objects/_layout.scss */
+    /* line 40, ../scss/scss/objects/_layout.scss */
     .main.page {
       display: block;
       float: left;
       margin-left: 8.4592%;
       margin-right: -100%;
       width: 83.02951%; }
-    /* line 44, ../scss/scss/objects/_layout.scss */
+    /* line 41, ../scss/scss/objects/_layout.scss */
     body.left .main {
       display: block;
       float: left;
       margin-left: 25.3776%;
       margin-right: -100%;
       width: 74.57031%; }
-    /* line 45, ../scss/scss/objects/_layout.scss */
+    /* line 42, ../scss/scss/objects/_layout.scss */
     body.right .main {
       display: block;
       float: left;
       margin-left: 0%;
       margin-right: -100%;
       width: 74.57031%; }
-    /* line 46, ../scss/scss/objects/_layout.scss */
+    /* line 43, ../scss/scss/objects/_layout.scss */
     body[class*='fullwidth'].right .main, body[class*='fullwidth'].left .main, body[class*="image"].left .main, body[class*="image"].right .main {
       display: block;
       float: left;
@@ -993,25 +989,25 @@ td {
       margin-right: -100%;
       width: 99.94792%; } }
 
-/* line 52, ../scss/scss/objects/_layout.scss */
+/* line 49, ../scss/scss/objects/_layout.scss */
 .sidebar {
   height: 100%; }
   @media all and (max-width: 50em) {
-    /* line 52, ../scss/scss/objects/_layout.scss */
+    /* line 49, ../scss/scss/objects/_layout.scss */
     .sidebar {
       display: none; } }
   @media all and (min-width: 50em) {
-    /* line 58, ../scss/scss/objects/_layout.scss */
+    /* line 55, ../scss/scss/objects/_layout.scss */
     body.nosidebar .sidebar {
       display: none; }
-    /* line 59, ../scss/scss/objects/_layout.scss */
+    /* line 56, ../scss/scss/objects/_layout.scss */
     body.left .sidebar {
       display: block;
       float: left;
       margin-left: 0%;
       margin-right: -100%;
       width: 23.8151%; }
-    /* line 60, ../scss/scss/objects/_layout.scss */
+    /* line 57, ../scss/scss/objects/_layout.scss */
     body.right .sidebar {
       display: block;
       float: left;
@@ -1020,82 +1016,82 @@ td {
       width: 23.8151%; } }
 
 /* Image sizes offsets */
-/* line 67, ../scss/scss/objects/_layout.scss */
+/* line 64, ../scss/scss/objects/_layout.scss */
 .size-small {
   max-width: 12em; }
 
-/* line 70, ../scss/scss/objects/_layout.scss */
+/* line 67, ../scss/scss/objects/_layout.scss */
 .size-medium {
   max-width: 16em; }
 
-/* line 74, ../scss/scss/objects/_layout.scss */
+/* line 71, ../scss/scss/objects/_layout.scss */
 .featured-image {
   display: table-cell;
   vertical-align: top;
   margin: 1rem; }
   @media all and (max-width: 29.75em) {
-    /* line 74, ../scss/scss/objects/_layout.scss */
+    /* line 71, ../scss/scss/objects/_layout.scss */
     .featured-image {
       width: 100%;
       display: inline;
       margin-bottom: 1rem; } }
 
 @media all and (min-width: 73em) {
-  /* line 84, ../scss/scss/objects/_layout.scss */
+  /* line 81, ../scss/scss/objects/_layout.scss */
   .wp-caption.alignleft {
     margin-left: -8em; } }
-/* line 88, ../scss/scss/objects/_layout.scss */
+/* line 85, ../scss/scss/objects/_layout.scss */
 .wp-caption.alignleft p.wp-caption-text {
   margin-right: 1rem;
   margin-bottom: 0px; }
 
-/* line 93, ../scss/scss/objects/_layout.scss */
+/* line 90, ../scss/scss/objects/_layout.scss */
 .alignnone {
   float: left;
   max-width: 100%; }
 
-/* line 98, ../scss/scss/objects/_layout.scss */
+/* line 95, ../scss/scss/objects/_layout.scss */
 .aligncenter {
   float: none;
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 104, ../scss/scss/objects/_layout.scss */
+/* line 101, ../scss/scss/objects/_layout.scss */
 .alignleft {
   float: left;
   clear: both;
   margin-right: 1rem; }
   @media all and (min-width: 73em) {
-    /* line 109, ../scss/scss/objects/_layout.scss */
-    .alignleft.size-small {
+    /* line 106, ../scss/scss/objects/_layout.scss */
+    .alignleft.size-small, .alignleft.size-thumbnail {
       margin-left: -6em; }
-    /* line 112, ../scss/scss/objects/_layout.scss */
+    /* line 109, ../scss/scss/objects/_layout.scss */
     .alignleft.size-medium, .alignleft.size-full {
       margin-left: -8em; }
-    /* line 115, ../scss/scss/objects/_layout.scss */
+    /* line 112, ../scss/scss/objects/_layout.scss */
     .alignleft.size-large {
       margin-left: -11em; }
-    /* line 118, ../scss/scss/objects/_layout.scss */
+    /* line 115, ../scss/scss/objects/_layout.scss */
     .left .alignleft {
       margin-left: 0px; } }
 
-/* line 124, ../scss/scss/objects/_layout.scss */
+/* line 121, ../scss/scss/objects/_layout.scss */
 .alignright {
   float: right;
   clear: both;
   margin-left: 1rem; }
   @media all and (min-width: 73em) {
-    /* line 129, ../scss/scss/objects/_layout.scss */
-    .alignright.size-small {
+    /* line 126, ../scss/scss/objects/_layout.scss */
+    .alignright.size-small, .alignright.size-thumbnail {
       margin-right: -6em; }
-    /* line 132, ../scss/scss/objects/_layout.scss */
+    /* line 129, ../scss/scss/objects/_layout.scss */
     .alignright.size-medium, .alignright.size-full {
       margin-right: -8em; }
-    /* line 135, ../scss/scss/objects/_layout.scss */
+    /* line 132, ../scss/scss/objects/_layout.scss */
     .alignright.size-large {
       margin-right: -11em; }
-    /* line 138, ../scss/scss/objects/_layout.scss */
+    /* line 135, ../scss/scss/objects/_layout.scss */
     .right .alignright {
       margin-right: 0px; } }
 
