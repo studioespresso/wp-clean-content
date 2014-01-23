@@ -11,6 +11,8 @@ Some of the key features are:
 * Responsive layout
 * Customisable through the standard WordPress theme customiser
 
+![](https://raw2.github.com/On-Edge/wp-clean-content/develop/screenshot.png)
+
 
 ####Options
 
