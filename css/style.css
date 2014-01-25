@@ -1170,26 +1170,25 @@ li ul.sub-menu {
   /* line 24, ../scss/scss/objects/_nav.scss */
   li ul.sub-menu li a {
     display: block;
-    font-size: 0.55em;
     color: #000; }
-  /* line 29, ../scss/scss/objects/_nav.scss */
+  /* line 28, ../scss/scss/objects/_nav.scss */
   li ul.sub-menu :hover {
     background-color: #09388c; }
-    /* line 31, ../scss/scss/objects/_nav.scss */
+    /* line 30, ../scss/scss/objects/_nav.scss */
     li ul.sub-menu :hover a {
       color: #fff; }
 
-/* line 38, ../scss/scss/objects/_nav.scss */
+/* line 37, ../scss/scss/objects/_nav.scss */
 .main-navigation li {
   float: left;
   padding: 1rem; }
 
-/* line 42, ../scss/scss/objects/_nav.scss */
+/* line 41, ../scss/scss/objects/_nav.scss */
 .main-navigation a {
   display: block;
   text-decoration: none; }
 
-/* line 46, ../scss/scss/objects/_nav.scss */
+/* line 45, ../scss/scss/objects/_nav.scss */
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   display: none;
@@ -1200,21 +1199,21 @@ li ul.sub-menu {
   z-index: 99999;
   background-color: #fff; }
 
-/* line 56, ../scss/scss/objects/_nav.scss */
+/* line 55, ../scss/scss/objects/_nav.scss */
 .main-navigation ul ul ul {
   left: 100%;
   top: 0; }
 
-/* line 60, ../scss/scss/objects/_nav.scss */
+/* line 59, ../scss/scss/objects/_nav.scss */
 .main-navigation ul ul a {
   width: 200px; }
 
-/* line 71, ../scss/scss/objects/_nav.scss */
+/* line 70, ../scss/scss/objects/_nav.scss */
 .main-navigation ul li:hover > ul {
   display: block; }
 
 /* Small menu */
-/* line 79, ../scss/scss/objects/_nav.scss */
+/* line 78, ../scss/scss/objects/_nav.scss */
 .menu-toggle {
   cursor: pointer;
   display: none;
@@ -1222,55 +1221,55 @@ li ul.sub-menu {
   font-size: 2.5em; }
 
 @media screen and (max-width: 600px) {
-  /* line 87, ../scss/scss/objects/_nav.scss */
+  /* line 86, ../scss/scss/objects/_nav.scss */
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block;
     position: relative; }
 
-  /* line 93, ../scss/scss/objects/_nav.scss */
+  /* line 92, ../scss/scss/objects/_nav.scss */
   .main-navigation ul {
     display: none; } }
 /* =Navigation
 ----------------------------------------------- */
-/* line 101, ../scss/scss/objects/_nav.scss */
+/* line 100, ../scss/scss/objects/_nav.scss */
 .site-main [class*="navigation"] {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
-/* line 110, ../scss/scss/objects/_nav.scss */
+/* line 109, ../scss/scss/objects/_nav.scss */
 #image-navigation span.previous-image a {
   float: left;
   padding: 0.5rem;
   background-color: #09388c;
   color: #fff;
   margin-bottom: 1rem; }
-/* line 117, ../scss/scss/objects/_nav.scss */
+/* line 116, ../scss/scss/objects/_nav.scss */
 #image-navigation span.next-image a {
   float: right;
   padding: 0.5rem;
   background-color: #09388c;
   color: #fff;
   margin-bottom: 1rem; }
-/* line 124, ../scss/scss/objects/_nav.scss */
+/* line 123, ../scss/scss/objects/_nav.scss */
 #image-navigation span a {
   color: #fff; }
 
-/* line 129, ../scss/scss/objects/_nav.scss */
+/* line 128, ../scss/scss/objects/_nav.scss */
 .nav-links {
   background-color: #09388c;
   padding: 1rem;
   display: block; }
-  /* line 133, ../scss/scss/objects/_nav.scss */
+  /* line 132, ../scss/scss/objects/_nav.scss */
   .nav-links a[rel="next"] {
     float: right; }
-  /* line 136, ../scss/scss/objects/_nav.scss */
+  /* line 135, ../scss/scss/objects/_nav.scss */
   .nav-links a[rel="previous"] {
     float: left; }
-  /* line 139, ../scss/scss/objects/_nav.scss */
+  /* line 138, ../scss/scss/objects/_nav.scss */
   .nav-links a {
     color: #fff; }
-    /* line 141, ../scss/scss/objects/_nav.scss */
+    /* line 140, ../scss/scss/objects/_nav.scss */
     .nav-links a:hover {
       text-decoration: underline; }
 
