@@ -79,17 +79,32 @@
 	}
 }
 .wp-caption.alignleft {
-	@media all and  (min-width: $bp-xl) {
+	@media all and  (min-width: $bp-xxl) {
 	margin-left: -$medium-offset;
-}
-	p.wp-caption-text {
-		margin-right: $pad;
-		margin-bottom: 0px;
+
 	}
+}
+
+.wp-caption.alignleft+img.size-full {
+	margin-left: -20em;
+}
+
+.wp-caption.alignright {
+	@media all and  (min-width: $bp-xxl) {
+	margin-right: -$medium-offset;
+
+	}
+}
+
+
+p.wp-caption-text {
+	margin-right: $pad;
+	margin-bottom: 0px;
 }
 .alignnone {
 	float: left;
 	max-width: 100%;
+	clear: both;
 
 }
 .aligncenter {
@@ -102,15 +117,18 @@
 	float: left;
 	clear: both;
 	margin-right: $pad;
-	@media all and  (min-width: $bp-xl) {
+	@media all and  (min-width: $bp-xxl) {
 		&.size-small, &.size-thumbnail {
-			margin-left: -$small-offset;
+			margin-left: -$medium-offset;
 		}
 		&.size-medium, &.size-full,  {
 			margin-left: -$medium-offset;
 		}
 		&.size-large {
 			margin-left: -$large-offset;
+		}
+		&.size-full {
+			margin-left: 0;
 		}
 		.left & {
 			margin-left: 0px;
@@ -122,15 +140,18 @@
 	float: right;
 	clear: both;
 	margin-left: $pad;
-	@media all and  (min-width: $bp-xl) {
+	@media all and  (min-width: $bp-xxl) {
 		&.size-small, &.size-thumbnail {
-			margin-right: -$small-offset;
+			margin-right: -$medium-offset;
 		}
 		&.size-medium, &.size-full {
 			margin-right: -$medium-offset;
 		}
 		&.size-large {
 			margin-right: -$large-offset;
+		}
+		&.size-full {
+			margin-right: 0;
 		}
 		.right & {
 			margin-right: 0px;
