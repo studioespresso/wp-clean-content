@@ -390,20 +390,10 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
   border: 1px solid #ccc;
   border-radius: 3px; }
 
-/* line 259, ../scss/scss/generic/_base.scss */
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-  color: #111; }
-
-/* line 267, ../scss/scss/generic/_base.scss */
+/* line 265, ../scss/scss/generic/_base.scss */
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -411,7 +401,7 @@ input[type="password"],
 input[type="search"] {
   padding: 3px; }
 
-/* line 274, ../scss/scss/generic/_base.scss */
+/* line 272, ../scss/scss/generic/_base.scss */
 textarea {
   overflow: auto;
   /* Removes default vertical scrollbar in IE6/7/8/9 */
@@ -421,26 +411,26 @@ textarea {
   width: 98%; }
 
 /* Alignment */
-/* line 284, ../scss/scss/generic/_base.scss */
+/* line 282, ../scss/scss/generic/_base.scss */
 .alignleft {
   display: inline;
   float: left;
   margin-right: 1.5em; }
 
-/* line 289, ../scss/scss/generic/_base.scss */
+/* line 287, ../scss/scss/generic/_base.scss */
 .alignright {
   display: inline;
   float: right;
   margin-left: 1.5em; }
 
-/* line 294, ../scss/scss/generic/_base.scss */
+/* line 292, ../scss/scss/generic/_base.scss */
 .aligncenter {
   clear: both;
   display: block;
   margin: 0 auto; }
 
 /* Clearing */
-/* line 303, ../scss/scss/generic/_base.scss */
+/* line 301, ../scss/scss/generic/_base.scss */
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -456,7 +446,7 @@ textarea {
   content: '';
   display: table; }
 
-/* line 319, ../scss/scss/generic/_base.scss */
+/* line 317, ../scss/scss/generic/_base.scss */
 .clear:after,
 .entry-content:after,
 .comment-content:after,
@@ -467,41 +457,41 @@ textarea {
 
 /* =Content
 ----------------------------------------------- */
-/* line 334, ../scss/scss/generic/_base.scss */
+/* line 332, ../scss/scss/generic/_base.scss */
 .hentry {
   margin: 0 0 1.5em; }
 
-/* line 337, ../scss/scss/generic/_base.scss */
+/* line 335, ../scss/scss/generic/_base.scss */
 .byline,
 .updated {
   display: none; }
 
-/* line 341, ../scss/scss/generic/_base.scss */
+/* line 339, ../scss/scss/generic/_base.scss */
 .single .byline,
 .group-blog .byline {
   display: inline; }
 
-/* line 345, ../scss/scss/generic/_base.scss */
+/* line 343, ../scss/scss/generic/_base.scss */
 .page-content,
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 1.5em; }
 
-/* line 350, ../scss/scss/generic/_base.scss */
+/* line 348, ../scss/scss/generic/_base.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
 
 /* =Asides
 ----------------------------------------------- */
-/* line 359, ../scss/scss/generic/_base.scss */
+/* line 357, ../scss/scss/generic/_base.scss */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none; }
 
 /* =Media
 ----------------------------------------------- */
-/* line 368, ../scss/scss/generic/_base.scss */
+/* line 366, ../scss/scss/generic/_base.scss */
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
@@ -510,42 +500,42 @@ textarea {
   margin-top: 0;
   padding: 0; }
 
-/* line 376, ../scss/scss/generic/_base.scss */
+/* line 374, ../scss/scss/generic/_base.scss */
 .wp-caption {
   border: 1px solid #ccc;
   margin-bottom: 1.5em;
   max-width: 100%; }
 
-/* line 381, ../scss/scss/generic/_base.scss */
+/* line 379, ../scss/scss/generic/_base.scss */
 .wp-caption img[class*="wp-image-"] {
   display: block;
   margin: 1.2% auto 0;
   max-width: 98%; }
 
-/* line 386, ../scss/scss/generic/_base.scss */
+/* line 384, ../scss/scss/generic/_base.scss */
 .wp-caption-text {
   text-align: center; }
 
-/* line 389, ../scss/scss/generic/_base.scss */
+/* line 387, ../scss/scss/generic/_base.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0; }
 
-/* line 392, ../scss/scss/generic/_base.scss */
+/* line 390, ../scss/scss/generic/_base.scss */
 .site-main .gallery {
   margin-bottom: 1.5em; }
 
-/* line 397, ../scss/scss/generic/_base.scss */
+/* line 395, ../scss/scss/generic/_base.scss */
 .site-main .gallery a img {
   border: none;
   height: auto;
   max-width: 90%; }
 
-/* line 402, ../scss/scss/generic/_base.scss */
+/* line 400, ../scss/scss/generic/_base.scss */
 .site-main .gallery dd {
   margin: 0; }
 
 /* Make sure embeds and iframes fit their containers */
-/* line 411, ../scss/scss/generic/_base.scss */
+/* line 409, ../scss/scss/generic/_base.scss */
 embed,
 iframe,
 object {
@@ -554,26 +544,26 @@ object {
 /* =Widgets
 ----------------------------------------------- */
 /* Make sure select elements fit in widgets */
-/* line 430, ../scss/scss/generic/_base.scss */
+/* line 428, ../scss/scss/generic/_base.scss */
 .widget select {
   max-width: 100%; }
 
 /* Search widget */
-/* line 435, ../scss/scss/generic/_base.scss */
+/* line 433, ../scss/scss/generic/_base.scss */
 .widget_search .search-submit {
   display: none; }
 
 /* =Infinite Scroll
 ----------------------------------------------- */
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-/* line 444, ../scss/scss/generic/_base.scss */
+/* line 442, ../scss/scss/generic/_base.scss */
 .infinite-scroll .paging-navigation,
 .infinite-scroll.neverending .site-footer {
   /* Theme Footer (when set to scrolling) */
   display: none; }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-/* line 450, ../scss/scss/generic/_base.scss */
+/* line 448, ../scss/scss/generic/_base.scss */
 .infinity-end.neverending .site-footer {
   display: block; }
 
@@ -885,6 +875,7 @@ input[type="search"]::-webkit-search-decoration {
 /* Search Form */
 /* line 131, ../scss/scss/base/_forms.scss */
 input.search-field {
+  color: #eeeeee;
   width: 95%; }
 
 /* line 138, ../scss/scss/base/_forms.scss */
@@ -894,8 +885,7 @@ input.search-field {
 /* line 141, ../scss/scss/base/_forms.scss */
 .inline-form .search-submit {
   background: none;
-  border: 0;
-  color: grey; }
+  border: 0; }
 
 /*------------------------------------*\
     $Table

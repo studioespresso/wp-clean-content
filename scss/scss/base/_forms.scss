@@ -129,7 +129,7 @@ input[type="search"]::-webkit-search-decoration {
 
 /* Search Form */
 input.search-field {
-	
+	color: $gray-light-2;
 	width: 95%;
 }
 
@@ -141,5 +141,4 @@ input.search-field {
 .inline-form .search-submit {
 	background: none;
 	border: 0;
-	color: $gray;
 }
