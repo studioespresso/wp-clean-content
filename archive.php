@@ -65,6 +65,7 @@ get_header(); ?>
 						endif;
 					?>
 				</h1>
+				<hr>
 				<?php
 					// Show an optional term description.
 					$term_description = term_description();
