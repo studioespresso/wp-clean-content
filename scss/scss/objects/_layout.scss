@@ -79,9 +79,11 @@
 	}
 }
 .wp-caption.alignleft {
+	@media all and  (min-width: $bp-xl) {
+	margin-left: -$smaller-offset;
+	}
 	@media all and  (min-width: $bp-xxl) {
 	margin-left: -$medium-offset;
-
 	}
 }
 
@@ -90,9 +92,11 @@
 }
 
 .wp-caption.alignright {
+	@media all and  (min-width: $bp-xl) {
+	margin-right: -$smaller-offset;
+	}
 	@media all and  (min-width: $bp-xxl) {
 	margin-right: -$medium-offset;
-
 	}
 }
 
@@ -117,9 +121,26 @@ p.wp-caption-text {
 	float: left;
 	clear: both;
 	margin-right: $pad;
+	@media all and  (min-width: $bp-xl) {
+		&.size-small, &.size-thumbnail {
+			margin-left: -$smaller-offset;
+		}
+		&.size-medium, &.size-full,  {
+			margin-left: -$mediumer-offset;
+		}
+		&.size-large {
+			margin-left: -$larger-offset;
+		}
+		&.size-full {
+			margin-left: 0;
+		}
+		.left & {
+			margin-left: 0px;
+		}
+	}
 	@media all and  (min-width: $bp-xxl) {
 		&.size-small, &.size-thumbnail {
-			margin-left: -$medium-offset;
+			margin-left: -$small-offset;
 		}
 		&.size-medium, &.size-full,  {
 			margin-left: -$medium-offset;
@@ -140,9 +161,26 @@ p.wp-caption-text {
 	float: right;
 	clear: both;
 	margin-left: $pad;
+	@media all and  (min-width: $bp-xl) {
+		&.size-small, &.size-thumbnail {
+			margin-right: -$smaller-offset;
+		}
+		&.size-medium, &.size-full {
+			margin-right: -$mediumer-offset;
+		}
+		&.size-large {
+			margin-right: -$larger-offset;
+		}
+		&.size-full {
+			margin-right: 0;
+		}
+		.right & {
+			margin-right: 0px;
+		}
+	}
 	@media all and  (min-width: $bp-xxl) {
 		&.size-small, &.size-thumbnail {
-			margin-right: -$medium-offset;
+			margin-right: -$small-offset;
 		}
 		&.size-medium, &.size-full {
 			margin-right: -$medium-offset;
