@@ -9,14 +9,6 @@
 
 .container {
 	@include gs-span(cl,2, 11);
-	&.midnight {
-		background: $link;
-	}
-	&.light {
-		background: $link;
-	}
-	&.blue {
-	}
 }
 
 /*------------------------------------*\
@@ -80,10 +72,8 @@
 }
 .wp-caption.alignleft {
 	@media all and  (min-width: $bp-xl) {
-	margin-left: -$smaller-offset;
 	}
 	@media all and  (min-width: $bp-xxl) {
-	margin-left: -$medium-offset;
 	}
 }
 
@@ -93,10 +83,8 @@
 
 .wp-caption.alignright {
 	@media all and  (min-width: $bp-xl) {
-	margin-right: -$smaller-offset;
 	}
 	@media all and  (min-width: $bp-xxl) {
-	margin-right: -$medium-offset;
 	}
 }
 
