@@ -21,7 +21,7 @@ get_header();
                         <div class="entry-meta">
                             <?php
                                 $metadata = wp_get_attachment_metadata();
-                                printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s" pubdate>%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>', 'shape' ),
+                                printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s" pubdate>%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>', 'clean-content' ),
                                     esc_attr( get_the_date( 'c' ) ),
                                     esc_html( get_the_date() ),
                                     wp_get_attachment_url(),
@@ -31,12 +31,12 @@ get_header();
                                     get_the_title( $post->post_parent )
                                 );
                             ?>
-                            <?php edit_post_link( __( 'Edit', 'shape' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
+                            <?php edit_post_link( __( 'Edit', 'clean-content' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
                         </div><!-- .entry-meta -->
  
                         <nav id="image-navigation" class="site-navigation">
-                            <span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'shape' ) ); ?></span>
-                            <span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'shape' ) ); ?></span>
+                            <span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'clean-content' ) ); ?></span>
+                            <span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'clean-content' ) ); ?></span>
                         </nav><!-- #image-navigation -->
                     </header><!-- .entry-header -->
  
@@ -70,7 +70,7 @@ get_header();
                                 ?>
  
                                 <a href="<?php echo $next_attachment_url; ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php
-                                    $attachment_size = apply_filters( 'shape_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
+                                    $attachment_size = apply_filters( 'clean-content_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
                                     echo wp_get_attachment_image( $post->ID, $attachment_size );
                                 ?></a>
                             </div><!-- .attachment -->
@@ -83,7 +83,7 @@ get_header();
                         </div><!-- .entry-attachment -->
  
                         <?php the_content(); ?>
-                        <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'shape' ), 'after' => '</div>' ) ); ?>
+                        <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'clean-content' ), 'after' => '</div>' ) ); ?>
  
                     </div><!-- .entry-content -->
  
