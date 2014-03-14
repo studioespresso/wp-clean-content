@@ -125,9 +125,9 @@ add_action( 'init', 'cd_add_editor_styles' );
  * @uses get_stylesheet_uri() Returns URI of theme stylesheet
  */
 function cd_add_editor_styles() {
- 
+
     add_editor_style( get_stylesheet_uri() );
- 
+
 }
 
 /*-----------------------------------------------------------------------------
@@ -159,7 +159,27 @@ function cc_register_theme_customizer( $wp_customize ) {
     			'settings'	=> 'cc_sidebar_control'
     		)
     	);
-/** Colour control **/
+
+/** Text colour control **/
+    $wp_customize->add_setting(
+            'cc_text_color',
+            array(
+                'default'     => '#DDDDDD'
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'text_color',
+                array(
+                    'label'      => __( 'Text Color', 'cc' ),
+                    'section'    => 'colors',
+                    'settings'   => 'cc_text_color'
+                )
+            )
+        );
+
+/**Link colour control **/
     $wp_customize->add_setting(
             'cc_link_color',
             array(
@@ -177,6 +197,8 @@ function cc_register_theme_customizer( $wp_customize ) {
                 )
             )
         );
+
+
 /** Tagline control **/
     $wp_customize->add_setting(
     	'cc_show_tagline',
@@ -214,6 +236,7 @@ add_action( 'customize_register', 'cc_register_theme_customizer' );
 function cc_customizer_css() {
     ?>
     <style type="text/css">
+        body {color: <?php echo get_theme_mod( 'cc_text_color'); ?>;}
         a, h1, h2, .menu-toggle { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
         .entry-meta a:hover, .nav-links, textarea, input, button, input[type="submit"] {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
     </style>
@@ -222,7 +245,7 @@ function cc_customizer_css() {
 add_action( 'wp_head', 'cc_customizer_css' );
 
 function cc_customizer_live_preview() {
- 
+
     wp_enqueue_script(
         'cc-theme-customizer',
         get_template_directory_uri() . '/js/theme-customizer.js',
@@ -230,6 +253,6 @@ function cc_customizer_live_preview() {
         '0.3.0',
         true
     );
- 
+
 }
 add_action( 'customize_preview_init', 'cc_customizer_live_preview' );
