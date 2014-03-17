@@ -1,6 +1,6 @@
 #site-title a, .nav a, #site-title a:visited, {
 	color: darken($link, 24%);
-} 
+}
 
 .logo {
 	float: left;
@@ -18,10 +18,9 @@ header#masthead {
 }
 
 header[role=banner] {
-    font-family: 'siteheader', 'Verdana', sans-serif;   
+    font-family: 'heading', 'Verdana', sans-serif;
     border-bottom: 1px solid;
     margin-bottom: $pad-double;
-    padding-bottom: $pad-double;
 }
 
 .site-branding {

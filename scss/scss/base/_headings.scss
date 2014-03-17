@@ -1,5 +1,5 @@
 /* Headings */
-h1 { 
+h1 {
 	line-height: 1.2;
 	font-size: $font-size-large;
 	color: $colour-h1;
@@ -13,18 +13,17 @@ h1 {
 	}
 }
 
-h2 { 
+h2 {
 	line-height: 1.2;
 	color: $colour-h2;
-	font-family: 'heading', 'Verdana', sans-serif;   
+	font-family: 'heading', 'Verdana', sans-serif;
 	&.entry-title {
 		font-size: $font-size-larger;
 		a {
 			font-size: $font-size-slightly-larger;
-		} 
-		&:hover {
-			color: inherit;
-			text-decoration: underline;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 	&.linked-list-item a, &.linked-list-single a {
@@ -38,20 +37,19 @@ h2 {
 	}
 }
 
-h3 { 
+h3 {
 	line-height: 1.2;
-	font-family: 'heading', 'Verdana', sans-serif;   
+	font-family: 'heading', 'Verdana', sans-serif;
 }
 
 h4 {
-	
+
 }
 
-h5 { 
-	
+h5 {
+
 }
 
-h6 { 
-	
-}
+h6 {
 
+}

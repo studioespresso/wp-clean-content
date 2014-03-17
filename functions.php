@@ -164,7 +164,7 @@ function cc_register_theme_customizer( $wp_customize ) {
     $wp_customize->add_setting(
             'cc_text_color',
             array(
-                'default'     => '#DDDDDD'
+                'default'     => '#4A525A'
             )
         );
         $wp_customize->add_control(
@@ -236,8 +236,8 @@ add_action( 'customize_register', 'cc_register_theme_customizer' );
 function cc_customizer_css() {
     ?>
     <style type="text/css">
-        body {color: <?php echo get_theme_mod( 'cc_text_color'); ?>;}
-        a, h1, h2, .menu-toggle { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
+        body, a {color: <?php echo get_theme_mod( 'cc_text_color'); ?>;}
+        h1, h2, h1 a, h2 a, .menu-toggle { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
         .entry-meta a:hover, .nav-links, textarea, input, button, input[type="submit"] {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
     </style>
     <?php
