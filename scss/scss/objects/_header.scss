@@ -13,14 +13,14 @@
 }
 
 header#masthead {
-	padding-top: $pad;
-	padding-bottom: $pad;
+	padding-top: $pad-half;
+	padding-bottom: $pad-half;
 }
 
 header[role=banner] {
     font-family: 'heading', 'Verdana', sans-serif;
     border-bottom: 1px solid;
-    margin-bottom: $pad-double;
+    margin-bottom: $pad-and-half;
 }
 
 .site-branding {

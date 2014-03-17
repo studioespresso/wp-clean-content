@@ -943,13 +943,13 @@ p.wp-caption-text {
       max-width: 9rem; } }
 
 header#masthead {
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
 
 header[role=banner] {
   font-family: 'heading', 'Verdana', sans-serif;
   border-bottom: 1px solid;
-  margin-bottom: 2rem; }
+  margin-bottom: 1.5rem; }
 
 .site-branding {
   max-width: 60%;
@@ -1417,7 +1417,7 @@ span.tags-links {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  padding: 20px;
+  padding: 1rem;
   word-wrap: break-word; }
 
 .widget .widget-title {

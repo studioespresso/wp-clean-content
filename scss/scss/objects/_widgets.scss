@@ -4,7 +4,7 @@
 	-moz-hyphens:    auto;
 	-ms-hyphens:     auto;
 	hyphens:         auto;
-	padding: 20px;
+	padding: $pad;
 	word-wrap: break-word;
 }
 
@@ -58,7 +58,7 @@
 			ul {
 			background-color: inherit;
 			margin-top: 10px;
-			border-top: 0;	
+			border-top: 0;
 			padding: 0;
 			position: inherit;
 				li a {
@@ -67,7 +67,7 @@
 				}
 					:hover {
 					background-color: inherit;
-				a { 
+				a {
 					color: inherit;
 				}
 			}
