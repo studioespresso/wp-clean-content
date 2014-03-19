@@ -4,13 +4,15 @@ body {
 	-webkit-text-size-adjust: 100%;
 	font-family: 'main', sans-serif;
 	width: 100%;
+	color: #4A525A;
 	@media all and (max-width: $bp-xl) {
 		padding: 0 $pad-and-half 0 $pad-and-half;
 	}
-}	
+}
 
 a {
 	text-decoration: none;
 	outline: 0;
+	color: #284a60;
 
 }

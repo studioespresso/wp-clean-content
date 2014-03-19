@@ -153,7 +153,7 @@ function cc_register_theme_customizer( $wp_customize ) {
     			'choices'	=> array(
     				'left' => __('Sidebar on the left', 'clean-content'),
     				'right' => __('Sidebar on the right', 'clean-content'),
-                    'nosidebar' => __('No sidebar', 'clean-content')
+            'nosidebar' => __('No sidebar', 'clean-content')
     				),
     			'section'	=> 'cc_layout',
     			'settings'	=> 'cc_sidebar_control'

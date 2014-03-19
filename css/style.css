@@ -572,14 +572,16 @@ body {
   font-size: 18px;
   -webkit-text-size-adjust: 100%;
   font-family: 'main', sans-serif;
-  width: 100%; }
+  width: 100%;
+  color: #4A525A; }
   @media all and (max-width: 73em) {
     body {
       padding: 0 1.5rem 0 1.5rem; } }
 
 a {
   text-decoration: none;
-  outline: 0; }
+  outline: 0;
+  color: #284a60; }
 
 /* Headings */
 h1 {
@@ -805,12 +807,18 @@ td {
       margin-left: 25.3776%;
       margin-right: -100%;
       width: 74.57031%; }
-    body.right .main {
+    body.right .main, body .main {
       display: block;
       float: left;
       margin-left: 0%;
       margin-right: -100%;
       width: 74.57031%; }
+    body.nosidebar .main {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 99.94792%; }
     body[class*='fullwidth'].right .main, body[class*='fullwidth'].left .main, body[class*="image"].left .main, body[class*="image"].right .main {
       display: block;
       float: left;
@@ -832,7 +840,7 @@ td {
       margin-left: 0%;
       margin-right: -100%;
       width: 23.8151%; }
-    body.right .sidebar {
+    body.right .sidebar, body .sidebar {
       display: block;
       float: left;
       margin-left: 76.13281%;
