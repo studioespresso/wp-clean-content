@@ -45,6 +45,7 @@ function clean_content_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'clean-content' ),
+		'secondary' => __('Secondary Menu (sidebar)', 'clean-content' )
 	) );
 
 	// Enable support for Post Formats.

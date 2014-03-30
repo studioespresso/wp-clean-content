@@ -989,11 +989,10 @@ header[role=banner] {
     position: relative; }
 
 li ul.sub-menu {
-  background-color: #9bbdf9;
+  clear: both;
   margin-top: 20px;
   border-top: 0;
-  padding: 0;
-  position: absolute; }
+  padding: 0; }
   li ul.sub-menu li a {
     display: block;
     color: #000; }

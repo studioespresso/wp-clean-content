@@ -16,11 +16,10 @@
 	}
 }
 li ul.sub-menu {
-	background-color: lighten($link, 50%);
+	clear: both;
 	margin-top: 20px;
 	border-top: 0;
 	padding: 0;
-	position: absolute;
 	li a {
 			display: block;
 			color: #000;

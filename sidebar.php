@@ -6,6 +6,7 @@
  */
 ?>
 	<div id="secondary" class="sidebar widget-area" role="complementary">
+	<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
