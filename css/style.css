@@ -1215,17 +1215,28 @@ li.comment {
   margin-top: 1rem;
   padding: 1rem;
   margin-bottom: 2rem;
-  word-wrap: break-word; }
-  li.comment.even {
-    border-right: 1px solid black; }
+  word-wrap: break-word;
+  width: 90%;
+  border-bottom: 1px solid #bbbbbb; }
   li.comment.odd {
-    border-left: 1px solid black; }
+    border-right: 1px solid #bbbbbb;
+    text-align: right;
+    float: right; }
+    li.comment.odd .comment-meta img {
+      display: block;
+      margin: 0 0 0.5rem 0.5rem;
+      float: right; }
+  li.comment.even {
+    border-left: 1px solid #bbbbbb;
+    float: left; }
+    li.comment.even .comment-meta img {
+      display: block;
+      margin: 0 0.5rem 0.5rem 0;
+      float: left; }
   li.comment .bypostauthor {
     border: 1.5px dashed black; }
-  li.comment .comment-meta img {
-    display: block;
-    margin-bottom: 0.5rem;
-    float: right; }
+  li.comment article.comment-body {
+    margin-bottom: 0; }
 
 li.pingback {
   padding-left: 1rem;
