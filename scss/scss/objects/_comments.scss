@@ -9,13 +9,6 @@
 	margin-top: $space;	
 }
 
-.comment-meta {
-	img {
-		display: block;
-		margin-bottom: $space-half;
-		float: right;
-	}
-}
 .comment-content {
 	display: block;
 }
@@ -24,11 +17,25 @@ li.comment  {
 	margin-top: $pad;
 	padding: $pad;
 	margin-bottom: $pad-double;
-
 	word-wrap: break-word;
-	& .bypostauthor {
+	&.even {
+		border-right: 1px solid black;
 	}
-}	
+	&.odd {
+		border-left: 1px solid black;
+	}
+	& .bypostauthor {
+		border: 1.5px dashed black;
+	}
+	& .comment-meta {
+		img {
+			display: block;
+			margin-bottom: $space-half;
+			float: right;			
+		}
+	}
+}
+
 
 li.pingback {
 	padding-left: $space;
@@ -37,26 +44,4 @@ li.pingback {
 	&:nth-child(odd) {
 
 	}
-}
-
-ol.comment-list {
-	& li.depth-1:nth-child(odd){
-		background-color: #C0C0C0;
-		& ul.children {
-			background-color: #C0C0C0;
-			& li.depth-2:nth-child(odd) {
-				background-color: white;
-				ul.children {
-					background-color: white;
-					& li.depth-3:nth-child(odd) {
-						background-color: #C0C0C0;
-					}
-				}
-			}
-		}
-	}  
-}  
-
-li.bypostauthor {
-	border: 1.5px dashed black;
 }
