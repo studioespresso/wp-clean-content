@@ -1007,8 +1007,8 @@ header[role=banner] {
           padding: 0.5rem; }
           .main-navigation ul li ul.sub-menu li a {
             display: block; }
-      .main-navigation ul li.current-menu-item :before {
-        content: "\00BB"; }
+      .main-navigation ul li.current-menu-item a {
+        text-decoration: underline; }
 
 .main-navigation ul ul ul {
   left: 100%;
@@ -1019,6 +1019,9 @@ header[role=banner] {
 
 .main-navigation ul li:hover > ul {
   display: block; }
+
+.menu-short-container .current-menu-item a {
+  text-decoration: underline; }
 
 /* Small menu */
 .menu-toggle {
