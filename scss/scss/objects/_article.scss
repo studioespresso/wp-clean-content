@@ -50,6 +50,9 @@ article {
 			margin-left: $pad;	
 		}
 	}
+	& p a {
+		text-decoration: underline;
+	}
 }
 
 .byline {

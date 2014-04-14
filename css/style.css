@@ -1175,6 +1175,8 @@ article {
 @media all and (min-width: 29.75em) {
   .featured-image + .entry-content {
     margin-left: 1rem; } }
+.entry-content p a {
+  text-decoration: underline; }
 
 .byline {
   font-size: 0.85em;
