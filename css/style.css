@@ -599,7 +599,7 @@ h2 {
   color: adjust-saturation(#09388c, -100%);
   font-family: 'heading', 'Verdana', sans-serif; }
   h2.entry-title {
-    font-size: 1.5em; }
+    font-size: 2.5em; }
     h2.entry-title a {
       font-size: 1.225em; }
       h2.entry-title a:hover {
@@ -1080,7 +1080,7 @@ header[role=banner] {
   border-top: 1px solid gray;
   line-height: 1.2;
   height: 120px;
-  padding: 1rem;
+  padding: 1rem 0;
   margin-top: 1rem; }
 
 .nav-footer {
@@ -1215,28 +1215,17 @@ li.comment {
   margin-top: 1rem;
   padding: 1rem;
   margin-bottom: 2rem;
-  word-wrap: break-word;
-  width: 90%;
-  border-bottom: 1px solid #bbbbbb; }
-  li.comment.odd {
-    border-right: 1px solid #bbbbbb;
-    text-align: right;
-    float: right; }
-    li.comment.odd .comment-meta img {
-      display: block;
-      margin: 0 0 0.5rem 0.5rem;
-      float: right; }
+  word-wrap: break-word; }
   li.comment.even {
-    border-left: 1px solid #bbbbbb;
-    float: left; }
-    li.comment.even .comment-meta img {
-      display: block;
-      margin: 0 0.5rem 0.5rem 0;
-      float: left; }
+    border-right: 1px solid black; }
+  li.comment.odd {
+    border-left: 1px solid black; }
   li.comment .bypostauthor {
     border: 1.5px dashed black; }
-  li.comment article.comment-body {
-    margin-bottom: 0; }
+  li.comment .comment-meta img {
+    display: block;
+    margin-bottom: 0.5rem;
+    float: right; }
 
 li.pingback {
   padding-left: 1rem;
