@@ -598,14 +598,12 @@ h2 {
   line-height: 1.2;
   color: adjust-saturation(#09388c, -100%);
   font-family: 'heading', 'Verdana', sans-serif; }
-  h2.entry-title {
-    font-size: 2.5em; }
-    h2.entry-title a {
-      font-size: 1.225em; }
-      h2.entry-title a:hover {
-        text-decoration: underline; }
+  h2.entry-title a {
+    font-size: 1.225em; }
+    h2.entry-title a:hover {
+      text-decoration: underline; }
   h2.linked-list-item a, h2.linked-list-single a {
-    font-size: 0.55em; }
+    font-size: 0.85em; }
   h2.comments-title {
     margin-bottom: 1rem; }
   h2.headline {

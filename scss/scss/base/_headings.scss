@@ -19,7 +19,6 @@ h2 {
 	font-family: 'heading', 'Verdana', sans-serif;
 
 	&.entry-title {
-		font-size: 2.5em;
 		a {
 			font-size: $font-size-slightly-larger;
 			&:hover {
@@ -28,7 +27,7 @@ h2 {
 		}
 	}
 	&.linked-list-item a, &.linked-list-single a {
-		font-size: $font-size-sm;
+		font-size: $font-size-slightly-smaller;
 	}
 	&.comments-title {
 		margin-bottom: $pad;
