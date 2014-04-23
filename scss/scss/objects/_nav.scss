@@ -41,7 +41,7 @@
 			}
 			&.current-menu-item {
 				a {
-					text-decoration: underline;
+					border-bottom: 1px solid black;
 				}
 
 			}
@@ -64,7 +64,6 @@
 .menu-short-container {
 	& .current-menu-item {
 		& a {
-		text-decoration: underline;
 		}
 	}
 }

@@ -1002,7 +1002,7 @@ header[role=banner] {
           .main-navigation ul li ul.sub-menu li a {
             display: block; }
       .main-navigation ul li.current-menu-item a {
-        text-decoration: underline; }
+        border-bottom: 1px solid black; }
 
 .main-navigation ul ul ul {
   left: 100%;
@@ -1013,9 +1013,6 @@ header[role=banner] {
 
 .main-navigation ul li:hover > ul {
   display: block; }
-
-.menu-short-container .current-menu-item a {
-  text-decoration: underline; }
 
 /* Small menu */
 .menu-toggle {
@@ -1156,7 +1153,7 @@ article {
     margin-top: 6rem; }
   article.sticky {
     padding-bottom: 1rem;
-    border-bottom: 2px dashed; }
+    border-bottom: 1px solid; }
   article pre {
     white-space: pre-wrap;
     /* css-3 */
