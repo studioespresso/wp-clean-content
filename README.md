@@ -20,19 +20,19 @@ Clean Content works with the built-in WordPress theme customiser and you can see
 
 You can customise the following:
 
-* Link Colour (a couple of the colours will also change along with this one: buttons, headings, text fields, etc)
+* Header image
+* Replace the site title and description with your logo
 * Background colour
+* Text colour
+* Link colour (a couple of the colours will also change along with this one: buttons, headings, text fields, etc)
 * Show or hide the theme description (default: hide)
 * Full sidebar control (Hide sidebar, sidebar on the left, sidebar on the right) (default: sidebar on the right)
 
 
 #### Support
 
-If you see any problems of bugs, feel free to make an issue on [Github](https://github.com/On-Edge/wp-clean-content), I'll try to solve them to the best of my abilities.
+If you see any problems of bugs, feel free to make a post on the [WordPress Support forum](http://wordpress.org/support/theme/clean-content) or make an issue on [Github](https://github.com/On-Edge/wp-clean-content), I'll try to solve them to the best of my abilities.
 
-#### Down the road...
-
-I've got a couple of extra features I want to get into this theme but they didn't make it into the 1.0 release (otherwise 1.0 would probably never got out...). Stay tuned...
 
 #### License
 
