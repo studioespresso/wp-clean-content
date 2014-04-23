@@ -1213,16 +1213,20 @@ li.comment {
   padding: 1rem;
   margin-bottom: 2rem;
   word-wrap: break-word; }
-  li.comment.even {
-    border-right: 1px solid black; }
-  li.comment.odd {
+  li.comment:nth-of-type(odd) {
     border-left: 1px solid black; }
+    li.comment:nth-of-type(odd) .comment-meta img {
+      float: left; }
+  li.comment:nth-of-type(even) {
+    text-align: right;
+    border-right: 1px solid black; }
+    li.comment:nth-of-type(even) .comment-meta img {
+      float: right; }
   li.comment .bypostauthor {
     border: 1.5px dashed black; }
   li.comment .comment-meta img {
     display: block;
-    margin-bottom: 0.5rem;
-    float: right; }
+    margin: 1rem; }
 
 li.pingback {
   padding-left: 1rem;

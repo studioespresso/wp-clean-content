@@ -18,11 +18,19 @@ li.comment  {
 	padding: $pad;
 	margin-bottom: $pad-double;
 	word-wrap: break-word;
-	&.even {
-		border-right: 1px solid black;
-	}
-	&.odd {
+	&:nth-of-type(odd) {
 		border-left: 1px solid black;
+		& .comment-meta img {
+			float: left;
+		}
+	}
+	&:nth-of-type(even) {
+		text-align: right;
+		border-right: 1px solid black;
+		& .comment-meta img {
+			float: right;
+		}
+
 	}
 	& .bypostauthor {
 		border: 1.5px dashed black;
@@ -30,8 +38,7 @@ li.comment  {
 	& .comment-meta {
 		img {
 			display: block;
-			margin-bottom: $space-half;
-			float: right;			
+			margin: $space;
 		}
 	}
 }
