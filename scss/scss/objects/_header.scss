@@ -2,6 +2,8 @@
 	color: darken($link, 24%);
 }
 
+
+
 header[role=banner] {
 	padding-top: $pad-half;
 	font-family: 'heading', 'Verdana', sans-serif;
@@ -21,6 +23,9 @@ header[role=banner] {
 	& .header-image {
 		padding-top: $pad;
 		clear: both;
+	}
+	& img.site-logo {
+		max-height: 100px;
 	}
 }
 

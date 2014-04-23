@@ -957,6 +957,8 @@ header[role=banner] {
   header[role=banner] .header-image {
     padding-top: 1rem;
     clear: both; }
+  header[role=banner] img.site-logo {
+    max-height: 100px; }
 
 .search-form {
   overflow: hidden;
