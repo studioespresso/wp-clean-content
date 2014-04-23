@@ -20,16 +20,22 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<?php do_action( 'before' ); ?>
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php if ( get_theme_mod( 'cc_show_tagline' ) )  { ?>
+	<div id="page" class="hfeed site">
+		<?php do_action( 'before' ); ?>
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-branding">
+				<?php if ( get_theme_mod( 'cc_logo_image' ) ) : ?>
+					<div class='site-logo'>
+						<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'cc_logo_image' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+					</div>
+				<?php else : ?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php if ( get_theme_mod( 'cc_show_tagline' ) )  { ?>
 
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			<?php } ?>
-		</div>
+					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+					<?php } ?>
+				<?php endif; ?>
+			</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h1 class="menu-toggle"><?php _e( '&#9776;', 'clean-content' ); ?></h1>
