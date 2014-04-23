@@ -2,39 +2,31 @@
 	color: darken($link, 24%);
 }
 
-.logo {
-	float: left;
-	max-width: 8rem;
-	margin: 0.4rem;
-
-	@media all and (min-width: $bp-med) {
-		max-width: 9rem;
-	}
-}
-
-header#masthead {
-	padding-top: $pad-half;
-	padding-bottom: $pad-half;
-}
-
 header[role=banner] {
-    font-family: 'heading', 'Verdana', sans-serif;
-    border-bottom: 1px solid;
-    margin-bottom: $pad-and-half;
-}
-
-.site-branding {
-	max-width: 60%;
-	float: left;
-	@media all and (max-width: $bp-med) {
-		max-width: 100%;
+	padding-top: $pad-half;
+	font-family: 'heading', 'Verdana', sans-serif;
+	margin-bottom: $pad-and-half;
+	& .site-branding {
+		max-width: 60%;
+		float: left;
+		@media all and (max-width: $bp-med) {
+			max-width: 100%;
+		}
+	}
+	& .border {
+		padding-top: $pad;
+		border-bottom: 1px solid black;
+		clear: both;
+	}
+	& .header-image {
+		padding-top: $pad;
+		clear: both;
 	}
 }
 
 .search-form {
 	overflow: hidden;
 	max-height: 0;
-
 	@media all and (min-width: $bp-med) {
 		max-height: none;
 		margin: 0.65em 0.5em 0 0;

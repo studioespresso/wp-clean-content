@@ -43,6 +43,16 @@
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
+		
+		<?php if ( get_header_image() ) : ?>
+		<div class="header-image">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+			</a>
+		</div>
+		<?php else : ?>
+			<div class="border"></div>
+		<?php endif; // End header image check. ?>
 	</header><!-- #masthead -->
 	<div id="content" class="site-content">
 

@@ -940,29 +940,23 @@ p.wp-caption-text {
 #site-title a, .nav a, #site-title a:visited {
   color: #020a19; }
 
-.logo {
-  float: left;
-  max-width: 8rem;
-  margin: 0.4rem; }
-  @media all and (min-width: 46.8em) {
-    .logo {
-      max-width: 9rem; } }
-
-header#masthead {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
-
 header[role=banner] {
+  padding-top: 0.5rem;
   font-family: 'heading', 'Verdana', sans-serif;
-  border-bottom: 1px solid;
   margin-bottom: 1.5rem; }
-
-.site-branding {
-  max-width: 60%;
-  float: left; }
-  @media all and (max-width: 46.8em) {
-    .site-branding {
-      max-width: 100%; } }
+  header[role=banner] .site-branding {
+    max-width: 60%;
+    float: left; }
+    @media all and (max-width: 46.8em) {
+      header[role=banner] .site-branding {
+        max-width: 100%; } }
+  header[role=banner] .border {
+    padding-top: 1rem;
+    border-bottom: 1px solid black;
+    clear: both; }
+  header[role=banner] .header-image {
+    padding-top: 1rem;
+    clear: both; }
 
 .search-form {
   overflow: hidden;

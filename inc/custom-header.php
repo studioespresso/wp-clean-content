@@ -28,7 +28,7 @@ function clean_content_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'clean_content_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
+		'width'                  => 1100,
 		'height'                 => 250,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'clean_content_header_style',
