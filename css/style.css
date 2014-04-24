@@ -812,7 +812,7 @@ td {
       margin-left: 0%;
       margin-right: -100%;
       width: 99.94792%; }
-    body[class*='fullwidth'].right .main, body[class*='fullwidth'].left .main, body[class*="image"].left .main, body[class*="image"].right .main {
+    body[class*='fullwidth'].right .main, body[class*='fullwidth'].left .main, body[class="image"].left .main, body[class="image"].right .main {
       display: block;
       float: left;
       margin-left: 0%;

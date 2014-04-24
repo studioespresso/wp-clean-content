@@ -35,8 +35,8 @@
 		body.nosidebar & {@include gs-span(cl, 1, 12);}
 		body[class*='fullwidth'].right &,
 		body[class*='fullwidth'].left &,
-		body[class*="image"].left &,
-		body[class*="image"].right & {@include gs-span(cl, 1, 12);}
+		body[class="image"].left &,
+		body[class="image"].right & {@include gs-span(cl, 1, 12);}
 	}
 }
 .sidebar {
