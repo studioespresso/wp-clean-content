@@ -71,29 +71,7 @@
 		margin-bottom: $pad;
 	}
 }
-.wp-caption.alignleft {
-	@media all and  (min-width: $bp-xl) {
-	}
-	@media all and  (min-width: $bp-xxl) {
-	}
-}
 
-.wp-caption.alignleft+img.size-full {
-	margin-left: -20em;
-}
-
-.wp-caption.alignright {
-	@media all and  (min-width: $bp-xl) {
-	}
-	@media all and  (min-width: $bp-xxl) {
-	}
-}
-
-
-p.wp-caption-text {
-	margin-right: $pad;
-	margin-bottom: 0px;
-}
 .alignnone {
 	float: left;
 	max-width: 100%;
@@ -112,36 +90,26 @@ p.wp-caption-text {
 	margin-right: $pad;
 	@media all and  (min-width: $bp-xl) {
 		&.size-small, &.size-thumbnail {
-			margin-left: -$smaller-offset;
 		}
 		&.size-medium, &.size-full,  {
-			margin-left: -$mediumer-offset;
 		}
 		&.size-large {
-			margin-left: -$larger-offset;
 		}
 		&.size-full {
-			margin-left: 0;
 		}
 		.left & {
-			margin-left: 0px;
 		}
 	}
 	@media all and  (min-width: $bp-xxl) {
 		&.size-small, &.size-thumbnail {
-			margin-left: -$small-offset;
 		}
 		&.size-medium, &.size-full,  {
-			margin-left: -$medium-offset;
 		}
 		&.size-large {
-			margin-left: -$large-offset;
 		}
 		&.size-full {
-			margin-left: 0;
 		}
 		.left & {
-			margin-left: 0px;
 		}
 	}
 }
@@ -152,36 +120,26 @@ p.wp-caption-text {
 	margin-left: $pad;
 	@media all and  (min-width: $bp-xl) {
 		&.size-small, &.size-thumbnail {
-			margin-right: -$smaller-offset;
 		}
 		&.size-medium, &.size-full {
-			margin-right: -$mediumer-offset;
 		}
 		&.size-large {
-			margin-right: -$larger-offset;
 		}
 		&.size-full {
-			margin-right: 0;
 		}
 		.right & {
-			margin-right: 0px;
 		}
 	}
 	@media all and  (min-width: $bp-xxl) {
 		&.size-small, &.size-thumbnail {
-			margin-right: -$small-offset;
 		}
 		&.size-medium, &.size-full {
-			margin-right: -$medium-offset;
 		}
 		&.size-large {
-			margin-right: -$large-offset;
 		}
 		&.size-full {
-			margin-right: 0;
 		}
 		.right & {
-			margin-right: 0px;
 		}
 	}
 }
