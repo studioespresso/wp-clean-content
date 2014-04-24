@@ -640,10 +640,6 @@ hr {
   margin: 2rem 0;
   clear: both; }
 
-abbr {
-  border-bottom: 1px dotted gray;
-  cursor: help; }
-
 /*------------------------------------*\
     $FORMS
 \*------------------------------------*/
@@ -1237,12 +1233,8 @@ li.pingback {
   .entry-meta a:hover {
     background-color: #09388c;
     color: #fff; }
-
-.posted-on, .bypostauthor, .byline {
-  font-style: italic; }
-
-[rel="tag"] {
-  content: "tag"; }
+  .entry-meta .posted-on, .entry-meta .bypostauthor, .entry-meta .byline {
+    font-style: italic; }
 
 .paging-navigation .meta-nav.previous {
   float: right; }
