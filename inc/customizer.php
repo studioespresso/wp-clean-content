@@ -126,7 +126,7 @@ function cc_customizer_css() {
     <style type="text/css">
         body, a {color: <?php echo get_theme_mod( 'cc_text_color'); ?>;}
         h1, h2, h1 a, h2 a, .menu-toggle { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
-        .entry-meta a:hover, .nav-links, textarea, input, button, input[type="submit"] {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
+        .entry-meta a:hover, .nav-links, button, input[type="submit"] {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
     </style>
     <?php
 }

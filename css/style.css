@@ -337,6 +337,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="submit"],
 textarea {
   border: 1px solid #ccc;
   border-radius: 3px; }
@@ -668,10 +669,8 @@ button, input, select, textarea {
   margin: 0; }
 
 input, textarea {
-  border: 0px;
   width: 100%;
-  padding: 0.5rem 0.65rem;
-  border: 1px solid black; }
+  padding: 0.5rem 0.65rem; }
 
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
   -webkit-appearance: none; }
