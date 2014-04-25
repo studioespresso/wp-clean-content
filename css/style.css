@@ -873,11 +873,27 @@ td {
   float: left;
   clear: both;
   margin-right: 1rem; }
+  @media all and (min-width: 73em) {
+    .alignleft.size-full {
+      margin-left: -50px; }
+    .left .alignleft {
+      margin-left: 0; } }
+  @media all and (min-width: 89em) {
+    .left .alignleft {
+      margin-left: 0; } }
 
 .alignright {
   float: right;
   clear: both;
   margin-left: 1rem; }
+  @media all and (min-width: 73em) {
+    .alignright.size-full {
+      margin-right: -50px; }
+    .right .alignright {
+      margin-right: 0; } }
+  @media all and (min-width: 89em) {
+    .right .alignright {
+      margin-right: 0; } }
 
 /*------------------------------------*\
     $PAGE STRUCTURE

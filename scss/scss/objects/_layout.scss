@@ -97,8 +97,10 @@
 		&.size-large {
 		}
 		&.size-full {
+			margin-left: -50px;
 		}
 		.left & {
+			margin-left: 0;
 		}
 	}
 	@media all and  (min-width: $bp-xxl) {
@@ -111,6 +113,7 @@
 		&.size-full {
 		}
 		.left & {
+			margin-left: 0;
 		}
 	}
 }
@@ -127,8 +130,11 @@
 		&.size-large {
 		}
 		&.size-full {
+			margin-right: -50px;
+
 		}
 		.right & {
+			margin-right: 0;
 		}
 	}
 	@media all and  (min-width: $bp-xxl) {
@@ -141,6 +147,7 @@
 		&.size-full {
 		}
 		.right & {
+			margin-right: 0;
 		}
 	}
 }
