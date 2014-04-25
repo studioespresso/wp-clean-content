@@ -78,12 +78,13 @@
 	max-width: 100%;
 	clear: both;
 
+
 }
 .aligncenter {
 	float: none;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: $pad-half;
+	margin-bottom: $pad-half;
 }
 .alignleft {
 	float: left;

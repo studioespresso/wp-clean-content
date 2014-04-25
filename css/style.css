@@ -866,8 +866,8 @@ td {
 .aligncenter {
   float: none;
   display: block;
-  margin-left: auto;
-  margin-right: auto; }
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
 
 .alignleft {
   float: left;
