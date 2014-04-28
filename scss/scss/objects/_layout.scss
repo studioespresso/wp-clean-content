@@ -125,13 +125,15 @@
 	margin-left: $pad;
 	@media all and  (min-width: $bp-xl) {
 		&.size-small, &.size-thumbnail {
+			margin-right: -50px;
 		}
-		&.size-medium, &.size-full {
+		&.size-medium {
+			margin-right: -70px;
 		}
 		&.size-large {
+			margin-right: -100px;
 		}
 		&.size-full {
-			margin-right: -50px;
 
 		}
 		.right & {

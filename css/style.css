@@ -887,8 +887,12 @@ td {
   clear: both;
   margin-left: 1rem; }
   @media all and (min-width: 73em) {
-    .alignright.size-full {
+    .alignright.size-small, .alignright.size-thumbnail {
       margin-right: -50px; }
+    .alignright.size-medium {
+      margin-right: -70px; }
+    .alignright.size-large {
+      margin-right: -100px; }
     .right .alignright {
       margin-right: 0; } }
   @media all and (min-width: 89em) {
