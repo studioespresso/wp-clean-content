@@ -337,6 +337,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="submit"],
 textarea {
   border: 1px solid #ccc;
   border-radius: 3px; }
@@ -639,10 +640,6 @@ hr {
   margin: 2rem 0;
   clear: both; }
 
-abbr {
-  border-bottom: 1px dotted gray;
-  cursor: help; }
-
 /*------------------------------------*\
     $FORMS
 \*------------------------------------*/
@@ -668,10 +665,8 @@ button, input, select, textarea {
   margin: 0; }
 
 input, textarea {
-  border: 0px;
   width: 100%;
-  padding: 0.5rem 0.65rem;
-  border: 1px solid black; }
+  padding: 0.5rem 0.65rem; }
 
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
   -webkit-appearance: none; }
@@ -817,7 +812,7 @@ td {
       margin-left: 0%;
       margin-right: -100%;
       width: 99.94792%; }
-    body[class*='fullwidth'].right .main, body[class*='fullwidth'].left .main, body[class*="image"].left .main, body[class*="image"].right .main {
+    body[class*='fullwidth'].right .main, body[class*='fullwidth'].left .main, body[class="image"].left .main, body[class="image"].right .main {
       display: block;
       float: left;
       margin-left: 0%;
@@ -862,50 +857,30 @@ td {
       display: inline;
       margin-bottom: 1rem; } }
 
-.wp-caption.alignleft + img.size-full {
-  margin-left: -20em; }
-
-p.wp-caption-text {
-  margin-right: 1rem;
-  margin-bottom: 0px; }
-
 .alignnone {
   float: left;
+  margin-right: 1rem;
   max-width: 100%;
   clear: both; }
 
 .aligncenter {
   float: none;
   display: block;
-  margin-left: auto;
-  margin-right: auto; }
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
 
 .alignleft {
   float: left;
   clear: both;
   margin-right: 1rem; }
   @media all and (min-width: 73em) {
-    .alignleft.size-small, .alignleft.size-thumbnail {
-      margin-left: -3.6em; }
-    .alignleft.size-medium, .alignleft.size-full {
-      margin-left: -4.8em; }
-    .alignleft.size-large {
-      margin-left: -11em; }
     .alignleft.size-full {
-      margin-left: 0; }
+      margin-left: -50px; }
     .left .alignleft {
-      margin-left: 0px; } }
+      margin-left: 0; } }
   @media all and (min-width: 89em) {
-    .alignleft.size-small, .alignleft.size-thumbnail {
-      margin-left: -6em; }
-    .alignleft.size-medium, .alignleft.size-full {
-      margin-left: -8em; }
-    .alignleft.size-large {
-      margin-left: -11em; }
-    .alignleft.size-full {
-      margin-left: 0; }
     .left .alignleft {
-      margin-left: 0px; } }
+      margin-left: 0; } }
 
 .alignright {
   float: right;
@@ -913,26 +888,16 @@ p.wp-caption-text {
   margin-left: 1rem; }
   @media all and (min-width: 73em) {
     .alignright.size-small, .alignright.size-thumbnail {
-      margin-right: -3.6em; }
-    .alignright.size-medium, .alignright.size-full {
-      margin-right: -4.8em; }
+      margin-right: -50px; }
+    .alignright.size-medium {
+      margin-right: -70px; }
     .alignright.size-large {
-      margin-right: -11em; }
-    .alignright.size-full {
-      margin-right: 0; }
+      margin-right: -100px; }
     .right .alignright {
-      margin-right: 0px; } }
+      margin-right: 0; } }
   @media all and (min-width: 89em) {
-    .alignright.size-small, .alignright.size-thumbnail {
-      margin-right: -6em; }
-    .alignright.size-medium, .alignright.size-full {
-      margin-right: -8em; }
-    .alignright.size-large {
-      margin-right: -11em; }
-    .alignright.size-full {
-      margin-right: 0; }
     .right .alignright {
-      margin-right: 0px; } }
+      margin-right: 0; } }
 
 /*------------------------------------*\
     $PAGE STRUCTURE
@@ -940,29 +905,25 @@ p.wp-caption-text {
 #site-title a, .nav a, #site-title a:visited {
   color: #020a19; }
 
-.logo {
-  float: left;
-  max-width: 8rem;
-  margin: 0.4rem; }
-  @media all and (min-width: 46.8em) {
-    .logo {
-      max-width: 9rem; } }
-
-header#masthead {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
-
 header[role=banner] {
+  padding-top: 0.5rem;
   font-family: 'heading', 'Verdana', sans-serif;
-  border-bottom: 1px solid;
   margin-bottom: 1.5rem; }
-
-.site-branding {
-  max-width: 60%;
-  float: left; }
-  @media all and (max-width: 46.8em) {
-    .site-branding {
-      max-width: 100%; } }
+  header[role=banner] .site-branding {
+    max-width: 60%;
+    float: left; }
+    @media all and (max-width: 46.8em) {
+      header[role=banner] .site-branding {
+        max-width: 100%; } }
+  header[role=banner] .border {
+    padding-top: 1rem;
+    border-bottom: 1px solid black;
+    clear: both; }
+  header[role=banner] .header-image {
+    padding-top: 1rem;
+    clear: both; }
+  header[role=banner] img.site-logo {
+    max-height: 100px; }
 
 .search-form {
   overflow: hidden;
@@ -1008,7 +969,7 @@ header[role=banner] {
           .main-navigation ul li ul.sub-menu li a {
             display: block; }
       .main-navigation ul li.current-menu-item a {
-        text-decoration: underline; }
+        border-bottom: 1px solid black; }
 
 .main-navigation ul ul ul {
   left: 100%;
@@ -1019,9 +980,6 @@ header[role=banner] {
 
 .main-navigation ul li:hover > ul {
   display: block; }
-
-.menu-short-container .current-menu-item a {
-  text-decoration: underline; }
 
 /* Small menu */
 .menu-toggle {
@@ -1162,7 +1120,7 @@ article {
     margin-top: 6rem; }
   article.sticky {
     padding-bottom: 1rem;
-    border-bottom: 2px dashed; }
+    border-bottom: 1px solid; }
   article pre {
     white-space: pre-wrap;
     /* css-3 */
@@ -1219,16 +1177,20 @@ li.comment {
   padding: 1rem;
   margin-bottom: 2rem;
   word-wrap: break-word; }
-  li.comment.even {
-    border-right: 1px solid black; }
-  li.comment.odd {
+  li.comment:nth-of-type(odd) {
     border-left: 1px solid black; }
+    li.comment:nth-of-type(odd) .comment-meta img {
+      float: left; }
+  li.comment:nth-of-type(even) {
+    text-align: right;
+    border-right: 1px solid black; }
+    li.comment:nth-of-type(even) .comment-meta img {
+      float: right; }
   li.comment .bypostauthor {
     border: 1.5px dashed black; }
   li.comment .comment-meta img {
     display: block;
-    margin-bottom: 0.5rem;
-    float: right; }
+    margin: 1rem; }
 
 li.pingback {
   padding-left: 1rem;
@@ -1241,12 +1203,8 @@ li.pingback {
   .entry-meta a:hover {
     background-color: #09388c;
     color: #fff; }
-
-.posted-on, .bypostauthor, .byline {
-  font-style: italic; }
-
-[rel="tag"] {
-  content: "tag"; }
+  .entry-meta .posted-on, .entry-meta .bypostauthor, .entry-meta .byline {
+    font-style: italic; }
 
 .paging-navigation .meta-nav.previous {
   float: right; }

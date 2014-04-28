@@ -5,16 +5,11 @@
 		background-color: $link;
 		color: #fff;
 	}
-}
-
-.posted-on, .bypostauthor, .byline {
+	& .posted-on, & .bypostauthor, & .byline {
 	font-style: italic;
+	}
 }
 
-[rel="tag"]{	
-		content: "tag";
-		
-} 
 .paging-navigation .meta-nav.previous {
 	float: right;
 }

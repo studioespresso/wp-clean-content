@@ -88,7 +88,7 @@ function clean_content_comment( $comment, $args, $depth ) {
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<footer class="comment-meta">
 					<div class="comment-author vcard">
-						<?php if ( 0 != $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>
+						<?php if ( 0 != $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size=96'] ); } ?>
 						<?php printf( __( '%s <span class="says">says:</span>', 'clean-content' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 					</div><!-- .comment-author -->
 						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">

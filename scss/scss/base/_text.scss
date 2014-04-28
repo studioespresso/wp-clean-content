@@ -7,7 +7,6 @@ p {
 
 /* Blockquote */
 
-
 blockquote {
     font-style: italic;
     border-left: 7px solid $gray-light-4;
@@ -19,7 +18,6 @@ blockquote {
         font-style: none;
         font-size: $font-size-slightly-smaller;
         display: block;
-
     }
 }
 
@@ -30,9 +28,4 @@ hr {
     background: $gray-light-2;
     margin: $space-double 0;
     clear: both;
-}
-
-abbr {
-    border-bottom: 1px dotted $gray;
-    cursor: help;
 }

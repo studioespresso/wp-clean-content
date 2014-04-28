@@ -61,6 +61,15 @@ function cc_register_theme_customizer( $wp_customize ) {
 				)
 			)
 		);
+
+	/** Logo **/
+	$wp_customize->add_setting('cc_logo_image');
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cc_logo_image', array(
+	    'label'    => __( 'Logo', 'clean-content' ),
+	    'section'  => 'title_tagline',
+	    'settings' => 'cc_logo_image',
+	) ) );
+
 	/**Link colour control **/
 	$wp_customize->add_setting(
 		'cc_link_color',
@@ -117,7 +126,7 @@ function cc_customizer_css() {
     <style type="text/css">
         body, a {color: <?php echo get_theme_mod( 'cc_text_color'); ?>;}
         h1, h2, h1 a, h2 a, .menu-toggle { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
-        .entry-meta a:hover, .nav-links, textarea, input, button, input[type="submit"] {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
+        .entry-meta a:hover, .nav-links, button, input[type="submit"] {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
     </style>
     <?php
 }

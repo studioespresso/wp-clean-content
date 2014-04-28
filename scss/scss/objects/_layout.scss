@@ -35,8 +35,8 @@
 		body.nosidebar & {@include gs-span(cl, 1, 12);}
 		body[class*='fullwidth'].right &,
 		body[class*='fullwidth'].left &,
-		body[class*="image"].left &,
-		body[class*="image"].right & {@include gs-span(cl, 1, 12);}
+		body[class="image"].left &,
+		body[class="image"].right & {@include gs-span(cl, 1, 12);}
 	}
 }
 .sidebar {
@@ -71,40 +71,20 @@
 		margin-bottom: $pad;
 	}
 }
-.wp-caption.alignleft {
-	@media all and  (min-width: $bp-xl) {
-	}
-	@media all and  (min-width: $bp-xxl) {
-	}
-}
 
-.wp-caption.alignleft+img.size-full {
-	margin-left: -20em;
-}
-
-.wp-caption.alignright {
-	@media all and  (min-width: $bp-xl) {
-	}
-	@media all and  (min-width: $bp-xxl) {
-	}
-}
-
-
-p.wp-caption-text {
-	margin-right: $pad;
-	margin-bottom: 0px;
-}
 .alignnone {
 	float: left;
+	margin-right: $pad;
 	max-width: 100%;
 	clear: both;
+
 
 }
 .aligncenter {
 	float: none;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: $pad-half;
+	margin-bottom: $pad-half;
 }
 .alignleft {
 	float: left;
@@ -112,36 +92,29 @@ p.wp-caption-text {
 	margin-right: $pad;
 	@media all and  (min-width: $bp-xl) {
 		&.size-small, &.size-thumbnail {
-			margin-left: -$smaller-offset;
 		}
 		&.size-medium, &.size-full,  {
-			margin-left: -$mediumer-offset;
 		}
 		&.size-large {
-			margin-left: -$larger-offset;
 		}
 		&.size-full {
-			margin-left: 0;
+			margin-left: -50px;
 		}
 		.left & {
-			margin-left: 0px;
+			margin-left: 0;
 		}
 	}
 	@media all and  (min-width: $bp-xxl) {
 		&.size-small, &.size-thumbnail {
-			margin-left: -$small-offset;
 		}
 		&.size-medium, &.size-full,  {
-			margin-left: -$medium-offset;
 		}
 		&.size-large {
-			margin-left: -$large-offset;
 		}
 		&.size-full {
-			margin-left: 0;
 		}
 		.left & {
-			margin-left: 0px;
+			margin-left: 0;
 		}
 	}
 }
@@ -152,36 +125,32 @@ p.wp-caption-text {
 	margin-left: $pad;
 	@media all and  (min-width: $bp-xl) {
 		&.size-small, &.size-thumbnail {
-			margin-right: -$smaller-offset;
+			margin-right: -50px;
 		}
-		&.size-medium, &.size-full {
-			margin-right: -$mediumer-offset;
+		&.size-medium {
+			margin-right: -70px;
 		}
 		&.size-large {
-			margin-right: -$larger-offset;
+			margin-right: -100px;
 		}
 		&.size-full {
-			margin-right: 0;
+
 		}
 		.right & {
-			margin-right: 0px;
+			margin-right: 0;
 		}
 	}
 	@media all and  (min-width: $bp-xxl) {
 		&.size-small, &.size-thumbnail {
-			margin-right: -$small-offset;
 		}
 		&.size-medium, &.size-full {
-			margin-right: -$medium-offset;
 		}
 		&.size-large {
-			margin-right: -$large-offset;
 		}
 		&.size-full {
-			margin-right: 0;
 		}
 		.right & {
-			margin-right: 0px;
+			margin-right: 0;
 		}
 	}
 }
