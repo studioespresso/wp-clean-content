@@ -617,7 +617,7 @@ h3 {
 /* Text-Related Elements */
 p {
   margin-bottom: 1rem;
-  font-family: 'main', 'Verdana', sans-serif; }
+  font-family: Avenir Next, serif; }
 
 /* Blockquote */
 blockquote {
@@ -823,7 +823,7 @@ td {
   height: 100%; }
   @media all and (max-width: 50em) {
     .sidebar {
-      display: none; } }
+      float: left; } }
   @media all and (min-width: 50em) {
     body.nosidebar .sidebar {
       display: none; }

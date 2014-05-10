@@ -42,7 +42,7 @@
 .sidebar {
 	height: 100%;
 	@media all and (max-width: $bp-large) {
-		display: none;
+		float: left;
 	}
 	@media all and (min-width: $bp-large) {
 		body.nosidebar & {display:none;}
