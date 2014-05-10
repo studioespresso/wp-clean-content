@@ -14,8 +14,6 @@ $gray-dark-2 : #131313;
 $white : #fff;
 $black : #000;
 
-$dim : rgba(0,0,0,0.5);
-$dimmer : rgba(0,0,0,0.8);
 
 $error : #f00;
 $valid : #089e00;
@@ -58,11 +56,6 @@ $pad-quad: $pad*4;
 $pad-six: $pad*6;
 $pad-half : $pad/2;
 $pad-quarter :$pad/4;
-
-//Borders
-$border-med: 3px;
-$border-thick: 7px;
-
 
 //Breakpoints
 $bp-small : 26em;

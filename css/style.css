@@ -472,81 +472,6 @@ object {
     $GLOBAL ELEMENTS
 \*------------------------------------*/
 /*------------------------------------*\
-    $GLOBAL CLASSES
-\*------------------------------------*/
-/* Clearfix */
-.cf {
-  *zoom: 1; }
-
-.cf:before, .cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-
-.cf:after {
-  clear: both; }
-
-/* Completely remove from the flow and screen readers. */
-.is-hidden {
-  display: none !important;
-  visibility: hidden !important; }
-
-/* Completely remove from the flow but leave available to screen readers. */
-.is-vishidden {
-  position: absolute !important;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px); }
-
-/* Floats */
-.right {
-  float: right; }
-
-.right-search {
-  float: right;
-  padding: 0 0 1rem 0; }
-
-.left {
-  float: left; }
-
-/* Text-Align */
-.align-right {
-  text-align: right; }
-
-.align-center {
-  text-align: center; }
-
-.align-left {
-  text-align: left; }
-
-/* Display Classes */
-@media all and (max-width: 46.8em) {
-  .hide-small {
-    display: none; } }
-
-@media all and (max-width: 50em) {
-  .hide-sidebar {
-    display: none; } }
-
-@media all and (min-width: 46.8em) and (max-width: 50em) {
-  .hide-med {
-    display: none; } }
-
-@media all and (min-width: 50em) {
-  .hide-large {
-    display: none; } }
-
-.valid {
-  color: #089e00; }
-
-.error {
-  color: red; }
-
-/*------------------------------------*\
     $RESET
 \*------------------------------------*/
 /* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
@@ -607,10 +532,10 @@ hr {
 h1 {
   line-height: 1.2;
   font-size: 2.3375em;
-  color: adjust-saturation(#09388c, -50%); }
+  color: adjust-saturation(#09388c, -50%);
+  font-weight: lighter; }
   h1.site-title {
-    font-size: 2.4375em;
-    font-weight: lighter; }
+    font-size: 2.4375em; }
   h1#site-title {
     line-height: 1.4;
     display: inline; }
@@ -630,7 +555,7 @@ h2 {
   h2.headline {
     clear: both; }
 
-h3 {
+h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: lighter; }
 
@@ -750,15 +675,22 @@ input.search-field {
   margin-right: -100%;
   width: 83.02951%; }
 
-/*------------------------------------*\
-    $LAYOUT
-\*------------------------------------*/
-/* Layout Container */
+/* Layout */
 .left {
   float: left; }
 
 .right {
   float: right; }
+
+/* Text-Align */
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.align-left {
+  text-align: left; }
 
 /* Two Column Layout */
 .main {
@@ -1040,40 +972,17 @@ span.onedge {
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
-/*------------------------------------*\
-    $BUTTONS
-\*------------------------------------*/
-.btn {
-  display: inline-block;
-  background: #333333;
-  color: white;
-  line-height: 1;
-  font-weight: bold;
-  padding: 1rem;
-  border: 0;
-  text-align: center; }
-  .btn:hover, .btn:focus {
-    color: white; }
-  .btn.disabled {
-    background: #eeeeee;
-    color: #bbbbbb; }
-
-.btn-small {
-  padding: 0.5rem; }
-
-.btn-large {
-  padding: 0.5rem;
-  text-transform: uppercase;
-  background: gray;
-  font-size: 1.4rem;
-  font-weight: normal; }
-
-.text-btn {
-  font-style: italic; }
-
 article {
   vertical-align: top;
   margin-bottom: 2rem; }
+  article .entry-meta {
+    margin-bottom: 0.5rem;
+    color: scale-saturation(#09388c, -100%); }
+    article .entry-meta a:hover {
+      background-color: #09388c;
+      color: #fff; }
+    article .entry-meta .posted-on, article .entry-meta .bypostauthor, article .entry-meta .byline {
+      font-style: italic; }
   article.post {
     margin-top: 4rem; }
     article.post:first-of-type {
@@ -1129,6 +1038,21 @@ article {
 dd.gallery-caption {
   bottom: 10px; }
 
+.paging-navigation .meta-nav.previous {
+  float: right; }
+
+span.tags-links {
+  white-space: pre-line;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ }
+
 .wordwrap {
   white-space: pre-wrap;
   /* CSS3 */
@@ -1171,30 +1095,6 @@ li.pingback {
   padding-left: 1rem;
   padding-bottom: 0.5rem;
   padding-top: 0.5rem; }
-
-.entry-meta {
-  margin-bottom: 0.5rem;
-  color: scale-saturation(#09388c, -100%); }
-  .entry-meta a:hover {
-    background-color: #09388c;
-    color: #fff; }
-  .entry-meta .posted-on, .entry-meta .bypostauthor, .entry-meta .byline {
-    font-style: italic; }
-
-.paging-navigation .meta-nav.previous {
-  float: right; }
-
-span.tags-links {
-  white-space: pre-line;
-  /* css-3 */
-  white-space: -moz-pre-wrap;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */ }
 
 /**
  * 6.5 Gallery
