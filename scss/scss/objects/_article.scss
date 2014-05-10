@@ -1,6 +1,7 @@
 //Article
 article {
 	.entry-meta {
+		font-size: 0.85em;
 		margin-bottom: $pad-half;
 		color: $colour-meta;
 			& a:hover {
@@ -66,10 +67,7 @@ article {
 	}
 }
 
-.byline {
-	font-size: $font-size-slightly-smaller;
-	margin-bottom: $space-half;
-}
+
 
 /* Wordpress Caption */
 .wp-caption-text {
