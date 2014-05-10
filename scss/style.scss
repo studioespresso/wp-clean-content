@@ -55,8 +55,6 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 
 @import "scss/generic/variables";
 @import "scss/generic/colours";
-@import "scss/generic/reset";
-@import "scss/generic/fonts";
 @import "scss/generic/base";
 
 /*------------------------------------*\
@@ -66,9 +64,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "scss/base/gridset";
 @import "scss/base/main";
 @import "scss/base/headings";
-@import "scss/base/text";
 @import "scss/base/forms";
-@import "scss/base/tables";
 
 /*------------------------------------*\
     $LAYOUT
