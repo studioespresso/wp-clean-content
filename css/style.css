@@ -70,12 +70,6 @@ html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, 
 header, footer, nav, section, article, hgroup, figure {
   display: block; }
 
-@font-face {
-  font-family: heading;
-  src: url("../fonts/ClearSans-Regular.ttf"); }
-@font-face {
-  font-family: main;
-  src: url("../fonts/ClearSans-Light.ttf"); }
 /*
 Theme Name: Clean Content
 Theme URI: http://underscores.me/
@@ -572,7 +566,7 @@ body {
   font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-size: 18px;
   -webkit-text-size-adjust: 100%;
-  font-family: 'main', sans-serif;
+  font-family: Avenir Next, Verdana, sans-serif;
   width: 100%;
   color: #4A525A; }
   @media all and (max-width: 73em) {
@@ -597,8 +591,7 @@ h1 {
 
 h2 {
   line-height: 1.2;
-  color: adjust-saturation(#09388c, -100%);
-  font-family: 'heading', 'Verdana', sans-serif; }
+  color: adjust-saturation(#09388c, -100%); }
   h2.entry-title a {
     font-size: 1.225em; }
     h2.entry-title a:hover {
@@ -611,13 +604,12 @@ h2 {
     clear: both; }
 
 h3 {
-  line-height: 1.2;
-  font-family: 'heading', 'Verdana', sans-serif; }
+  line-height: 1.2; }
 
 /* Text-Related Elements */
 p {
   margin-bottom: 1rem;
-  font-family: Avenir Next, serif; }
+  font-family: Avenir Next, Verdana, sans-serif; }
 
 /* Blockquote */
 blockquote {
