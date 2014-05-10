@@ -584,14 +584,16 @@ h1 {
   font-size: 2.3375em;
   color: adjust-saturation(#09388c, -50%); }
   h1.site-title {
-    font-size: 2.4375em; }
+    font-size: 2.4375em;
+    font-weight: lighter; }
   h1#site-title {
     line-height: 1.4;
     display: inline; }
 
 h2 {
   line-height: 1.2;
-  color: adjust-saturation(#09388c, -100%); }
+  color: adjust-saturation(#09388c, -100%);
+  font-weight: lighter; }
   h2.entry-title a {
     font-size: 1.225em; }
     h2.entry-title a:hover {
@@ -604,12 +606,12 @@ h2 {
     clear: both; }
 
 h3 {
-  line-height: 1.2; }
+  line-height: 1.2;
+  font-weight: lighter; }
 
 /* Text-Related Elements */
 p {
-  margin-bottom: 1rem;
-  font-family: Avenir Next, Verdana, sans-serif; }
+  margin-bottom: 1rem; }
 
 /* Blockquote */
 blockquote {
@@ -899,7 +901,6 @@ td {
 
 header[role=banner] {
   padding-top: 0.5rem;
-  font-family: 'heading', 'Verdana', sans-serif;
   margin-bottom: 1.5rem; }
   header[role=banner] .site-branding {
     max-width: 60%;

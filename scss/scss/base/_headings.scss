@@ -5,6 +5,7 @@ h1 {
 	color: $colour-h1;
 	&.site-title {
 		font-size: $font-size-xl;
+		font-weight: lighter;
 	}
 	&#site-title {
 		line-height: 1.4;
@@ -15,7 +16,7 @@ h1 {
 h2 {
 	line-height: 1.2;
 	color: $colour-h2;
-
+	font-weight: lighter;
 	&.entry-title {
 		a {
 			font-size: $font-size-slightly-larger;
@@ -37,6 +38,7 @@ h2 {
 
 h3 {
 	line-height: 1.2;
+	font-weight: lighter;
 }
 
 h4 {

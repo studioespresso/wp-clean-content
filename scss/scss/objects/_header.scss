@@ -2,11 +2,8 @@
 	color: darken($link, 24%);
 }
 
-
-
 header[role=banner] {
 	padding-top: $pad-half;
-	font-family: 'heading', 'Verdana', sans-serif;
 	margin-bottom: $pad-and-half;
 	& .site-branding {
 		max-width: 60%;
