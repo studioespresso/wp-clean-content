@@ -72,8 +72,6 @@
 .menu-toggle {
 	cursor: pointer;
 	display: none;
-	color: #189730;
-	font-size: 2.5em;
 }
 
 @media screen and (max-width: 600px) {
@@ -81,6 +79,17 @@
 	.main-navigation.toggled .nav-menu {
 		display: block;
 		position: relative;
+		float: right;
+
+	}
+	.main-navigation .menu-toggle {
+		font-size: 1.4em;
+		text-transform: uppercase;
+
+	}
+
+	.main-navigation.toggled .menu-toggle {
+		font-style: italic;
 	}
 	.main-navigation ul {
 		display: none;
