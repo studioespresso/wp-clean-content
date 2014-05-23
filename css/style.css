@@ -894,12 +894,18 @@ header[role=banner] {
   display: none; }
 
 @media screen and (max-width: 600px) {
-  .menu-toggle, .main-navigation .menu-toggle,
+  .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block;
     position: relative;
-    float: none;
-    color: red; }
+    float: right; }
+
+  .main-navigation .menu-toggle {
+    text-transform: uppercase;
+    font-size: 1.5em; }
+
+  .main-navigation.toggled .menu-toggle {
+    font-style: italic; }
 
   .main-navigation ul {
     display: none; } }
