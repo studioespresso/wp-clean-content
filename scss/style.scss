@@ -55,20 +55,15 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 
 @import "scss/generic/variables";
 @import "scss/generic/colours";
-@import "scss/generic/reset";
-@import "scss/generic/fonts";
 @import "scss/generic/base";
 
 /*------------------------------------*\
     $GLOBAL ELEMENTS
 \*------------------------------------*/
-@import "scss/base/global-classes";
 @import "scss/base/gridset";
 @import "scss/base/main";
 @import "scss/base/headings";
-@import "scss/base/text";
 @import "scss/base/forms";
-@import "scss/base/tables";
 
 /*------------------------------------*\
     $LAYOUT
@@ -85,10 +80,8 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
-@import "scss/objects/buttons";
 @import "scss/objects/article";
 @import "scss/objects/comments";
-@import "scss/objects/meta";
 @import "scss/objects/gallery";
 @import "scss/objects/screenreader";
 @import "scss/objects/widgets";

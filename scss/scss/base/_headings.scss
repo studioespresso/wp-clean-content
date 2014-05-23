@@ -3,8 +3,10 @@ h1 {
 	line-height: 1.2;
 	font-size: $font-size-large;
 	color: $colour-h1;
+	font-weight: lighter;
 	&.site-title {
 		font-size: $font-size-xl;
+		
 	}
 	&#site-title {
 		line-height: 1.4;
@@ -15,8 +17,7 @@ h1 {
 h2 {
 	line-height: 1.2;
 	color: $colour-h2;
-	font-family: 'heading', 'Verdana', sans-serif;
-
+	font-weight: lighter;
 	&.entry-title {
 		a {
 			font-size: $font-size-slightly-larger;
@@ -36,19 +37,7 @@ h2 {
 	}
 }
 
-h3 {
+h3, h4, h5, h6 {
 	line-height: 1.2;
-	font-family: 'heading', 'Verdana', sans-serif;
-}
-
-h4 {
-
-}
-
-h5 {
-
-}
-
-h6 {
-
+	font-weight: lighter;
 }
