@@ -21,6 +21,7 @@ h2 {
 	&.entry-title {
 		a {
 			font-size: $font-size-slightly-larger;
+			text-decoration: none;
 			&:hover {
 				text-decoration: underline;
 			}

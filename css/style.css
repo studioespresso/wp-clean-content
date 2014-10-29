@@ -499,7 +499,6 @@ body {
       padding: 0 1.5rem 0 1.5rem; } }
 
 a {
-  text-decoration: none;
   outline: 0;
   color: #284a60; }
 
@@ -510,7 +509,7 @@ p {
 /* Blockquote */
 blockquote {
   font-style: italic;
-  border-left: 7px solid #bbbbbb;
+  border-left: 7px solid #bbb;
   padding-left: 1rem;
   margin-bottom: 1rem;
   font-size: 1.225em; }
@@ -524,7 +523,7 @@ blockquote {
 hr {
   border: 0;
   height: 2px;
-  background: #eeeeee;
+  background: #eee;
   margin: 2rem 0;
   clear: both; }
 
@@ -532,7 +531,7 @@ hr {
 h1 {
   line-height: 1.2;
   font-size: 2.3375em;
-  color: adjust-saturation(#09388c, -50%);
+  color: adjust-saturation(#09388C, -50%);
   font-weight: lighter; }
   h1.site-title {
     font-size: 2.4375em; }
@@ -542,10 +541,11 @@ h1 {
 
 h2 {
   line-height: 1.2;
-  color: adjust-saturation(#09388c, -100%);
+  color: adjust-saturation(#09388C, -100%);
   font-weight: lighter; }
   h2.entry-title a {
-    font-size: 1.225em; }
+    font-size: 1.225em;
+    text-decoration: none; }
     h2.entry-title a:hover {
       text-decoration: underline; }
   h2.linked-list-item a, h2.linked-list-single a {
@@ -592,7 +592,7 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 
 button, input[type="submit"] {
   padding: 0.5rem;
-  color: white;
+  color: #fff;
   cursor: pointer; }
 
 input[type="checkbox"],
@@ -618,8 +618,8 @@ input[type="search"]::-webkit-search-decoration {
   z-index: 1;
   width: auto; }
   .inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
-    background: gray;
-    color: white; }
+    background: #808080;
+    color: #fff; }
 
 .inline-search-results-form {
   width: 100%; }
@@ -637,7 +637,7 @@ input[type="search"]::-webkit-search-decoration {
 
 /* Validation */
 .has-error {
-  border-color: red; }
+  border-color: #f00; }
 
 .is-valid {
   border-color: #089e00; }
@@ -647,7 +647,7 @@ input[type="search"]::-webkit-search-decoration {
 \*------------------------------------*/
 /* Search Form */
 input.search-field {
-  color: black;
+  color: #000;
   width: 95%;
   background-color: #fff; }
 
@@ -671,9 +671,9 @@ input.search-field {
 .container {
   display: block;
   float: left;
-  margin-left: 8.4592%;
+  margin-left: 8.4592013889%;
   margin-right: -100%;
-  width: 83.02951%; }
+  width: 83.0295138889%; }
 
 /* Layout */
 .left {
@@ -699,33 +699,33 @@ input.search-field {
     .main.page {
       display: block;
       float: left;
-      margin-left: 8.4592%;
+      margin-left: 8.4592013889%;
       margin-right: -100%;
-      width: 83.02951%; }
+      width: 83.0295138889%; }
     body.left .main {
       display: block;
       float: left;
-      margin-left: 25.3776%;
+      margin-left: 25.3776041667%;
       margin-right: -100%;
-      width: 74.57031%; }
+      width: 74.5703125%; }
     body.right .main, body .main {
       display: block;
       float: left;
       margin-left: 0%;
       margin-right: -100%;
-      width: 74.57031%; }
+      width: 74.5703125%; }
     body.nosidebar .main {
       display: block;
       float: left;
       margin-left: 0%;
       margin-right: -100%;
-      width: 99.94792%; }
+      width: 99.9479166667%; }
     body[class*='fullwidth'].right .main, body[class*='fullwidth'].left .main, body[class="image"].left .main, body[class="image"].right .main {
       display: block;
       float: left;
       margin-left: 0%;
       margin-right: -100%;
-      width: 99.94792%; } }
+      width: 99.9479166667%; } }
 
 .sidebar {
   height: 100%; }
@@ -740,13 +740,13 @@ input.search-field {
       float: left;
       margin-left: 0%;
       margin-right: -100%;
-      width: 23.8151%; }
+      width: 23.8151041667%; }
     body.right .sidebar, body .sidebar {
       display: block;
       float: left;
-      margin-left: 76.13281%;
+      margin-left: 76.1328125%;
       margin-right: -100%;
-      width: 23.8151%; } }
+      width: 23.8151041667%; } }
 
 /* Image sizes offsets */
 .size-small {
@@ -810,8 +810,9 @@ input.search-field {
 /*------------------------------------*\
     $PAGE STRUCTURE
 \*------------------------------------*/
-#site-title a, .nav a, #site-title a:visited {
-  color: #020a19; }
+.site-title a, .nav a, #site-title a:visited {
+  color: #020a19;
+  text-decoration: none; }
 
 header[role=banner] {
   padding-top: 0.5rem;
@@ -918,20 +919,20 @@ header[role=banner] {
 #image-navigation span.previous-image a {
   float: left;
   padding: 0.5rem;
-  background-color: #09388c;
+  background-color: #09388C;
   color: #fff;
   margin-bottom: 1rem; }
 #image-navigation span.next-image a {
   float: right;
   padding: 0.5rem;
-  background-color: #09388c;
+  background-color: #09388C;
   color: #fff;
   margin-bottom: 1rem; }
 #image-navigation span a {
   color: #fff; }
 
 .nav-links {
-  background-color: #09388c;
+  background-color: #09388C;
   padding: 1rem;
   display: block; }
   .nav-links a[rel="next"] {
@@ -949,7 +950,7 @@ header[role=banner] {
 .footer {
   clear: both;
   overflow: hidden;
-  border-top: 1px solid gray;
+  border-top: 1px solid #808080;
   line-height: 1.2;
   padding: 1rem 0;
   margin-top: 1rem; }
@@ -957,7 +958,7 @@ header[role=banner] {
 .nav-footer {
   margin: -1rem -1rem 1rem; }
   .nav-footer li {
-    border-bottom: 1px solid #333333; }
+    border-bottom: 1px solid #333; }
     @media all and (min-width: 46.8em) {
       .nav-footer li {
         border: 0;
@@ -983,9 +984,9 @@ article {
   article .entry-meta {
     font-size: 0.85em;
     margin-bottom: 0.5rem;
-    color: scale-saturation(#09388c, -100%); }
+    color: scale-saturation(#09388C, -100%); }
     article .entry-meta a:hover {
-      background-color: #09388c;
+      background-color: #09388C;
       color: #fff; }
     article .entry-meta .posted-on, article .entry-meta .bypostauthor, article .entry-meta .byline {
       font-style: italic; }
@@ -1026,8 +1027,11 @@ article {
 @media all and (min-width: 29.75em) {
   .featured-image + .entry-content {
     margin-left: 1rem; } }
-.entry-content p a {
+.entry-content p a, .entry-content li a {
   text-decoration: underline; }
+  .entry-content p a:hover, .entry-content li a:hover {
+    background-color: #09388C;
+    color: #fff; }
 
 /* Wordpress Caption */
 .wp-caption-text {
