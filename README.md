@@ -1,3 +1,4 @@
+[ ![Codeship Status for On-Edge/wp-clean-content](https://codeship.io/projects/1f662990-426b-0132-a221-0608fd86df6c/status)](https://codeship.io/projects/44412)
 Clean Content
 ===
 
