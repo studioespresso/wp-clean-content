@@ -57,7 +57,8 @@ function cc_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'      => __( 'Text Color', 'cc' ),
 				'section'    => 'colors',
-				'settings'   => 'cc_text_color'
+				'settings'   => 'cc_text_color',
+				'sanitize_callback' => 'sanitize_hex_color'
 				)
 			)
 		);
@@ -74,7 +75,8 @@ function cc_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cc_link_color',
 		array(
-			'default'     => '#284a60'
+			'default'     => '#284a60',
+			'sanitize_callback' => 'sanitize_hex_color'
 			)
 		);
 	$wp_customize->add_control(
