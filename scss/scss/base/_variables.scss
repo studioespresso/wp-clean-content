@@ -14,6 +14,20 @@ $gray-dark-2 : #131313;
 $white : #fff;
 $black : #000;
 
+// Color scheme //
+$link: #09388C;
+$base: darken($link, 100%);
+$text: #626262;
+$bg-meta: $link;
+$form: $link;
+$form-focus: adjust-hue($form, -15%);
+$colour-h1: adjust-saturation($link, -50%);
+$colour-h2: adjust-saturation($link, -100%);
+$colour-h3: adjust-saturation($link, -10%);
+$colour-meta: scale-saturation($link, -100%);
+
+
+
 
 $error : #f00;
 $valid : #089e00;
