@@ -43,6 +43,20 @@ li.comment  {
 	}
 }
 
+blockquote {
+    font-style: italic;
+    border-left: 7px solid $gray-light-4;
+    padding-left: $pad;
+    margin-bottom: $space;
+    font-size: $font-size-slightly-larger;
+    small {
+        padding-top: $pad; 
+        font-style: none;
+        font-size: $font-size-slightly-smaller;
+        display: block;
+    }
+}
+
 
 li.pingback {
 	padding-left: $space;

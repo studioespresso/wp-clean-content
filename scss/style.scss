@@ -1,25 +1,13 @@
+@import "scss/base/reset";
 @import "scss/base/variables";
 @import "scss/base/base";
 @import "scss/base/main";
 
-
-/*------------------------------------*\
-    $GLOBAL ELEMENTS
-\*------------------------------------*/
-
-/*------------------------------------*\
-    $LAYOUT
-\*------------------------------------*/
 @import "scss/structure/gridset";
 @import "scss/structure/layout";
 @import "scss/structure/header";
 @import "scss/structure/footer";
 
-
-
-/*------------------------------------*\
-    $COMPONENTS
-\*------------------------------------*/
 @import "scss/components/headings";
 @import "scss/components/forms";
 @import "scss/components/nav";
