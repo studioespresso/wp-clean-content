@@ -127,6 +127,6 @@ add_action( 'init', 'cd_add_editor_styles' );
  */
 function cd_add_editor_styles() {
 
-    add_editor_style( get_stylesheet_uri() );
+    // add_editor_style( get_stylesheet_uri() );
 
 }

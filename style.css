@@ -948,6 +948,14 @@ article {
   .entry-content p a:hover, .entry-content li a:hover {
     background-color: #09388C;
     color: #fff; }
+.entry-content blockquote {
+  font-style: italic;
+  border-left: 7px solid #bbb;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.225em; }
+  .entry-content blockquote p:nth-of-type(2) {
+    font-size: 0.85em; }
 
 /* Wordpress Caption */
 .wp-caption-text {
@@ -1012,18 +1020,6 @@ li.comment {
   li.comment .comment-meta img {
     display: block;
     margin: 1rem; }
-
-blockquote {
-  font-style: italic;
-  border-left: 7px solid #bbb;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.225em; }
-  blockquote small {
-    padding-top: 1rem;
-    font-style: none;
-    font-size: 0.85em;
-    display: block; }
 
 li.pingback {
   padding-left: 1rem;
