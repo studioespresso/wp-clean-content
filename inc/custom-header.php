@@ -22,7 +22,7 @@ function clean_content_custom_header_setup() {
 		'width'                  => 1100,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'clean_content_header_style',
+		'wp-head-callback'       => '_custom_background_cb',
 		'admin-head-callback'    => 'clean_content_admin_header_style',
 		'admin-preview-callback' => 'clean_content_admin_header_image',
 	) ) );

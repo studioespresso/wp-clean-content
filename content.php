@@ -19,7 +19,10 @@
 				<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 					<?php clean_content_meta_categories(); ?>
 				<?php endif; // End if 'post' == get_post_type() ?>
-
+				<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>|
+					<span class="comments-link"> <?php comments_popup_link( __( 'Leave a comment', 'clean-content' ), __( '1 Comment', 'clean-content' ), __( '% Comments', 'clean-content' ) ); ?></span>
+				<?php endif; ?>
+				<?php edit_post_link( __( 'Edit', 'clean-content' ), '<span class="edit-link"> ', '</span>' ); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	<?php endif; ?>
@@ -68,12 +71,6 @@
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
-
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"> <?php comments_popup_link( __( 'Leave a comment', 'clean-content' ), __( '1 Comment', 'clean-content' ), __( '% Comments', 'clean-content' ) ); ?></span>
-		<?php endif; ?>
-
-		<?php edit_post_link( __( 'Edit', 'clean-content' ), '<span class="edit-link"> ', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 <?php endif; ?>
 </article><!-- #post-## -->

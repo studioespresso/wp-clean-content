@@ -1,5 +1,6 @@
-#site-title a, .nav a, #site-title a:visited, {
+.site-title a, .nav a, #site-title a:visited, {
 	color: darken($link, 24%);
+	text-decoration: none;
 }
 
 header[role=banner] {

@@ -62,12 +62,24 @@ article {
 			margin-left: $pad;	
 		}
 	}
-	& p a {
+	& p a, & li a {
 		text-decoration: underline;
+		&:hover {
+			background-color: $link;
+			color: #fff;
+		}
+	}
+	& blockquote {
+    font-style: italic;
+    border-left: 7px solid $gray-light-4;
+    padding-left: $pad;
+    margin-bottom: $space;
+    font-size: $font-size-slightly-larger;
+    & p:nth-of-type(2) {
+    	font-size: $font-size-slightly-smaller;
+    	}
 	}
 }
-
-
 
 /* Wordpress Caption */
 .wp-caption-text {
