@@ -129,6 +129,9 @@ function cc_customizer_css() {
         body, a {color: <?php echo get_theme_mod( 'cc_text_color'); ?>;}
         h1, h2, h1 a, h2 a, .menu-toggle { color: <?php echo get_theme_mod( 'cc_link_color' ); ?>; }
         .entry-meta a:hover, .nav-links, button, input[type="submit"] {background-color: <?php echo get_theme_mod( 'cc_link_color' ); ?>;}
+        body, a {color: <?php echo wp_kses(get_theme_mod( 'cc_text_color')); ?>;}
+        h1, h2, h1 a, h2 a, .menu-toggle { color: <?php echo wp_kses(get_theme_mod( 'cc_link_color' )); ?>; }
+        .entry-meta a:hover, .nav-links, button, input[type="submit"] {background-color: <?php echo wp_kses(get_theme_mod( 'cc_link_color' )); ?>;}
     </style>
     <?php
 }
