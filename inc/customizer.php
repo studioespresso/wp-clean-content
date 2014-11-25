@@ -48,7 +48,9 @@ function cc_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cc_text_color',
 		array(
-			'default'     => '#4A525A'
+			'default'     => '#4A525A',
+			'sanitize_callback' => 'sanitize_hex_color'
+
 			)
 		);
 	$wp_customize->add_control(
@@ -58,14 +60,17 @@ function cc_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'      => __( 'Text Color', 'cc' ),
 				'section'    => 'colors',
-				'settings'   => 'cc_text_color',
-				'sanitize_callback' => 'sanitize_hex_color'
+				'settings'   => 'cc_text_color'
 				)
 			)
 		);
 
 	/** Logo **/
-	$wp_customize->add_setting('cc_logo_image');
+	$wp_customize->add_setting('cc_logo_image',
+		array(
+			'sanitize_callback' => 'sanitize_file_name'
+			)
+		);
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cc_logo_image', array(
 	    'label'    => __( 'Logo', 'clean-content' ),
 	    'section'  => 'title_tagline',
